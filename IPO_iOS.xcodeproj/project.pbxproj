@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		315F601E01821BAACDFCDFBE /* LessonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6864AEFBA2797A9F9BA8 /* LessonsView.swift */; };
+		315F61EA6D26F2BDA5EFFC2A /* IPOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F65F6CE3F7F19B5DB342C /* IPOView.swift */; };
+		315F65B4588C1018879782B7 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6E9F9CF6B97CD5C7AEFD /* SettingsView.swift */; };
+		315F6A1D738FD0D1B7B49E74 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F69829DA4625ACDE3404B /* TransactionsView.swift */; };
+		315F6C2FD96EAED97497B8C4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6943FBE705AE7A24BDB9 /* MainView.swift */; };
+		315F6C73EB7B241913B3D43B /* CircleTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6642D81721A994B6340D /* CircleTab.swift */; };
+		315F6F6C3E768B0BF19F16A6 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6D5FE47F36102947C82C /* NewsView.swift */; };
 		650441F19A1FF740B04A7EAF /* IPO_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044969C198379CB9ED32D5 /* IPO_iOSTests.swift */; };
 		650442BCE182BED91769D36B /* IPO_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504411CF52DD02564B331D3 /* IPO_iOSApp.swift */; };
 		6504455A086676BD1C3CFE53 /* IPO_iOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504475F93E4F43E8DB10D9B /* IPO_iOSUITests.swift */; };
@@ -35,6 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		315F65F6CE3F7F19B5DB342C /* IPOView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPOView.swift; sourceTree = "<group>"; };
+		315F6642D81721A994B6340D /* CircleTab.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleTab.swift; sourceTree = "<group>"; };
+		315F6864AEFBA2797A9F9BA8 /* LessonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonsView.swift; sourceTree = "<group>"; };
+		315F6943FBE705AE7A24BDB9 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		315F69829DA4625ACDE3404B /* TransactionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
+		315F6D5FE47F36102947C82C /* NewsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		315F6E9F9CF6B97CD5C7AEFD /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		65044027DF9C58A6EFC1ADB1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		650440CBB75B70564B0B1D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		6504411CF52DD02564B331D3 /* IPO_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPO_iOSApp.swift; sourceTree = "<group>"; };
@@ -76,6 +90,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		315F64E9C0B6415FFC43EA80 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				315F6943FBE705AE7A24BDB9 /* MainView.swift */,
+				315F6642D81721A994B6340D /* CircleTab.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		315F652E9107782160D6069B /* Lessons */ = {
+			isa = PBXGroup;
+			children = (
+				315F6864AEFBA2797A9F9BA8 /* LessonsView.swift */,
+			);
+			path = Lessons;
+			sourceTree = "<group>";
+		};
+		315F65AD25B113D8548F88AB /* News */ = {
+			isa = PBXGroup;
+			children = (
+				315F6D5FE47F36102947C82C /* NewsView.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		315F67C37C821594DE54D9BD /* IPO */ = {
+			isa = PBXGroup;
+			children = (
+				315F65F6CE3F7F19B5DB342C /* IPOView.swift */,
+			);
+			path = IPO;
+			sourceTree = "<group>";
+		};
+		315F6DAA6F48CDC392721C03 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				315F69829DA4625ACDE3404B /* TransactionsView.swift */,
+			);
+			path = Transactions;
+			sourceTree = "<group>";
+		};
+		315F6EBECF2562726E0528D2 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				315F6E9F9CF6B97CD5C7AEFD /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
 		65044009EA209EC9E10460F0 /* IPO_iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +149,12 @@
 				65044C6961B9507A46295296 /* ContentView.swift */,
 				65044027DF9C58A6EFC1ADB1 /* Persistence.swift */,
 				650446A069EEB0AEB04A305A /* IPO_iOS.xcdatamodeld */,
+				315F64E9C0B6415FFC43EA80 /* Main */,
+				315F6DAA6F48CDC392721C03 /* Transactions */,
+				315F67C37C821594DE54D9BD /* IPO */,
+				315F652E9107782160D6069B /* Lessons */,
+				315F65AD25B113D8548F88AB /* News */,
+				315F6EBECF2562726E0528D2 /* Settings */,
 			);
 			path = IPO_iOS;
 			sourceTree = "<group>";
@@ -197,11 +266,19 @@
 /* Begin PBXProject section */
 		650444FCCCC1054F1EEF0741 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				TargetAttributes = {
+					6504427C3713CFB690B34748 = {
+						DevelopmentTeam = HQ4NY73BWJ;
+					};
+				};
+			};
 			buildConfigurationList = 650448525914DD9F0C99D868 /* Build configuration list for PBXProject "IPO_iOS" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 65044346AE75F9F9BD86A7CF;
@@ -267,6 +344,13 @@
 				6504466801D6A8C51DF754B2 /* ContentView.swift in Sources */,
 				65044CC20D1CA38658EA8B5F /* Persistence.swift in Sources */,
 				65044A93CD8FDDA7E954F58D /* IPO_iOS.xcdatamodeld in Sources */,
+				315F6C2FD96EAED97497B8C4 /* MainView.swift in Sources */,
+				315F6A1D738FD0D1B7B49E74 /* TransactionsView.swift in Sources */,
+				315F65B4588C1018879782B7 /* SettingsView.swift in Sources */,
+				315F6F6C3E768B0BF19F16A6 /* NewsView.swift in Sources */,
+				315F601E01821BAACDFCDFBE /* LessonsView.swift in Sources */,
+				315F61EA6D26F2BDA5EFFC2A /* IPOView.swift in Sources */,
+				315F6C73EB7B241913B3D43B /* CircleTab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +376,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				DEVELOPMENT_ASSET_PATHS = "\"IPO_iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = HQ4NY73BWJ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = IPO_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -411,6 +496,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				DEVELOPMENT_ASSET_PATHS = "\"IPO_iOS/Preview Content\"";
+				DEVELOPMENT_TEAM = HQ4NY73BWJ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = IPO_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -471,8 +557,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -500,6 +585,7 @@
 				6504488D60FDAC658DFF8EF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6504435AFCA4086433CF100E /* Build configuration list for PBXNativeTarget "IPO_iOSTests" */ = {
 			isa = XCConfigurationList;
@@ -508,6 +594,7 @@
 				650444B2CEBD668D05B8F143 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		650448525914DD9F0C99D868 /* Build configuration list for PBXProject "IPO_iOS" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +612,7 @@
 				65044803BFDB4651EE9D3ACA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
