@@ -7,16 +7,44 @@ import SwiftUI
 
 
 struct MainView: View {
-    @State var tag = 2
+
+    @StateObject var viewRouter: ViewRouter;
 
     var body: some View {
         NavigationView{
 
             VStack{
 
+                switch viewRouter.index{
+
+                case 0:
+
+                    TransactionsView()
+
+                case 1:
+
+                     LessonsView()
+
+                case 2:
+
+                     IPOView()
+
+                case 3:
+
+                     NewsView()
+
+                case 4:
+
+                     AccountView()
+
+                default:
+
+                     TransactionsView()
+                }
+
                 Spacer()
 
-                CircleTab()
+                BottomNavBar(viewRouter: viewRouter)
 
 
             }.background(Color.black.opacity(0.05).edgesIgnoringSafeArea(.top))

@@ -4,7 +4,7 @@
 
 import Foundation
 import SwiftUI
-struct SettingsView: View {
+struct AccountView: View {
 
 
     var body: some View {

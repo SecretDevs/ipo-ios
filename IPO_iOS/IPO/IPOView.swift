@@ -8,7 +8,7 @@ struct IPOView: View {
 
 
     var body: some View {
-        Text("Hello, Lessons will be here")
+        Text("Hello, IPO will be here")
     }
 }
 

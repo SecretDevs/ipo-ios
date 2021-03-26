@@ -11,10 +11,11 @@ import SwiftUI
 @main
 struct IPO_iOSApp: App {
     let persistenceController = PersistenceController.shared
+    @StateObject var viewRouter: ViewRouter = ViewRouter()
 
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainView(viewRouter: viewRouter)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
