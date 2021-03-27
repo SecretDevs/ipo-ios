@@ -129,7 +129,6 @@ struct ToggleButtonsView: View {
                     }
                 }
 
-
             }
                     .padding(.vertical, 10)
                     .padding(.horizontal, 10)
