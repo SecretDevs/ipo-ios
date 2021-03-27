@@ -6,11 +6,34 @@ import Foundation
 import SwiftUI
 struct TransactionsView: View {
 
+    @StateObject var viewRouter: ViewRouterTransactions;
+
 
     var body: some View {
         VStack{
-            ToggleButtonsView().padding()
-            Spacer()
+            ToggleButtonsView(viewRouter: viewRouter).padding()
+
+            switch viewRouter.index {
+
+            case 0:
+
+                FavoriteTransactionsView()
+
+            case 1:
+
+                IPOTransactionsView()
+
+            case 2:
+
+                SPACTransactionsView()
+
+            case 3:
+                DiscountsTransactionsView()
+
+            default:
+                FavoriteTransactionsView()
+
+            }
         }
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 struct MainView: View {
 
     @StateObject var viewRouter: ViewRouter;
+    @StateObject var viewRouterForTransactions: ViewRouterTransactions;
 
     var body: some View {
         NavigationView{
@@ -19,7 +20,7 @@ struct MainView: View {
 
                 case 0:
 
-                    TransactionsView()
+                    TransactionsView(viewRouter: viewRouterForTransactions)
 
                 case 1:
 
@@ -39,7 +40,7 @@ struct MainView: View {
 
                 default:
 
-                     TransactionsView()
+                     TransactionsView(viewRouter: viewRouterForTransactions)
                 }
 
                 Spacer()

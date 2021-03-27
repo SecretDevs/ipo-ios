@@ -12,10 +12,11 @@ import SwiftUI
 struct IPO_iOSApp: App {
     let persistenceController = PersistenceController.shared
     @StateObject var viewRouter: ViewRouter = ViewRouter()
+    @StateObject var viewRouterForTransactions: ViewRouterTransactions = ViewRouterTransactions()
 
     var body: some Scene {
         WindowGroup {
-            MainView(viewRouter: viewRouter)
+            MainView(viewRouter: viewRouter, viewRouterForTransactions: viewRouterForTransactions)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }

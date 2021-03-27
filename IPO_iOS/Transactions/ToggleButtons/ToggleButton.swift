@@ -7,7 +7,7 @@ import SwiftUI
 
 struct ToggleButtonsView: View {
 
-    @State var index : Int = 3;
+    @StateObject var viewRouter : ViewRouterTransactions;
 
     var body: some View {
         HStack {
@@ -16,10 +16,10 @@ struct ToggleButtonsView: View {
 
                 Button(action: {
 
-                    self.index = 0;
+                    viewRouter.index = 0;
 
                 }) {
-                    if index != 0 {
+                    if viewRouter.index != 0 {
 
                         VStack {
                             Image("favorite").resizable().renderingMode(.template)
@@ -42,11 +42,11 @@ struct ToggleButtonsView: View {
 
                 Button(action: {
 
-                    self.index = 1;
+                    viewRouter.index = 1;
 
                 }) {
 
-                    if index != 1 {
+                    if viewRouter.index != 1 {
 
                         VStack {
 
@@ -71,11 +71,11 @@ struct ToggleButtonsView: View {
 
                 Button(action: {
 
-                    self.index = 2;
+                    viewRouter.index = 2;
 
                 }) {
 
-                    if index != 2 {
+                    if viewRouter.index != 2 {
 
                         VStack {
 
@@ -101,11 +101,11 @@ struct ToggleButtonsView: View {
 
                 Button(action: {
 
-                    self.index = 3;
+                    viewRouter.index = 3;
 
                 }) {
 
-                    if index != 3 {
+                    if viewRouter.index != 3 {
 
                         VStack {
                             HStack {

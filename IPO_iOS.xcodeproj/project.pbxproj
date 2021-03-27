@@ -24,7 +24,12 @@
 		65044CC20D1CA38658EA8B5F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044027DF9C58A6EFC1ADB1 /* Persistence.swift */; };
 		65044E0C17F8E3D7C1DB9C23 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6504468210FFB191C061B872 /* Preview Assets.xcassets */; };
 		CC02519F4CC7CB3170E8B976 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02554868D44D50E1D574DE /* ViewRouter.swift */; };
-		CC025D3ED757FCC0BF3B2647 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02564EFBB2DEBEFA3DACB3 /* ToggleButton.swift */; };
+		CC0253432E6795CC73871833 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025F91D3B6110956F3CE10 /* ToggleButton.swift */; };
+		CC02544EA725F02C6775C6F0 /* SPACTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0259686E2A09D9A8C8E1BC /* SPACTransactions.swift */; };
+		CC0254609BC007296299CB27 /* DiscountsTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025974311CF94E513212D1 /* DiscountsTransactions.swift */; };
+		CC0254D6C99EF5E961097354 /* FavoriteTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02534C83469739C0B7CBA1 /* FavoriteTransactions.swift */; };
+		CC02590C1F0CCBF388478233 /* ViewRouterTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025C0A8B01E554D8F25B1C /* ViewRouterTransactions.swift */; };
+		CC025DD32C5B6C2D9138D1F2 /* IPOTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025F42D3521844AF62C122 /* IPOTransactions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +72,13 @@
 		65044CA13FB3D973ADF9C9E9 /* IPO_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IPO_iOS.xcdatamodel; sourceTree = "<group>"; };
 		65044F59E42D6B17497986BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		65044FB5737CD8DC3F6214CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		CC02534C83469739C0B7CBA1 /* FavoriteTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTransactions.swift; sourceTree = "<group>"; };
 		CC02554868D44D50E1D574DE /* ViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
-		CC02564EFBB2DEBEFA3DACB3 /* ToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
+		CC0259686E2A09D9A8C8E1BC /* SPACTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPACTransactions.swift; sourceTree = "<group>"; };
+		CC025974311CF94E513212D1 /* DiscountsTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountsTransactions.swift; sourceTree = "<group>"; };
+		CC025C0A8B01E554D8F25B1C /* ViewRouterTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRouterTransactions.swift; sourceTree = "<group>"; };
+		CC025F42D3521844AF62C122 /* IPOTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPOTransactions.swift; sourceTree = "<group>"; };
+		CC025F91D3B6110956F3CE10 /* ToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +144,9 @@
 			isa = PBXGroup;
 			children = (
 				315F69829DA4625ACDE3404B /* TransactionsView.swift */,
-				CC02564EFBB2DEBEFA3DACB3 /* ToggleButton.swift */,
+				CC0258DBC3EB18A027933A65 /* Transactions */,
+				CC025368AE5B076E6B2F3417 /* ToggleButtons */,
+				CC0258A0D5F11EAB2A882D94 /* ViewRouter */,
 			);
 			path = Transactions;
 			sourceTree = "<group>";
@@ -212,6 +224,33 @@
 				65044969C198379CB9ED32D5 /* IPO_iOSTests.swift */,
 			);
 			path = IPO_iOSTests;
+			sourceTree = "<group>";
+		};
+		CC025368AE5B076E6B2F3417 /* ToggleButtons */ = {
+			isa = PBXGroup;
+			children = (
+				CC025F91D3B6110956F3CE10 /* ToggleButton.swift */,
+			);
+			path = ToggleButtons;
+			sourceTree = "<group>";
+		};
+		CC0258A0D5F11EAB2A882D94 /* ViewRouter */ = {
+			isa = PBXGroup;
+			children = (
+				CC025C0A8B01E554D8F25B1C /* ViewRouterTransactions.swift */,
+			);
+			path = ViewRouter;
+			sourceTree = "<group>";
+		};
+		CC0258DBC3EB18A027933A65 /* Transactions */ = {
+			isa = PBXGroup;
+			children = (
+				CC025974311CF94E513212D1 /* DiscountsTransactions.swift */,
+				CC02534C83469739C0B7CBA1 /* FavoriteTransactions.swift */,
+				CC025F42D3521844AF62C122 /* IPOTransactions.swift */,
+				CC0259686E2A09D9A8C8E1BC /* SPACTransactions.swift */,
+			);
+			path = Transactions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,7 +401,12 @@
 				315F61EA6D26F2BDA5EFFC2A /* IPOView.swift in Sources */,
 				315F6C73EB7B241913B3D43B /* BottomNavBar.swift in Sources */,
 				CC02519F4CC7CB3170E8B976 /* ViewRouter.swift in Sources */,
-				CC025D3ED757FCC0BF3B2647 /* ToggleButton.swift in Sources */,
+				CC0254609BC007296299CB27 /* DiscountsTransactions.swift in Sources */,
+				CC0254D6C99EF5E961097354 /* FavoriteTransactions.swift in Sources */,
+				CC025DD32C5B6C2D9138D1F2 /* IPOTransactions.swift in Sources */,
+				CC02544EA725F02C6775C6F0 /* SPACTransactions.swift in Sources */,
+				CC0253432E6795CC73871833 /* ToggleButton.swift in Sources */,
+				CC02590C1F0CCBF388478233 /* ViewRouterTransactions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
