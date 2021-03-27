@@ -8,7 +8,10 @@ struct TransactionsView: View {
 
 
     var body: some View {
-        Text("Hello!")
+        VStack{
+            ToggleButtonsView().padding()
+            Spacer()
+        }
     }
 }
 
