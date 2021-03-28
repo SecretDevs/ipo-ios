@@ -11,7 +11,6 @@
 		315F601E01821BAACDFCDFBE /* LessonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6864AEFBA2797A9F9BA8 /* LessonsView.swift */; };
 		315F61EA6D26F2BDA5EFFC2A /* IPOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F65F6CE3F7F19B5DB342C /* IPOView.swift */; };
 		315F65B4588C1018879782B7 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6E9F9CF6B97CD5C7AEFD /* AccountView.swift */; };
-		315F6A1D738FD0D1B7B49E74 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F69829DA4625ACDE3404B /* TransactionsView.swift */; };
 		315F6C2FD96EAED97497B8C4 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6943FBE705AE7A24BDB9 /* MainView.swift */; };
 		315F6C73EB7B241913B3D43B /* BottomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6642D81721A994B6340D /* BottomNavBar.swift */; };
 		315F6F6C3E768B0BF19F16A6 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6D5FE47F36102947C82C /* NewsView.swift */; };
@@ -23,6 +22,26 @@
 		65044A93CD8FDDA7E954F58D /* IPO_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 650446A069EEB0AEB04A305A /* IPO_iOS.xcdatamodeld */; };
 		65044CC20D1CA38658EA8B5F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044027DF9C58A6EFC1ADB1 /* Persistence.swift */; };
 		65044E0C17F8E3D7C1DB9C23 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6504468210FFB191C061B872 /* Preview Assets.xcassets */; };
+		87651165E89B320A22177777 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876514168AA2544CF3F9D170 /* TransactionsView.swift */; };
+		8765147DACF64574090B4A17 /* TransactionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651D20CFD0E93ED6E31349 /* TransactionCardView.swift */; };
+		87651696579956F7DE304192 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8765115CCD368FC0C33BF85F /* Status.swift */; };
+		876518F4668BAE25194A2DEE /* TransactionRiskTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651BAF3C3F97A9B3DC30D1 /* TransactionRiskTag.swift */; };
+		876519C01966F06256988122 /* TransactionStatusTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876515FD50F32E5AC8930BCA /* TransactionStatusTag.swift */; };
+		87651A05A92CFA8E2E254DC0 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8765179B5A19056AAF216231 /* Transaction.swift */; };
+		87651A1BBD1648F7C4FC69B3 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876514D3E6784895973FEE33 /* Star.swift */; };
+		87651C9AA4FDB36117463F5F /* Risk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651EACEFAF4CB93560A9D0 /* Risk.swift */; };
+		87651F042F85256769D28262 /* TriangleDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651DD77113B63E76F6DE0C /* TriangleDown.swift */; };
+		87651FBD3B2DE9CB260F0EA6 /* TriangleUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651EA3EC4B9AD30AB88652 /* TriangleUp.swift */; };
+		C364C838260FFDDF0064A697 /* EuclidSquare-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364C82E260FFDDF0064A697 /* EuclidSquare-Medium.ttf */; };
+		C364C839260FFDDF0064A697 /* EuclidSquare-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364C82F260FFDDF0064A697 /* EuclidSquare-Bold.ttf */; };
+		C364C83A260FFDDF0064A697 /* EuclidSquare-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364C830260FFDDF0064A697 /* EuclidSquare-LightItalic.ttf */; };
+		C364C83B260FFDDF0064A697 /* EuclidSquare-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364C831260FFDDF0064A697 /* EuclidSquare-SemiBold.ttf */; };
+		C364C83C260FFDDF0064A697 /* EuclidSquare-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364C832260FFDDF0064A697 /* EuclidSquare-Light.ttf */; };
+		C364C83D260FFDDF0064A697 /* EuclidSquare-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364C833260FFDDF0064A697 /* EuclidSquare-Italic.ttf */; };
+		C364C83E260FFDDF0064A697 /* EuclidSquare-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364C834260FFDDF0064A697 /* EuclidSquare-MediumItalic.ttf */; };
+		C364C83F260FFDDF0064A697 /* EuclidSquare-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364C835260FFDDF0064A697 /* EuclidSquare-Regular.ttf */; };
+		C364C840260FFDDF0064A697 /* EuclidSquare-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364C836260FFDDF0064A697 /* EuclidSquare-SemiBoldItalic.ttf */; };
+		C364C841260FFDDF0064A697 /* EuclidSquare-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364C837260FFDDF0064A697 /* EuclidSquare-BoldItalic.ttf */; };
 		CC02519F4CC7CB3170E8B976 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02554868D44D50E1D574DE /* ViewRouter.swift */; };
 		CC0253432E6795CC73871833 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025F91D3B6110956F3CE10 /* ToggleButton.swift */; };
 		CC02544EA725F02C6775C6F0 /* SPACTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0259686E2A09D9A8C8E1BC /* SPACTransactions.swift */; };
@@ -55,7 +74,6 @@
 		315F6642D81721A994B6340D /* BottomNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomNavBar.swift; sourceTree = "<group>"; };
 		315F6864AEFBA2797A9F9BA8 /* LessonsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LessonsView.swift; sourceTree = "<group>"; };
 		315F6943FBE705AE7A24BDB9 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		315F69829DA4625ACDE3404B /* TransactionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
 		315F6D5FE47F36102947C82C /* NewsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
 		315F6E9F9CF6B97CD5C7AEFD /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		65044027DF9C58A6EFC1ADB1 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -73,6 +91,26 @@
 		65044F59E42D6B17497986BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		65044FB5737CD8DC3F6214CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		CC02534C83469739C0B7CBA1 /* FavoriteTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTransactions.swift; sourceTree = "<group>"; };
+		8765115CCD368FC0C33BF85F /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		876514168AA2544CF3F9D170 /* TransactionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
+		876514D3E6784895973FEE33 /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
+		876515FD50F32E5AC8930BCA /* TransactionStatusTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionStatusTag.swift; sourceTree = "<group>"; };
+		8765179B5A19056AAF216231 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		87651BAF3C3F97A9B3DC30D1 /* TransactionRiskTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionRiskTag.swift; sourceTree = "<group>"; };
+		87651D20CFD0E93ED6E31349 /* TransactionCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCardView.swift; sourceTree = "<group>"; };
+		87651DD77113B63E76F6DE0C /* TriangleDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleDown.swift; sourceTree = "<group>"; };
+		87651EA3EC4B9AD30AB88652 /* TriangleUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleUp.swift; sourceTree = "<group>"; };
+		87651EACEFAF4CB93560A9D0 /* Risk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Risk.swift; sourceTree = "<group>"; };
+		C364C82E260FFDDF0064A697 /* EuclidSquare-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Medium.ttf"; sourceTree = "<group>"; };
+		C364C82F260FFDDF0064A697 /* EuclidSquare-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Bold.ttf"; sourceTree = "<group>"; };
+		C364C830260FFDDF0064A697 /* EuclidSquare-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-LightItalic.ttf"; sourceTree = "<group>"; };
+		C364C831260FFDDF0064A697 /* EuclidSquare-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-SemiBold.ttf"; sourceTree = "<group>"; };
+		C364C832260FFDDF0064A697 /* EuclidSquare-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Light.ttf"; sourceTree = "<group>"; };
+		C364C833260FFDDF0064A697 /* EuclidSquare-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Italic.ttf"; sourceTree = "<group>"; };
+		C364C834260FFDDF0064A697 /* EuclidSquare-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-MediumItalic.ttf"; sourceTree = "<group>"; };
+		C364C835260FFDDF0064A697 /* EuclidSquare-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Regular.ttf"; sourceTree = "<group>"; };
+		C364C836260FFDDF0064A697 /* EuclidSquare-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		C364C837260FFDDF0064A697 /* EuclidSquare-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-BoldItalic.ttf"; sourceTree = "<group>"; };
 		CC02554868D44D50E1D574DE /* ViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		CC0259686E2A09D9A8C8E1BC /* SPACTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPACTransactions.swift; sourceTree = "<group>"; };
 		CC025974311CF94E513212D1 /* DiscountsTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountsTransactions.swift; sourceTree = "<group>"; };
@@ -147,6 +185,8 @@
 				CC0258DBC3EB18A027933A65 /* Transactions */,
 				CC025368AE5B076E6B2F3417 /* ToggleButtons */,
 				CC0258A0D5F11EAB2A882D94 /* ViewRouter */,
+				87651954D74DEBF7EF146DA3 /* Model */,
+				87651C95F27DF44D16143D88 /* View */,
 			);
 			path = Transactions;
 			sourceTree = "<group>";
@@ -162,6 +202,7 @@
 		65044009EA209EC9E10460F0 /* IPO_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				C364C82D260FFD7C0064A697 /* Fonts */,
 				650440CBB75B70564B0B1D5C /* Info.plist */,
 				65044B1FB6B8A115ED1BA0AD /* Assets.xcassets */,
 				16AD1E55260E4CC5004CF50F /* Colors.xcassets */,
@@ -176,6 +217,7 @@
 				315F652E9107782160D6069B /* Lessons */,
 				315F65AD25B113D8548F88AB /* News */,
 				315F6EBECF2562726E0528D2 /* Account */,
+				87651043E55AF5FAB4AE077C /* Shapes */,
 			);
 			path = IPO_iOS;
 			sourceTree = "<group>";
@@ -251,6 +293,54 @@
 				CC0259686E2A09D9A8C8E1BC /* SPACTransactions.swift */,
 			);
 			path = Transactions;
+			sourceTree = "<group>";
+		};
+		87651043E55AF5FAB4AE077C /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				87651EA3EC4B9AD30AB88652 /* TriangleUp.swift */,
+				87651DD77113B63E76F6DE0C /* TriangleDown.swift */,
+				876514D3E6784895973FEE33 /* Star.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		87651954D74DEBF7EF146DA3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8765179B5A19056AAF216231 /* Transaction.swift */,
+				8765115CCD368FC0C33BF85F /* Status.swift */,
+				87651EACEFAF4CB93560A9D0 /* Risk.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		87651C95F27DF44D16143D88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				876514168AA2544CF3F9D170 /* TransactionsView.swift */,
+				87651D20CFD0E93ED6E31349 /* TransactionCardView.swift */,
+				876515FD50F32E5AC8930BCA /* TransactionStatusTag.swift */,
+				87651BAF3C3F97A9B3DC30D1 /* TransactionRiskTag.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C364C82D260FFD7C0064A697 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C364C82F260FFDDF0064A697 /* EuclidSquare-Bold.ttf */,
+				C364C837260FFDDF0064A697 /* EuclidSquare-BoldItalic.ttf */,
+				C364C833260FFDDF0064A697 /* EuclidSquare-Italic.ttf */,
+				C364C832260FFDDF0064A697 /* EuclidSquare-Light.ttf */,
+				C364C830260FFDDF0064A697 /* EuclidSquare-LightItalic.ttf */,
+				C364C82E260FFDDF0064A697 /* EuclidSquare-Medium.ttf */,
+				C364C834260FFDDF0064A697 /* EuclidSquare-MediumItalic.ttf */,
+				C364C835260FFDDF0064A697 /* EuclidSquare-Regular.ttf */,
+				C364C831260FFDDF0064A697 /* EuclidSquare-SemiBold.ttf */,
+				C364C836260FFDDF0064A697 /* EuclidSquare-SemiBoldItalic.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -360,9 +450,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C364C83A260FFDDF0064A697 /* EuclidSquare-LightItalic.ttf in Resources */,
+				C364C838260FFDDF0064A697 /* EuclidSquare-Medium.ttf in Resources */,
+				C364C83B260FFDDF0064A697 /* EuclidSquare-SemiBold.ttf in Resources */,
+				C364C839260FFDDF0064A697 /* EuclidSquare-Bold.ttf in Resources */,
+				C364C840260FFDDF0064A697 /* EuclidSquare-SemiBoldItalic.ttf in Resources */,
+				C364C83E260FFDDF0064A697 /* EuclidSquare-MediumItalic.ttf in Resources */,
 				16AD1E56260E4CC5004CF50F /* Colors.xcassets in Resources */,
 				650445649F62B2DD8BE8367C /* Assets.xcassets in Resources */,
+				C364C83C260FFDDF0064A697 /* EuclidSquare-Light.ttf in Resources */,
 				65044E0C17F8E3D7C1DB9C23 /* Preview Assets.xcassets in Resources */,
+				C364C83F260FFDDF0064A697 /* EuclidSquare-Regular.ttf in Resources */,
+				C364C841260FFDDF0064A697 /* EuclidSquare-BoldItalic.ttf in Resources */,
+				C364C83D260FFDDF0064A697 /* EuclidSquare-Italic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +494,6 @@
 				65044CC20D1CA38658EA8B5F /* Persistence.swift in Sources */,
 				65044A93CD8FDDA7E954F58D /* IPO_iOS.xcdatamodeld in Sources */,
 				315F6C2FD96EAED97497B8C4 /* MainView.swift in Sources */,
-				315F6A1D738FD0D1B7B49E74 /* TransactionsView.swift in Sources */,
 				315F65B4588C1018879782B7 /* AccountView.swift in Sources */,
 				315F6F6C3E768B0BF19F16A6 /* NewsView.swift in Sources */,
 				315F601E01821BAACDFCDFBE /* LessonsView.swift in Sources */,
@@ -407,6 +506,16 @@
 				CC02544EA725F02C6775C6F0 /* SPACTransactions.swift in Sources */,
 				CC0253432E6795CC73871833 /* ToggleButton.swift in Sources */,
 				CC02590C1F0CCBF388478233 /* ViewRouterTransactions.swift in Sources */,
+				87651165E89B320A22177777 /* TransactionsView.swift in Sources */,
+				87651A05A92CFA8E2E254DC0 /* Transaction.swift in Sources */,
+				8765147DACF64574090B4A17 /* TransactionCardView.swift in Sources */,
+				87651696579956F7DE304192 /* Status.swift in Sources */,
+				87651C9AA4FDB36117463F5F /* Risk.swift in Sources */,
+				876519C01966F06256988122 /* TransactionStatusTag.swift in Sources */,
+				876518F4668BAE25194A2DEE /* TransactionRiskTag.swift in Sources */,
+				87651FBD3B2DE9CB260F0EA6 /* TriangleUp.swift in Sources */,
+				87651F042F85256769D28262 /* TriangleDown.swift in Sources */,
+				87651A1BBD1648F7C4FC69B3 /* Star.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
