@@ -48,7 +48,7 @@ struct MainView: View {
                 BottomNavBar(viewRouter: viewRouter)
 
 
-            }.background(Color("BackgroundThemeColor").edgesIgnoringSafeArea(.top))
+            }.background(Color("Background").edgesIgnoringSafeArea(.top))
 
         }.navigationBarHidden(true)
     }

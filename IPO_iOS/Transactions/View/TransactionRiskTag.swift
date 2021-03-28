@@ -12,28 +12,28 @@ struct TransactionRiskTag: View{
         switch risk{
         case .HIGH:
             TriangleUp()
-                    .fill(Color("HighRiskColor"))
+                    .fill(Color("Red"))
                     .frame(width: 6, height: 6)
             Text("Высокий риск")
                     .font(.custom("EuclidSquare-Medium",size: 10))
                     .fontWeight(.medium)
-                    .foregroundColor(Color("AppBlack"))
+                    .foregroundColor(Color("Black"))
         case .MIDDLE:
             Circle()
-                    .fill(Color("MiddleRiskColor"))
+                    .fill(Color("Orange"))
                     .frame(width: 6, height: 6)
             Text("Средний риск")
                     .font(.custom("EuclidSquare-Medium",size: 10))
                     .fontWeight(.medium)
-                    .foregroundColor(Color("AppBlack"))
+                    .foregroundColor(Color("Black"))
         case .LOW:
             TriangleDown()
-                    .fill(Color("LowRiskColor"))
+                    .fill(Color("Green"))
                     .frame(width: 6, height: 6)
             Text("Низкий риск")
                     .font(.custom("EuclidSquare-Medium",size: 10))
                     .fontWeight(.medium)
-                    .foregroundColor(Color("AppBlack"))
+                    .foregroundColor(Color("Black"))
         }
 
     }

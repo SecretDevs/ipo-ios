@@ -20,24 +20,26 @@ struct TransactionCardView : View {
                             .font(.custom("EuclidSquare-Medium",size: 10))
                             .fontWeight(.medium)
                             .foregroundColor(Color("DarkGrey"))
-                    Star(corners: 5, smoothness: 0.5)
-                            .overlay(
-                                    Star(corners: 5, smoothness: 0.5)
-                                            .stroke(transaction.isFavorite ? .white : Color("DarkGrey"))
-                                            .frame(width: 16, height: 16)
-                            )
-                            .foregroundColor(transaction.isFavorite ? .yellow : .white)
-                            .frame(width: 16, height: 16)
-                            .onTapGesture(perform: {
-                                transaction.isFavorite.toggle()
-                            })
+                    if(transaction.isFavorite){
+                        Image("favorite").resizable().renderingMode(.template)
+                                .frame(width: 16, height: 16).foregroundColor(Color("Orange"))
+                                .onTapGesture(perform: {
+                                    transaction.isFavorite.toggle()
+                                })
+                    }else{
+                        Image("favorite-border").resizable().renderingMode(.template)
+                                .frame(width: 16, height: 16).foregroundColor(Color("DarkGrey"))
+                                .onTapGesture(perform: {
+                                    transaction.isFavorite.toggle()
+                                })
+                    }
                 }
             }
             HStack{
                 Text(transaction.title)
                         .font(.custom("EuclidSquare-Medium",size: 16))
                         .fontWeight(.medium)
-                        .foregroundColor(Color("AppBlack"))
+                        .foregroundColor(Color("Black"))
                 Text(transaction.extraTitle)
                         .font(.custom("EuclidSquare-Medium",size: 16))
                         .fontWeight(.medium)
@@ -49,7 +51,7 @@ struct TransactionCardView : View {
             }
             Text(transaction.text)
                     .font(.custom("EuclidSquare-Medium",size: 12))
-                    .foregroundColor(Color("AppBlack"))
+                    .foregroundColor(Color("Black"))
         }
         .padding()
         .background(Color(.white))
