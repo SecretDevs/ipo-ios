@@ -15,7 +15,7 @@ struct TransactionRiskTag: View{
                     .fill(Color("HighRiskColor"))
                     .frame(width: 6, height: 6)
             Text("Высокий риск")
-                    .font(.system(size: 10))
+                    .font(.custom("EuclidSquare-Medium",size: 10))
                     .fontWeight(.medium)
                     .foregroundColor(Color("AppBlack"))
         case .MIDDLE:
@@ -23,7 +23,7 @@ struct TransactionRiskTag: View{
                     .fill(Color("MiddleRiskColor"))
                     .frame(width: 6, height: 6)
             Text("Средний риск")
-                    .font(.system(size: 10))
+                    .font(.custom("EuclidSquare-Medium",size: 10))
                     .fontWeight(.medium)
                     .foregroundColor(Color("AppBlack"))
         case .LOW:
@@ -31,7 +31,7 @@ struct TransactionRiskTag: View{
                     .fill(Color("LowRiskColor"))
                     .frame(width: 6, height: 6)
             Text("Низкий риск")
-                    .font(.system(size: 10))
+                    .font(.custom("EuclidSquare-Medium",size: 10))
                     .fontWeight(.medium)
                     .foregroundColor(Color("AppBlack"))
         }

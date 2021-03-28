@@ -6,31 +6,40 @@ import Foundation
 import SwiftUI
 
 struct TransactionCardView : View {
-    var transaction : Transaction
+    @State var transaction : Transaction
     var body: some View {
         VStack(alignment: .leading, spacing: 10){
             HStack{
                 Text("#" + transaction.id.prefix(5))
-                        .font(.system(size: 10))
+                        .font(.custom("EuclidSquare-Medium",size: 10))
                         .fontWeight(.medium)
                         .foregroundColor(Color("DarkGrey"))
                 Spacer()
                 HStack{
                     Text(transaction.date)
-                            .font(.system(size: 10))
+                            .font(.custom("EuclidSquare-Medium",size: 10))
                             .fontWeight(.medium)
                             .foregroundColor(Color("DarkGrey"))
-                    Image(systemName: "star.fill")
-                        .foregroundColor(.yellow)
+                    Star(corners: 5, smoothness: 0.5)
+                            .overlay(
+                                    Star(corners: 5, smoothness: 0.5)
+                                            .stroke(transaction.isFavorite ? .white : Color("DarkGrey"))
+                                            .frame(width: 16, height: 16)
+                            )
+                            .foregroundColor(transaction.isFavorite ? .yellow : .white)
+                            .frame(width: 16, height: 16)
+                            .onTapGesture(perform: {
+                                transaction.isFavorite.toggle()
+                            })
                 }
             }
             HStack{
                 Text(transaction.title)
-                        .font(.system(size: 16))
+                        .font(.custom("EuclidSquare-Medium",size: 16))
                         .fontWeight(.medium)
                         .foregroundColor(Color("AppBlack"))
                 Text(transaction.extraTitle)
-                        .font(.system(size: 16))
+                        .font(.custom("EuclidSquare-Medium",size: 16))
                         .fontWeight(.medium)
                         .foregroundColor(Color("DarkGrey"))
             }
@@ -39,7 +48,7 @@ struct TransactionCardView : View {
                 TransactionRiskTag(risk: transaction.risk)
             }
             Text(transaction.text)
-                    .font(.system(size: 12))
+                    .font(.custom("EuclidSquare-Medium",size: 12))
                     .foregroundColor(Color("AppBlack"))
         }
         .padding()

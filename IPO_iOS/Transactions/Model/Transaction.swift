@@ -16,7 +16,7 @@ struct Transaction : Identifiable{
 }
 
 var transactions = [
-    Transaction(title: "ON24", date: "20.03.2020 19:44", extraTitle: "ONTF", status: Status.CLOSED,
+    Transaction(title: "ON24", date: "20.03.2020 19:44", extraTitle: "ON24", status: Status.CLOSED,
             risk: Risk.MIDDLE, text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo.",
             isFavorite: false),
     Transaction(title: "MYT Netherlands", date: "20.03.2020 22:25", extraTitle: "MYTE", status: Status.OPEN,

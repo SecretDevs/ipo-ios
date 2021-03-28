@@ -2,6 +2,19 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>EuclidSquare-Bold.ttf</string>
+		<string>EuclidSquare-BoldItalic.ttf</string>
+		<string>EuclidSquare-Italic.ttf</string>
+		<string>EuclidSquare-Light.ttf</string>
+		<string>EuclidSquare-LightItalic.ttf</string>
+		<string>EuclidSquare-Medium.ttf</string>
+		<string>EuclidSquare-MediumItalic.ttf</string>
+		<string>EuclidSquare-Regular.ttf</string>
+		<string>EuclidSquare-SemiBold.ttf</string>
+		<string>EuclidSquare-SemiBoldItalic.ttf</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>

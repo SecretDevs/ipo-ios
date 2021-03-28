@@ -12,7 +12,7 @@ struct TransactionStatusTag: View{
         switch status{
         case Status.OPEN:
             Text("Сделка открыта")
-                    .font(.system(size: 10))
+                    .font(.custom("EuclidSquare-Medium",size: 10))
                     .fontWeight(.medium)
                     .foregroundColor(Color("OpenTransactionTextColor"))
                     .padding([.leading, .trailing], 15)
@@ -21,7 +21,7 @@ struct TransactionStatusTag: View{
                     .cornerRadius(50)
         case .CLOSED:
             Text("Сделка закрыта")
-                    .font(.system(size: 10))
+                    .font(.custom("EuclidSquare-Medium",size: 10))
                     .fontWeight(.medium)
                     .foregroundColor(Color("ClosedTransactionTextColor"))
                     .padding([.leading, .trailing], 15)
@@ -30,7 +30,7 @@ struct TransactionStatusTag: View{
                     .cornerRadius(50)
         case .AVERAGED:
             Text("Сделка усреднена")
-                    .font(.system(size: 10))
+                    .font(.custom("EuclidSquare-Medium",size: 10))
                     .fontWeight(.medium)
                     .foregroundColor(Color("AveragedTransactionTextColor"))
                     .padding([.leading, .trailing], 15)
