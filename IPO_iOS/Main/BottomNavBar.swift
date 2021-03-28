@@ -100,24 +100,27 @@ struct BottomNavBar: View {
 
                             }.frame(width: 20, height: 20)
 
-                            Text("IPO").font(.system(size: 11)).foregroundColor(Color("DarkGrey")).padding(.top, 5)
+                            Text("IPO").font(.system(size: 11)).fixedSize()
+                                    .foregroundColor(Color("DarkGrey")).padding(.top, 5)
 
-                        }.frame().padding(.leading, 10)
-                    } else {
+                        }.padding(.leading, 10)
 
-                        VStack {
+                        } else {
 
                             VStack {
 
-                                Image("ipo").resizable().renderingMode(.template)
-                                        .frame(width: 18, height: 18)
-                                        .foregroundColor(Color("ThemeColor"))
+                                VStack {
 
-                            }.frame(width: 20, height: 20)
+                                    Image("ipo").resizable().renderingMode(.template)
+                                            .frame(width: 18, height: 18)
+                                            .foregroundColor(Color("ThemeColor"))
 
-                            Text("IPO").font(.system(size: 11)).foregroundColor(Color("ThemeColor")).padding(.top, 5)
-                        }.frame().padding(.leading, 10)
-                    }
+                                }.frame(width: 20, height: 20)
+
+                                Text("IPO").font(.system(size: 11)).fixedSize()
+                                        .foregroundColor(Color("ThemeColor")).padding(.top, 5)
+                            }.padding(.leading, 10)
+                        }
                 }
 
                 Spacer()
@@ -194,7 +197,9 @@ struct BottomNavBar: View {
 
             }.frame(height: 45)
                     .padding(.top,17)
+                    .padding(.bottom,5)
                     .padding(.horizontal, 25)
                     .background(Color.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
         }
 }

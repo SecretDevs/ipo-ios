@@ -14,7 +14,7 @@ struct MainView: View {
     var body: some View {
         NavigationView{
 
-            VStack{
+            VStack(spacing: 0){
 
                 switch viewRouter.index{
 
@@ -25,25 +25,28 @@ struct MainView: View {
                 case 1:
 
                      LessonsView()
+                     Spacer()
 
                 case 2:
 
                      IPOView()
+                     Spacer()
 
                 case 3:
 
                      NewsView()
+                     Spacer()
 
                 case 4:
 
                      AccountView()
+                     Spacer()
+
 
                 default:
 
                      TransactionsView(viewRouter: viewRouterForTransactions)
                 }
-
-                Spacer()
 
                 BottomNavBar(viewRouter: viewRouter)
 

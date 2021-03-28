@@ -9,8 +9,8 @@ struct TransactionsView: View {
 
 
     var body: some View {
-        VStack{
-            ToggleButtonsView(viewRouter: viewRouter).padding()
+        VStack(spacing: 0){
+            ToggleButtonsView(viewRouter: viewRouter).padding(.horizontal)
 
             switch viewRouter.index {
 
