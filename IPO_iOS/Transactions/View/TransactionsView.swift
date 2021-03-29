@@ -9,31 +9,53 @@ struct TransactionsView: View {
 
 
     var body: some View {
-        VStack(spacing: 0){
-            ToggleButtonsView(viewRouter: viewRouter).padding(.horizontal)
+        NavigationView{
+            VStack(spacing: 0){
+                HStack{
+                    NavigationLink(destination: StatisticsView()){
+                        Image("statistics").resizable().renderingMode(.original)
+                                .frame(width: 32, height: 32)
+                                .padding()
+                    }
+                    Spacer()
+                    Text("Сделки")
+                            .font(.custom("EuclidSquare-Medium", size: 18))
+                    Spacer()
+                    Button(action: {
+                        //TODO
+                    }, label: {
+                        Image("search").resizable().renderingMode(.original)
+                                .frame(width: 21, height: 21)
+                                .padding()
+                    })
+                }
+                ToggleButtonsView(viewRouter: viewRouter).padding(.horizontal)
 
-            switch viewRouter.index {
+                switch viewRouter.index {
 
-            case 0:
+                case 0:
 
-                FavoriteTransactionsView()
+                    FavoriteTransactionsView()
 
-            case 1:
+                case 1:
 
-                IPOTransactionsView()
+                    IPOTransactionsView()
 
-            case 2:
+                case 2:
 
-                SPACTransactionsView()
+                    SPACTransactionsView()
 
-            case 3:
-                DiscountsTransactionsView()
+                case 3:
+                    DiscountsTransactionsView()
 
-            default:
-                FavoriteTransactionsView()
+                default:
+                    FavoriteTransactionsView()
 
+                }
             }
-        }
+                    .background(Color("Background").edgesIgnoringSafeArea(.top))
+                    .navigationBarHidden(true)
+        }.navigationBarHidden(true)
     }
 }
 

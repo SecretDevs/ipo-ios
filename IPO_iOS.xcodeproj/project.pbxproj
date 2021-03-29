@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -23,6 +23,7 @@
 		65044CC20D1CA38658EA8B5F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044027DF9C58A6EFC1ADB1 /* Persistence.swift */; };
 		65044E0C17F8E3D7C1DB9C23 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6504468210FFB191C061B872 /* Preview Assets.xcassets */; };
 		87651165E89B320A22177777 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876514168AA2544CF3F9D170 /* TransactionsView.swift */; };
+		876511A44CA43B39EC228B9F /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651A3112935CFB960D9B5E /* StatisticsView.swift */; };
 		8765147DACF64574090B4A17 /* TransactionCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651D20CFD0E93ED6E31349 /* TransactionCardView.swift */; };
 		87651696579956F7DE304192 /* Status.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8765115CCD368FC0C33BF85F /* Status.swift */; };
 		876518F4668BAE25194A2DEE /* TransactionRiskTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651BAF3C3F97A9B3DC30D1 /* TransactionRiskTag.swift */; };
@@ -90,12 +91,12 @@
 		65044CA13FB3D973ADF9C9E9 /* IPO_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = IPO_iOS.xcdatamodel; sourceTree = "<group>"; };
 		65044F59E42D6B17497986BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		65044FB5737CD8DC3F6214CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
-		CC02534C83469739C0B7CBA1 /* FavoriteTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTransactions.swift; sourceTree = "<group>"; };
 		8765115CCD368FC0C33BF85F /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
 		876514168AA2544CF3F9D170 /* TransactionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
 		876514D3E6784895973FEE33 /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		876515FD50F32E5AC8930BCA /* TransactionStatusTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionStatusTag.swift; sourceTree = "<group>"; };
 		8765179B5A19056AAF216231 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		87651A3112935CFB960D9B5E /* StatisticsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		87651BAF3C3F97A9B3DC30D1 /* TransactionRiskTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionRiskTag.swift; sourceTree = "<group>"; };
 		87651D20CFD0E93ED6E31349 /* TransactionCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCardView.swift; sourceTree = "<group>"; };
 		87651DD77113B63E76F6DE0C /* TriangleDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleDown.swift; sourceTree = "<group>"; };
@@ -111,6 +112,7 @@
 		C364C835260FFDDF0064A697 /* EuclidSquare-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Regular.ttf"; sourceTree = "<group>"; };
 		C364C836260FFDDF0064A697 /* EuclidSquare-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		C364C837260FFDDF0064A697 /* EuclidSquare-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-BoldItalic.ttf"; sourceTree = "<group>"; };
+		CC02534C83469739C0B7CBA1 /* FavoriteTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTransactions.swift; sourceTree = "<group>"; };
 		CC02554868D44D50E1D574DE /* ViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		CC0259686E2A09D9A8C8E1BC /* SPACTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPACTransactions.swift; sourceTree = "<group>"; };
 		CC025974311CF94E513212D1 /* DiscountsTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountsTransactions.swift; sourceTree = "<group>"; };
@@ -181,7 +183,6 @@
 		315F6DAA6F48CDC392721C03 /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
-				315F69829DA4625ACDE3404B /* TransactionsView.swift */,
 				CC0258DBC3EB18A027933A65 /* Transactions */,
 				CC025368AE5B076E6B2F3417 /* ToggleButtons */,
 				CC0258A0D5F11EAB2A882D94 /* ViewRouter */,
@@ -218,6 +219,7 @@
 				315F65AD25B113D8548F88AB /* News */,
 				315F6EBECF2562726E0528D2 /* Account */,
 				87651043E55AF5FAB4AE077C /* Shapes */,
+				87651CB560A816D9680BD417 /* Statistics */,
 			);
 			path = IPO_iOS;
 			sourceTree = "<group>";
@@ -268,6 +270,78 @@
 			path = IPO_iOSTests;
 			sourceTree = "<group>";
 		};
+		87651043E55AF5FAB4AE077C /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				87651EA3EC4B9AD30AB88652 /* TriangleUp.swift */,
+				87651DD77113B63E76F6DE0C /* TriangleDown.swift */,
+				876514D3E6784895973FEE33 /* Star.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		876515304B4F8ED8A5BB07CA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		87651954D74DEBF7EF146DA3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8765179B5A19056AAF216231 /* Transaction.swift */,
+				8765115CCD368FC0C33BF85F /* Status.swift */,
+				87651EACEFAF4CB93560A9D0 /* Risk.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		87651B45FE31424A42A1A2CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				87651A3112935CFB960D9B5E /* StatisticsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		87651C95F27DF44D16143D88 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				876514168AA2544CF3F9D170 /* TransactionsView.swift */,
+				87651D20CFD0E93ED6E31349 /* TransactionCardView.swift */,
+				876515FD50F32E5AC8930BCA /* TransactionStatusTag.swift */,
+				87651BAF3C3F97A9B3DC30D1 /* TransactionRiskTag.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		87651CB560A816D9680BD417 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				876515304B4F8ED8A5BB07CA /* Model */,
+				87651B45FE31424A42A1A2CE /* View */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		C364C82D260FFD7C0064A697 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C364C82F260FFDDF0064A697 /* EuclidSquare-Bold.ttf */,
+				C364C837260FFDDF0064A697 /* EuclidSquare-BoldItalic.ttf */,
+				C364C833260FFDDF0064A697 /* EuclidSquare-Italic.ttf */,
+				C364C832260FFDDF0064A697 /* EuclidSquare-Light.ttf */,
+				C364C830260FFDDF0064A697 /* EuclidSquare-LightItalic.ttf */,
+				C364C82E260FFDDF0064A697 /* EuclidSquare-Medium.ttf */,
+				C364C834260FFDDF0064A697 /* EuclidSquare-MediumItalic.ttf */,
+				C364C835260FFDDF0064A697 /* EuclidSquare-Regular.ttf */,
+				C364C831260FFDDF0064A697 /* EuclidSquare-SemiBold.ttf */,
+				C364C836260FFDDF0064A697 /* EuclidSquare-SemiBoldItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		CC025368AE5B076E6B2F3417 /* ToggleButtons */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,54 +369,6 @@
 			path = Transactions;
 			sourceTree = "<group>";
 		};
-		87651043E55AF5FAB4AE077C /* Shapes */ = {
-			isa = PBXGroup;
-			children = (
-				87651EA3EC4B9AD30AB88652 /* TriangleUp.swift */,
-				87651DD77113B63E76F6DE0C /* TriangleDown.swift */,
-				876514D3E6784895973FEE33 /* Star.swift */,
-			);
-			path = Shapes;
-			sourceTree = "<group>";
-		};
-		87651954D74DEBF7EF146DA3 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				8765179B5A19056AAF216231 /* Transaction.swift */,
-				8765115CCD368FC0C33BF85F /* Status.swift */,
-				87651EACEFAF4CB93560A9D0 /* Risk.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		87651C95F27DF44D16143D88 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				876514168AA2544CF3F9D170 /* TransactionsView.swift */,
-				87651D20CFD0E93ED6E31349 /* TransactionCardView.swift */,
-				876515FD50F32E5AC8930BCA /* TransactionStatusTag.swift */,
-				87651BAF3C3F97A9B3DC30D1 /* TransactionRiskTag.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		C364C82D260FFD7C0064A697 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				C364C82F260FFDDF0064A697 /* EuclidSquare-Bold.ttf */,
-				C364C837260FFDDF0064A697 /* EuclidSquare-BoldItalic.ttf */,
-				C364C833260FFDDF0064A697 /* EuclidSquare-Italic.ttf */,
-				C364C832260FFDDF0064A697 /* EuclidSquare-Light.ttf */,
-				C364C830260FFDDF0064A697 /* EuclidSquare-LightItalic.ttf */,
-				C364C82E260FFDDF0064A697 /* EuclidSquare-Medium.ttf */,
-				C364C834260FFDDF0064A697 /* EuclidSquare-MediumItalic.ttf */,
-				C364C835260FFDDF0064A697 /* EuclidSquare-Regular.ttf */,
-				C364C831260FFDDF0064A697 /* EuclidSquare-SemiBold.ttf */,
-				C364C836260FFDDF0064A697 /* EuclidSquare-SemiBoldItalic.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -359,6 +385,9 @@
 			dependencies = (
 			);
 			name = IPO_iOS;
+			packageProductDependencies = (
+				C36CBE3726114C7000CFE0D7,
+			);
 			productName = IPO_iOS;
 			productReference = 6504421D66C6FE08C915C38C /* IPO_iOS.app */;
 			productType = "com.apple.product-type.application";
@@ -420,6 +449,9 @@
 				en,
 			);
 			mainGroup = 65044346AE75F9F9BD86A7CF;
+			packageReferences = (
+				C36CBE3626114C7000CFE0D7,
+			);
 			productRefGroup = 65044D55ACE57EB961DAE660 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -516,6 +548,7 @@
 				87651FBD3B2DE9CB260F0EA6 /* TriangleUp.swift in Sources */,
 				87651F042F85256769D28262 /* TriangleDown.swift in Sources */,
 				87651A1BBD1648F7C4FC69B3 /* Star.swift in Sources */,
+				876511A44CA43B39EC228B9F /* StatisticsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,7 +578,10 @@
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = IPO_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ONTO.IPO-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -558,7 +594,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IPO_iOS.app/IPO_iOS";
 				INFOPLIST_FILE = IPO_iOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ONTO.IPO-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -572,7 +612,11 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IPO_iOS.app/IPO_iOS";
 				INFOPLIST_FILE = IPO_iOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ONTO.IPO-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -585,7 +629,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = IPO_iOSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ONTO.IPO-iOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -665,7 +713,10 @@
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = IPO_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ONTO.IPO-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -722,7 +773,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -731,7 +783,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				INFOPLIST_FILE = IPO_iOSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ONTO.IPO-iOSUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -780,6 +836,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C36CBE3626114C7000CFE0D7 = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C36CBE3726114C7000CFE0D7 = {
+			isa = XCSwiftPackageProductDependency;
+			package = C36CBE3626114C7000CFE0D7;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		650446A069EEB0AEB04A305A /* IPO_iOS.xcdatamodeld */ = {
