@@ -29,6 +29,7 @@ struct TransactionsView: View {
                                 .padding()
                     })
                 }
+
                 ToggleButtonsView(viewRouter: viewRouter).padding(.horizontal)
 
                 switch viewRouter.index {

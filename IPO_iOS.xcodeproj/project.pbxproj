@@ -183,7 +183,7 @@
 		315F6DAA6F48CDC392721C03 /* Transactions */ = {
 			isa = PBXGroup;
 			children = (
-				CC0258DBC3EB18A027933A65 /* Transactions */,
+				CC0258DBC3EB18A027933A65 /* TransactionsFragment */,
 				CC025368AE5B076E6B2F3417 /* ToggleButtons */,
 				CC0258A0D5F11EAB2A882D94 /* ViewRouter */,
 				87651954D74DEBF7EF146DA3 /* Model */,
@@ -358,7 +358,7 @@
 			path = ViewRouter;
 			sourceTree = "<group>";
 		};
-		CC0258DBC3EB18A027933A65 /* Transactions */ = {
+		CC0258DBC3EB18A027933A65 /* TransactionsFragment */ = {
 			isa = PBXGroup;
 			children = (
 				CC025974311CF94E513212D1 /* DiscountsTransactions.swift */,
@@ -366,7 +366,7 @@
 				CC025F42D3521844AF62C122 /* IPOTransactions.swift */,
 				CC0259686E2A09D9A8C8E1BC /* SPACTransactions.swift */,
 			);
-			path = Transactions;
+			path = TransactionsFragment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
