@@ -116,6 +116,8 @@ struct ToggleButtonsView: View {
 
                             VStack {
                                 HStack {
+                                    Image("lock").resizable().renderingMode(.template)
+                                            .frame(width: 10.91, height: 14).foregroundColor(Color("ThemeColor"))
                                     Text("Акции").font(.system(size: 11)).foregroundColor(Color("ThemeColor"))
                                 }
                             }.frame(width: 100, height: 45)

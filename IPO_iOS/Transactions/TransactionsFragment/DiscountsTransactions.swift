@@ -23,9 +23,9 @@ struct DiscountsTransactionsView: View {
 
                 Text("Но вы можете посмотреть статистику").font(.system(size: 11)).foregroundColor(Color.black).padding(5)
 
-                Button(action: {
 
-                }) {
+                NavigationLink(destination: StatisticsView()){
+
                     HStack {
 
                         Image("analytics_discounts").resizable().renderingMode(.template)
@@ -34,7 +34,9 @@ struct DiscountsTransactionsView: View {
                         Text("Статистика").font(.system(size: 12)).foregroundColor(Color("ThemeColor"))
 
                     }.frame(width: 147, height: 45).background(Color("Grey-2")).clipShape(RoundedRectangle(cornerRadius: 10)).padding(5)
+
                 }
+
 
             }
 
