@@ -222,43 +222,49 @@ public class ChartStyle {
     }
 }
 
-public class ChartData: ObservableObject, Identifiable {
+public class ChartData: ObservableObject/*, Identifiable*/ {
     @Published var points: [(String, Double)]
+    @Published var index : Int
     var valuesGiven: Bool = false
-    var ID = UUID()
+    //var ID = UUID()
 
-    public init<N: BinaryFloatingPoint>(points: [N]) {
+    public init<N: BinaryFloatingPoint>(points: [N], index: Int) {
         self.points = points.map {
             ("", Double($0))
         }
+        self.index = index
     }
 
-    public init<N: BinaryInteger>(values: [(String, N)]) {
+    public init<N: BinaryInteger>(values: [(String, N)], index: Int) {
         self.points = values.map {
             ($0.0, Double($0.1))
         }
         self.valuesGiven = true
+        self.index = index
     }
 
-    public init<N: BinaryFloatingPoint>(values: [(String, N)]) {
+    public init<N: BinaryFloatingPoint>(values: [(String, N)], index: Int) {
         self.points = values.map {
             ($0.0, Double($0.1))
         }
         self.valuesGiven = true
+        self.index = index
     }
 
-    public init<N: BinaryInteger>(numberValues: [(N, N)]) {
+    public init<N: BinaryInteger>(numberValues: [(N, N)], index: Int) {
         self.points = numberValues.map {
             (String($0.0), Double($0.1))
         }
         self.valuesGiven = true
+        self.index = index
     }
 
-    public init<N: BinaryFloatingPoint & LosslessStringConvertible>(numberValues: [(N, N)]) {
+    public init<N: BinaryFloatingPoint & LosslessStringConvertible>(numberValues: [(N, N)], index: Int) {
         self.points = numberValues.map {
             (String($0.0), Double($0.1))
         }
         self.valuesGiven = true
+        self.index = index
     }
 
     public func onlyPoints() -> [Double] {
@@ -266,9 +272,15 @@ public class ChartData: ObservableObject, Identifiable {
             $0.1
         }
     }
+
+    public func setPoints<N: BinaryFloatingPoint>(points: [N]){
+        self.points = points.map {
+            ("", Double($0))
+        }
+    }
 }
 
-public class MultiLineChartData: ChartData {
+/*public class MultiLineChartData: ChartData {
     var gradient: GradientColor
 
     public init<N: BinaryFloatingPoint>(points: [N], gradient: GradientColor) {
@@ -287,15 +299,15 @@ public class MultiLineChartData: ChartData {
 }
 
 public class TestData {
-    static public var data: ChartData = ChartData(points: [37, 72, 51, 22, 39, 47, 66, 85, 50])
+    static public var data: ChartData = ChartData(points: [37, 72, 51, 22, 39, 47, 66, 85, 50], index: 0)
     static public var values: ChartData = ChartData(values: [("2017 Q3", 220),
                                                              ("2017 Q4", 1550),
                                                              ("2018 Q1", 8180),
                                                              ("2018 Q2", 18440),
                                                              ("2018 Q3", 55840),
-                                                             ("2018 Q4", 63150), ("2019 Q1", 50900), ("2019 Q2", 77550), ("2019 Q3", 79600), ("2019 Q4", 92550)])
+                                                             ("2018 Q4", 63150), ("2019 Q1", 50900), ("2019 Q2", 77550), ("2019 Q3", 79600), ("2019 Q4", 92550)], index: 0)
 
-}
+}*/
 
 extension Color {
     init(hexString: String) {
