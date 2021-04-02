@@ -42,7 +42,7 @@ public struct LineChartView: View {
                 dropShadow: Bool? = true,
                 valueSpecifier: String? = "%.1f") {
 
-        self.data = ChartData(points: data)
+        self.data = ChartData(points: data, index: 0)
         self.title = title
         self.legend = legend
         self.style = style

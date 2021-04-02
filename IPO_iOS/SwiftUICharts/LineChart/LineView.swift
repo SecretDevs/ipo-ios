@@ -33,7 +33,7 @@ public struct LineView: View {
                 valueSpecifier: String? = "%.1f",
                 legendSpecifier: String? = "%.2f") {
         
-        self.data = ChartData(points: data)
+        self.data = ChartData(points: data, index: 0)
         self.title = title
         self.legend = legend
         self.style = style
@@ -100,7 +100,7 @@ public struct LineView: View {
                         }
                                 .frame(width: geometry.frame(in: .local).size.width, height: 240)
                                 .offset(x: 0, y: 40 )
-                        MagnifierRect(currentNumber: self.$currentDataNumber, valueSpecifier: self.valueSpecifier)
+                        MagnifierRect(currentNumber: self.$currentDataNumber, valueSpecifier: self.valueSpecifier, height: 260)
                                 .opacity(self.opacity)
                                 .offset(x: self.dragLocation.x - geometry.frame(in: .local).size.width/2, y: 36)
                     }

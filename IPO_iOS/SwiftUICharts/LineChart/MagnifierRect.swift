@@ -10,25 +10,26 @@ import SwiftUI
 public struct MagnifierRect: View {
     @Binding var currentNumber: Double
     var valueSpecifier:String
+    var height: CGFloat
     @Environment(\.colorScheme) var colorScheme: ColorScheme
     public var body: some View {
         ZStack{
             Text("\(self.currentNumber, specifier: valueSpecifier)")
                 .font(.system(size: 18, weight: .bold))
-                .offset(x: 0, y:-110)
+                .offset(x: 0, y: -(self.height / 2) + 20)
                 .foregroundColor(self.colorScheme == .dark ? Color.white : Color.black)
             if (self.colorScheme == .dark ){
                 RoundedRectangle(cornerRadius: 16)
                     .stroke(Color.white, lineWidth: self.colorScheme == .dark ? 2 : 0)
-                    .frame(width: 60, height: 260)
+                    .frame(width: 60, height: self.height)
             }else{
                 RoundedRectangle(cornerRadius: 16)
-                    .frame(width: 60, height: 280)
+                    .frame(width: 60, height: self.height)
                     .foregroundColor(Color.white)
                     .shadow(color: Colors.LegendText, radius: 12, x: 0, y: 6 )
                     .blendMode(.multiply)
             }
         }
-        .offset(x: 0, y: -15)
+        .offset(x: 0, y: -25)
     }
 }

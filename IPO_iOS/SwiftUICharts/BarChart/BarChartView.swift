@@ -148,7 +148,7 @@ public struct BarChartView : View {
     }
 }
 
-#if DEBUG
+/*#if DEBUG
 struct ChartView_Previews : PreviewProvider {
     static var previews: some View {
         BarChartView(data: TestData.values ,
@@ -157,4 +157,4 @@ struct ChartView_Previews : PreviewProvider {
                      valueSpecifier: "%.0f")
     }
 }
-#endif
+#endif*/
