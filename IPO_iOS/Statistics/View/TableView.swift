@@ -85,7 +85,7 @@ struct TableView: View {
                             .font(.custom("EuclidSquare-Regular", fixedSize: 12))
                             .opacity(0)
                     Rectangle()
-                            .fill(Color("Background"))
+                            .fill(Color("Grey-2"))
                             .opacity($0 < completedTransactions.count + 1 ? 1 : 0)
                             .frame(height: 1)
                             .edgesIgnoringSafeArea(.horizontal)

@@ -56,7 +56,7 @@ struct Legend: View {
                         .animation(.easeOut(duration: 0.2))
                         .clipped()
                     Text("$\(self.getYLegendSafe(height: height), specifier: specifier)")
-                            //.font(.custom(self.fontName, 10))
+                            .font(.custom(self.fontName, size: 10))
                             .offset(x: 0, y: self.getYposition(height: height) - (height == 2 ? 15 : 0))
                             .foregroundColor(height < 2 ? otherValuesTextColor : maxValueTextColor)
                             .font(.caption)

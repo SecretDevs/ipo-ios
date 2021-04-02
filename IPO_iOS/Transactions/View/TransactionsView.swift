@@ -20,6 +20,7 @@ struct TransactionsView: View {
                     Spacer()
                     Text("Сделки")
                             .font(.custom("EuclidSquare-Medium", size: 18))
+                            .foregroundColor(Color("Black"))
                     Spacer()
                     Button(action: {
                         //TODO

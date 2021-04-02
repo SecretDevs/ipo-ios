@@ -164,7 +164,6 @@ public struct GraphView: View {
                                                 self.showLegend = false
                                             }
                                 }
-                                //if (self.showLegend) {
                                 Legend(data: self.data,
                                         frame: .constant(CGRect(x: 0, y: 0, width: reader.frame(in: .local).width - 30, height: reader.frame(in: .local).height)),
                                         hideHorizontalLines: self.$hideHorizontalLines,
@@ -177,22 +176,20 @@ public struct GraphView: View {
                                         .transition(.opacity)
                                         .animation(Animation.easeOut(duration: 1).delay(1))
                                         .offset(x: 15, y: 0)
-                                //}
-
                             }
                                     .frame(width: geometry.frame(in: .local).size.width - 40, height: geometry.frame(in: .local).size.height / 3)
 
                             MagnifierRect(currentNumber: self.$currentDataNumber, valueSpecifier: self.valueSpecifier, height: geometry.frame(in: .local).size.height / 3 + 35)
                                     .opacity(self.opacity)
-                                    .offset(x: self.dragLocation.x - geometry.frame(in: .local).size.width / 2, y: 36)
+                                    .offset(x: self.dragLocation.x - geometry.frame(in: .local).size.width / 2 - 20, y: 36)
                         }
                                 .frame(width: geometry.frame(in: .local).size.width - 40, height: geometry.frame(in: .local).size.height / 3 + 20)
                                 .gesture(DragGesture()
                                         .onChanged({ value in
                                             self.dragLocation = value.location
-                                            self.indicatorLocation = CGPoint(x: max(value.location.x - 50, 0), y: 32)
+                                            self.indicatorLocation = CGPoint(x: max(value.location.x - 70, 0), y: 32)
                                             self.opacity = 1
-                                            self.closestPoint = self.getClosestDataPoint(toPoint: value.location, width: geometry.frame(in: .local).size.width - 30, height: geometry.frame(in: .local).size.height / 3)
+                                            self.closestPoint = self.getClosestDataPoint(toPoint: value.location, width: geometry.frame(in: .local).size.width - 70, height: geometry.frame(in: .local).size.height / 3)
                                             self.hideHorizontalLines = true
                                         })
                                         .onEnded({ value in
@@ -209,7 +206,9 @@ public struct GraphView: View {
                         .padding(.top, 20)
                         .padding([.leading, .trailing], 30)
 
-                }.padding()
+                }
+                        .padding([.leading, .trailing])
+                        .padding(.top, 23)
             }
         }
 
@@ -220,7 +219,7 @@ public struct GraphView: View {
         let stepWidth: CGFloat = width / CGFloat(points.count - 1)
         let stepHeight: CGFloat = height / CGFloat(points.max()! + points.min()!)
 
-        let index: Int = Int(floor((toPoint.x - 15) / stepWidth))
+        let index: Int = Int(floor((toPoint.x - 40) / stepWidth))
         if (index >= 0 && index < points.count) {
             self.currentDataNumber = points[index]
             return CGPoint(x: CGFloat(index) * stepWidth, y: CGFloat(points[index]) * stepHeight)
