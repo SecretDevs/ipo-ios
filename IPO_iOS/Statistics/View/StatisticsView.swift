@@ -31,7 +31,6 @@ struct StatisticsView: View {
                 }
             }
                     .padding([.top, .leading, .trailing])
-                    //.padding(.bottom, 23)
             GraphView(data: [12, 5, 6, 9, 1, 20], title: "Рост портфеля", legend: "+74%",
                     style: ChartStyle(
                             backgroundColor: .white,
