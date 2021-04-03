@@ -4,15 +4,26 @@
 
 import Foundation
 
-struct Transaction : Identifiable{
-    var id = UUID().uuidString
-    var title : String
-    var date : String
-    var extraTitle : String
-    var status : Status
-    var risk : Risk
-    var text : String
-    var isFavorite : Bool
+struct Transaction : Codable, Identifiable{
+    let id : Int
+    let title : String
+    let date : String
+    let extraTitle : String
+    let status : Status
+    let risk : Risk
+    let text : String
+    let isFavorite : Bool
+
+    enum CodingKeys: String, CodingKey {
+        case id
+        case title
+        case date
+        case extraTitle
+        case status
+        case risk
+        case text
+        case isFavorite
+    }
 }
 
 var transactions = [
