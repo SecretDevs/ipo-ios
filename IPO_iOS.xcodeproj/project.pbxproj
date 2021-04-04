@@ -63,13 +63,18 @@
 		C364C83F260FFDDF0064A697 /* EuclidSquare-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364C835260FFDDF0064A697 /* EuclidSquare-Regular.ttf */; };
 		C364C840260FFDDF0064A697 /* EuclidSquare-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364C836260FFDDF0064A697 /* EuclidSquare-SemiBoldItalic.ttf */; };
 		C364C841260FFDDF0064A697 /* EuclidSquare-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364C837260FFDDF0064A697 /* EuclidSquare-BoldItalic.ttf */; };
+		CC02511C789FB784413DD140 /* RadioButtonExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0253D7431E10B69903678F /* RadioButtonExp.swift */; };
 		CC02519F4CC7CB3170E8B976 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02554868D44D50E1D574DE /* ViewRouter.swift */; };
+		CC0251A7855D24E844EFC676 /* RadioButtonCapital.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025A5074B3D6CFE14100E1 /* RadioButtonCapital.swift */; };
+		CC0252F8C66E2DBEB60EB0C2 /* MainSurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0258B61C8F792D40E3A185 /* MainSurveyView.swift */; };
 		CC0253432E6795CC73871833 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025F91D3B6110956F3CE10 /* ToggleButton.swift */; };
 		CC02544EA725F02C6775C6F0 /* SPACTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0259686E2A09D9A8C8E1BC /* SPACTransactions.swift */; };
 		CC0254609BC007296299CB27 /* DiscountsTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025974311CF94E513212D1 /* DiscountsTransactions.swift */; };
 		CC0254D6C99EF5E961097354 /* FavoriteTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02534C83469739C0B7CBA1 /* FavoriteTransactions.swift */; };
+		CC0255CDA8972335A3DCC7D5 /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0258939DD968FD582D9F68 /* CheckButton.swift */; };
 		CC02590C1F0CCBF388478233 /* ViewRouterTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025C0A8B01E554D8F25B1C /* ViewRouterTransactions.swift */; };
 		CC025DD32C5B6C2D9138D1F2 /* IPOTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025F42D3521844AF62C122 /* IPOTransactions.swift */; };
+		CC025E92883D9BA86EBAB9C1 /* Age.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025D73903B55967C163A83 /* Age.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,10 +158,15 @@
 		C364C836260FFDDF0064A697 /* EuclidSquare-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		C364C837260FFDDF0064A697 /* EuclidSquare-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-BoldItalic.ttf"; sourceTree = "<group>"; };
 		CC02534C83469739C0B7CBA1 /* FavoriteTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTransactions.swift; sourceTree = "<group>"; };
+		CC0253D7431E10B69903678F /* RadioButtonExp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButtonExp.swift; sourceTree = "<group>"; };
 		CC02554868D44D50E1D574DE /* ViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
+		CC0258939DD968FD582D9F68 /* CheckButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
+		CC0258B61C8F792D40E3A185 /* MainSurveyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSurveyView.swift; sourceTree = "<group>"; };
 		CC0259686E2A09D9A8C8E1BC /* SPACTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPACTransactions.swift; sourceTree = "<group>"; };
 		CC025974311CF94E513212D1 /* DiscountsTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountsTransactions.swift; sourceTree = "<group>"; };
+		CC025A5074B3D6CFE14100E1 /* RadioButtonCapital.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButtonCapital.swift; sourceTree = "<group>"; };
 		CC025C0A8B01E554D8F25B1C /* ViewRouterTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRouterTransactions.swift; sourceTree = "<group>"; };
+		CC025D73903B55967C163A83 /* Age.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Age.swift; sourceTree = "<group>"; };
 		CC025F42D3521844AF62C122 /* IPOTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPOTransactions.swift; sourceTree = "<group>"; };
 		CC025F91D3B6110956F3CE10 /* ToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -261,6 +271,7 @@
 				87651043E55AF5FAB4AE077C /* Shapes */,
 				87651CB560A816D9680BD417 /* Statistics */,
 				87651495C6DFE0CCAF1EF98D /* SwiftUICharts */,
+				CC025A0451690C55A2096072 /* Survey */,
 			);
 			path = IPO_iOS;
 			sourceTree = "<group>";
@@ -442,6 +453,25 @@
 			path = ToggleButtons;
 			sourceTree = "<group>";
 		};
+		CC0255DA8CA621A8B0B41AA1 /* CheckBox */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CheckBox;
+			sourceTree = "<group>";
+		};
+		CC0256983B140C55C132C77F /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				CC0258B61C8F792D40E3A185 /* MainSurveyView.swift */,
+				CC025B27380DE7F45E5C51AC /* RadioButtons */,
+				CC025B6B379A9F969F5FE06C /* CheckButtons */,
+				CC0255DA8CA621A8B0B41AA1 /* CheckBox */,
+				CC025D4A7E64E82CA5BB7039 /* EditText */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
 		CC0258A0D5F11EAB2A882D94 /* ViewRouter */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,6 +489,39 @@
 				CC0259686E2A09D9A8C8E1BC /* SPACTransactions.swift */,
 			);
 			path = TransactionsFragment;
+			sourceTree = "<group>";
+		};
+		CC025A0451690C55A2096072 /* Survey */ = {
+			isa = PBXGroup;
+			children = (
+				CC0256983B140C55C132C77F /* MainScreen */,
+			);
+			path = Survey;
+			sourceTree = "<group>";
+		};
+		CC025B27380DE7F45E5C51AC /* RadioButtons */ = {
+			isa = PBXGroup;
+			children = (
+				CC025A5074B3D6CFE14100E1 /* RadioButtonCapital.swift */,
+				CC0253D7431E10B69903678F /* RadioButtonExp.swift */,
+			);
+			path = RadioButtons;
+			sourceTree = "<group>";
+		};
+		CC025B6B379A9F969F5FE06C /* CheckButtons */ = {
+			isa = PBXGroup;
+			children = (
+				CC0258939DD968FD582D9F68 /* CheckButton.swift */,
+			);
+			path = CheckButtons;
+			sourceTree = "<group>";
+		};
+		CC025D4A7E64E82CA5BB7039 /* EditText */ = {
+			isa = PBXGroup;
+			children = (
+				CC025D73903B55967C163A83 /* Age.swift */,
+			);
+			path = EditText;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -659,6 +722,11 @@
 				876514032971672F5F67F20A /* GraphView.swift in Sources */,
 				8765180D53997DF797E8CA1D /* TableView.swift in Sources */,
 				87651728C41D4E075BA933C7 /* CompletedTransaction.swift in Sources */,
+				CC0252F8C66E2DBEB60EB0C2 /* MainSurveyView.swift in Sources */,
+				CC0251A7855D24E844EFC676 /* RadioButtonCapital.swift in Sources */,
+				CC0255CDA8972335A3DCC7D5 /* CheckButton.swift in Sources */,
+				CC02511C789FB784413DD140 /* RadioButtonExp.swift in Sources */,
+				CC025E92883D9BA86EBAB9C1 /* Age.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
