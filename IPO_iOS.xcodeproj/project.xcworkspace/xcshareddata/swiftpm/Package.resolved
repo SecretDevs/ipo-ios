@@ -2,12 +2,12 @@
   "object": {
     "pins": [
       {
-        "package": "SwiftUICharts",
-        "repositoryURL": "https://github.com/AppPear/ChartView",
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
         "state": {
           "branch": null,
-          "revision": "9115a992c91fa19cbb4f2241084240d38654a1fc",
-          "version": "1.5.5"
+          "revision": "4d19ad82f80cc71ff829b941ded114c56f4f604c",
+          "version": "5.4.2"
         }
       }
     ]

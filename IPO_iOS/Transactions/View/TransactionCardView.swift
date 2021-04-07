@@ -10,17 +10,17 @@ struct TransactionCardView : View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10){
             HStack{
-                Text("#" + transaction.id.prefix(5))
+                Text("#\(transaction.id)")
                         .font(.custom("EuclidSquare-Medium",size: 10))
                         .fontWeight(.medium)
                         .foregroundColor(Color("DarkGrey"))
                 Spacer()
                 HStack{
-                    Text(transaction.date)
+                    Text(transaction.createdAt)
                             .font(.custom("EuclidSquare-Medium",size: 10))
                             .fontWeight(.medium)
                             .foregroundColor(Color("DarkGrey"))
-                    if(transaction.isFavorite){
+                    /*if(transaction.isFavorite){
                         Image("favorite").resizable().renderingMode(.template)
                                 .frame(width: 16, height: 16).foregroundColor(Color("Orange"))
                                 .onTapGesture(perform: {
@@ -32,15 +32,15 @@ struct TransactionCardView : View {
                                 .onTapGesture(perform: {
                                     transaction.isFavorite.toggle()
                                 })
-                    }
+                    }*/
                 }
             }
             HStack{
-                Text(transaction.title)
+                Text(transaction.name)
                         .font(.custom("EuclidSquare-Medium",size: 16))
                         .fontWeight(.medium)
                         .foregroundColor(Color("Black"))
-                Text(transaction.extraTitle)
+                Text(transaction.ticker)
                         .font(.custom("EuclidSquare-Medium",size: 16))
                         .fontWeight(.medium)
                         .foregroundColor(Color("DarkGrey"))
@@ -49,7 +49,7 @@ struct TransactionCardView : View {
                 TransactionStatusTag(status: transaction.status)
                 TransactionRiskTag(risk: transaction.risk)
             }
-            Text(transaction.text)
+            Text(transaction.description)
                     .font(.custom("EuclidSquare-Medium",size: 12))
                     .foregroundColor(Color("Black"))
         }
