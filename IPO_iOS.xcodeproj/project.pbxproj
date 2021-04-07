@@ -41,6 +41,7 @@
 		87651728C41D4E075BA933C7 /* CompletedTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651EE0457F09DF83E1BDF4 /* CompletedTransaction.swift */; };
 		876517BEEB5180365C1F9E10 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876514F6C3B2564DF795630C /* Helpers.swift */; };
 		876517C80FCBD8FB22C261E1 /* BarChartRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651E03D5C5F5070D4DCD32 /* BarChartRow.swift */; };
+		876517E536EB314A818ADD08 /* DropDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651BC7D907D564956AEA64 /* DropDownPicker.swift */; };
 		876517EB93BA12D055173C8A /* PieChartHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876512E41F327527571532BA /* PieChartHelpers.swift */; };
 		8765180D53997DF797E8CA1D /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876514F8883B1E77224C9B8A /* TableView.swift */; };
 		876518F4668BAE25194A2DEE /* TransactionRiskTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651BAF3C3F97A9B3DC30D1 /* TransactionRiskTag.swift */; };
@@ -48,6 +49,7 @@
 		87651A05A92CFA8E2E254DC0 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8765179B5A19056AAF216231 /* Transaction.swift */; };
 		87651A1BBD1648F7C4FC69B3 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876514D3E6784895973FEE33 /* Star.swift */; };
 		87651B3C42965ED927BC532C /* MagnifierRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651479728381B4DC0B7652 /* MagnifierRect.swift */; };
+		87651B6120F916075989E484 /* RegistrationCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876516F9019FA7EFB291E605 /* RegistrationCode.swift */; };
 		87651BCE71B8BA799A9F64C4 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651014FBF97139B3C70A7C /* LabelView.swift */; };
 		87651C9AA4FDB36117463F5F /* Risk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651EACEFAF4CB93560A9D0 /* Risk.swift */; };
 		87651C9BEF43007C1C9D2CA5 /* PieChartRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876516899E4CD257ACFF4DAA /* PieChartRow.swift */; };
@@ -130,6 +132,7 @@
 		876515718018BFBDA40BC77C /* PieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		876515FD50F32E5AC8930BCA /* TransactionStatusTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionStatusTag.swift; sourceTree = "<group>"; };
 		876516899E4CD257ACFF4DAA /* PieChartRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartRow.swift; sourceTree = "<group>"; };
+		876516F9019FA7EFB291E605 /* RegistrationCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationCode.swift; sourceTree = "<group>"; };
 		876517130AC0D9E2F857F833 /* LineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 		876517649CEB2ABE8B68C496 /* BarChartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartCell.swift; sourceTree = "<group>"; };
 		8765179B5A19056AAF216231 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
@@ -137,6 +140,7 @@
 		87651A7482EC304E6808BD8D /* GraphToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphToggleButton.swift; sourceTree = "<group>"; };
 		87651A8624FD5FAD96551C4A /* IndicatorPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorPoint.swift; sourceTree = "<group>"; };
 		87651BAF3C3F97A9B3DC30D1 /* TransactionRiskTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionRiskTag.swift; sourceTree = "<group>"; };
+		87651BC7D907D564956AEA64 /* DropDownPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownPicker.swift; sourceTree = "<group>"; };
 		87651BE300E6BF1F6283B8A0 /* Path+QuadCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Path+QuadCurve.swift"; sourceTree = "<group>"; };
 		87651C3300BDDC81679BDF13 /* LineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		87651D20CFD0E93ED6E31349 /* TransactionCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCardView.swift; sourceTree = "<group>"; };
@@ -374,6 +378,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		87651A8E5882B518B560CAC1 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				876516F9019FA7EFB291E605 /* RegistrationCode.swift */,
+			);
+			path = Registration;
+			sourceTree = "<group>";
+		};
 		87651AB46A34615BFC75A6F1 /* PieChart */ = {
 			isa = PBXGroup;
 			children = (
@@ -459,6 +471,7 @@
 			isa = PBXGroup;
 			children = (
 				CC0252248A96B5FDFA6AC3D4 /* DropDownView.swift */,
+				87651BC7D907D564956AEA64 /* DropDownPicker.swift */,
 			);
 			path = DropDownList;
 			sourceTree = "<group>";
@@ -471,6 +484,7 @@
 				CC025B6B379A9F969F5FE06C /* CheckButtons */,
 				CC0255DA8CA621A8B0B41AA1 /* DropDownList */,
 				CC025D4A7E64E82CA5BB7039 /* EditText */,
+				87651A8E5882B518B560CAC1 /* Registration */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -731,6 +745,8 @@
 				CC02511C789FB784413DD140 /* RadioButtonExp.swift in Sources */,
 				CC025E92883D9BA86EBAB9C1 /* Age.swift in Sources */,
 				CC025B02A180DED1F792C689 /* DropDownView.swift in Sources */,
+				876517E536EB314A818ADD08 /* DropDownPicker.swift in Sources */,
+				87651B6120F916075989E484 /* RegistrationCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

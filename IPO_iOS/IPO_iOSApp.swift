@@ -17,9 +17,9 @@ struct IPO_iOSApp: App {
     var body: some Scene {
         WindowGroup {
 
-            MainSurveyScreen()
-           // MainView(viewRouter: viewRouter, viewRouterForTransactions: viewRouterForTransactions)
-             //   .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            MainSurveyView()
+           //MainView(viewRouter: viewRouter, viewRouterForTransactions: viewRouterForTransactions)
+                //.environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }
