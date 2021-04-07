@@ -8,7 +8,7 @@ import SwiftUI
 struct AgeView : View {
 
 
-    @State var age : String
+    @State var age : String = ""
     @State var less18 : Bool = false
 
 
@@ -17,6 +17,7 @@ struct AgeView : View {
         VStack {
             Text("Сколько вам лет ?").font(.system(size: 16))
                     .fontWeight(.regular).foregroundColor(Color.black).padding(.top, 35)
+                    .multilineTextAlignment(.center)
 
             VStack(alignment: .center, spacing: 1) {
 

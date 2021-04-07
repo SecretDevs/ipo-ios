@@ -13,13 +13,14 @@ struct IPO_iOSApp: App {
     let persistenceController = PersistenceController.shared
     @StateObject var viewRouter: ViewRouter = ViewRouter()
     @StateObject var viewRouterForTransactions: ViewRouterTransactions = ViewRouterTransactions()
+    @StateObject var surveyRouter: SurveyRouter = SurveyRouter()
 
     var body: some Scene {
         WindowGroup {
 
-            MainSurveyView()
-           //MainView(viewRouter: viewRouter, viewRouterForTransactions: viewRouterForTransactions)
-                //.environment(\.managedObjectContext, persistenceController.container.viewContext)
+            MainSurveyView(surveyRouter: surveyRouter)
+           // MainView(viewRouter: viewRouter, viewRouterForTransactions: viewRouterForTransactions)
+             //   .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

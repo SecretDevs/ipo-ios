@@ -28,6 +28,7 @@ struct CheckButtons : View {
             Text("Какие интсрументы вам интересны ?").font(.system(size: 16))
                     .fontWeight(.regular).foregroundColor(Color.black)
                     .padding(.bottom,20)
+                    .multilineTextAlignment(.center)
 
             HStack {
                 lineWithCheckButtons(data: data_first_line).padding(.leading, 35)

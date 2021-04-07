@@ -8,7 +8,7 @@ import SwiftUI
 struct RadioButtonsExp : View {
 
     @State var selected : String = "Менее $10 000"
-    var data : [String]
+    var data : [String] = ["Нет","Меньше 1 года","1-3 года","Более 3 лет"]
 
 
     var body: some View {
@@ -17,6 +17,7 @@ struct RadioButtonsExp : View {
             Text("Какой у вас объем капитала ?").font(.system(size: 16))
                     .fontWeight(.regular).foregroundColor(Color.black)
                     .padding(.bottom,20)
+                    .multilineTextAlignment(.center)
 
             VStack(alignment: .leading, spacing: 1) {
 

@@ -13,35 +13,48 @@ import SwiftUI
 struct MainSurveyView: View {
     var data1 =  ["Менее $10 000","$10 000 - $50 000","$50 000 - $250 000","Более $250 000"]
 
-    var data2 =  ["Нет","Меньше 1 года","1-3 года","Более 3 лет"]
+    @StateObject var surveyRouter : SurveyRouter
     @State private var selectedStrength = "Mild"
     let strengths = ["Mild", "Medium", "Mature"]
 
     var body: some View {
         VStack(alignment: .center) {
 
-            Spacer()
-
             HStack {
+
+                Button(action: {
+
+                    if ( surveyRouter.index > 1) {
+                        surveyRouter.index -= 1
+                    }
+
+                }){
+                    Image("Arrow").resizable().frame(width: 7.5, height: 15)
+                }.padding(.leading,21)
 
                 Spacer()
 
-                Text("Опрос")
+                Text("Опрос").padding(.trailing,33)
 
                 Spacer()
             }.padding(.horizontal)
+            .padding(.top,60)
 
             Spacer()
 
-            Text("2/7").font(.system(size: 12))
+            Text(String(surveyRouter.index)+"/7").font(.system(size: 12))
                     .frame(width: 50,height: 25).background(Color("Grey-2"))
                     .clipShape(RoundedRectangle(cornerRadius: 15)).padding(.vertical,1)
 
-            DropDownPicker()
+            parseView()
 
             Spacer()
 
             Button(action: {
+
+                if (surveyRouter.index < 7) {
+                    surveyRouter.index += 1
+                }
 
             }){
                 Text("Далее").foregroundColor(Color.white).font(.system(size: 12))
@@ -59,5 +72,45 @@ struct MainSurveyView: View {
             Spacer()
 
         }.background(Color("Background")).edgesIgnoringSafeArea(.vertical)
+    }
+
+    func parseView() -> some View{
+        return VStack{
+
+            switch(surveyRouter.index){
+
+            case 1:
+                AgeView()
+
+
+            case 2:
+                RadioButtonsCapital()
+
+
+            case 3:
+                RadioButtonsExp()
+
+
+            case 4:
+                CheckButtons()
+
+
+            case 5:
+                DropDownView()
+
+
+            case 6:
+                RadioButtonsPercents()
+
+
+            case 7:
+                RadioButtonsRisk()
+
+            default:
+                AgeView()
+            }
+
+
+        }.padding(.top, 60)
     }
 }
