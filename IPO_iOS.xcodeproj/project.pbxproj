@@ -73,6 +73,7 @@
 		CC0254D6C99EF5E961097354 /* FavoriteTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02534C83469739C0B7CBA1 /* FavoriteTransactions.swift */; };
 		CC0255CDA8972335A3DCC7D5 /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0258939DD968FD582D9F68 /* CheckButton.swift */; };
 		CC02590C1F0CCBF388478233 /* ViewRouterTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025C0A8B01E554D8F25B1C /* ViewRouterTransactions.swift */; };
+		CC025B02A180DED1F792C689 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0252248A96B5FDFA6AC3D4 /* DropDownView.swift */; };
 		CC025DD32C5B6C2D9138D1F2 /* IPOTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025F42D3521844AF62C122 /* IPOTransactions.swift */; };
 		CC025E92883D9BA86EBAB9C1 /* Age.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025D73903B55967C163A83 /* Age.swift */; };
 /* End PBXBuildFile section */
@@ -157,6 +158,7 @@
 		C364C835260FFDDF0064A697 /* EuclidSquare-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Regular.ttf"; sourceTree = "<group>"; };
 		C364C836260FFDDF0064A697 /* EuclidSquare-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		C364C837260FFDDF0064A697 /* EuclidSquare-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-BoldItalic.ttf"; sourceTree = "<group>"; };
+		CC0252248A96B5FDFA6AC3D4 /* DropDownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
 		CC02534C83469739C0B7CBA1 /* FavoriteTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTransactions.swift; sourceTree = "<group>"; };
 		CC0253D7431E10B69903678F /* RadioButtonExp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButtonExp.swift; sourceTree = "<group>"; };
 		CC02554868D44D50E1D574DE /* ViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
@@ -453,11 +455,12 @@
 			path = ToggleButtons;
 			sourceTree = "<group>";
 		};
-		CC0255DA8CA621A8B0B41AA1 /* CheckBox */ = {
+		CC0255DA8CA621A8B0B41AA1 /* DropDownList */ = {
 			isa = PBXGroup;
 			children = (
+				CC0252248A96B5FDFA6AC3D4 /* DropDownView.swift */,
 			);
-			path = CheckBox;
+			path = DropDownList;
 			sourceTree = "<group>";
 		};
 		CC0256983B140C55C132C77F /* MainScreen */ = {
@@ -466,7 +469,7 @@
 				CC0258B61C8F792D40E3A185 /* MainSurveyView.swift */,
 				CC025B27380DE7F45E5C51AC /* RadioButtons */,
 				CC025B6B379A9F969F5FE06C /* CheckButtons */,
-				CC0255DA8CA621A8B0B41AA1 /* CheckBox */,
+				CC0255DA8CA621A8B0B41AA1 /* DropDownList */,
 				CC025D4A7E64E82CA5BB7039 /* EditText */,
 			);
 			path = MainScreen;
@@ -727,6 +730,7 @@
 				CC0255CDA8972335A3DCC7D5 /* CheckButton.swift in Sources */,
 				CC02511C789FB784413DD140 /* RadioButtonExp.swift in Sources */,
 				CC025E92883D9BA86EBAB9C1 /* Age.swift in Sources */,
+				CC025B02A180DED1F792C689 /* DropDownView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,7 +29,10 @@ struct CheckButtons : View {
                     .fontWeight(.regular).foregroundColor(Color.black)
                     .padding(.bottom,20)
 
-
+            HStack {
+                lineWithCheckButtons(data: data_first_line).padding(.leading, 35)
+                lineWithCheckButtons(data: data_second_line).padding(.leading,25)
+            }
 
 
         }.frame(width: 335, height: 260).background(Color.white)
@@ -38,14 +41,12 @@ struct CheckButtons : View {
     }
 
 
-    func line(data : [String]) -> some View {
-        return VStack(alignment: .leading, spacing: 1) {
+    func lineWithCheckButtons(data : [String]) -> some View {
+        return VStack(alignment: .leading) {
 
             ForEach(data, id: \.self) { i in
 
-                HStack {
 
-                    VStack {
                         Button(action: {
                             if (!(self.selected[i] ?? false)) {
                                 self.selected[i] = true
@@ -56,21 +57,17 @@ struct CheckButtons : View {
 
                             HStack {
 
+
                                 if (self.selected[i] ?? false) {
-                                    Image("by_adress_selected").resizable().aspectRatio(contentMode: .fit)
-                                    Text(i).font(.body).foregroundColor(Color("ThemeColor"))
+                                    Image("Check").resizable().aspectRatio(contentMode: .fit).frame(width: 24, height: 24)
+                                    Text(i).font(.system(size: 14)).foregroundColor(Color("ThemeColor"))
                                 } else {
-                                    Image("by_adress_not_selected").resizable().aspectRatio(contentMode: .fit)
-                                    Text(i).font(.body).foregroundColor(Color(Color.black))
+                                    Image("Uncheck").resizable().aspectRatio(contentMode: .fit).frame(width: 24, height: 24)
+                                    Text(i).font(.system(size: 14)).foregroundColor(Color.black)
                                 }
 
-
-                            }.frame(width: 30, height: 30)
-                        }.padding()
-
-                        Spacer()
-                    }
-
+                                Spacer()
+                            }.frame(width: 120, height: 30)
                 }
             }
         }

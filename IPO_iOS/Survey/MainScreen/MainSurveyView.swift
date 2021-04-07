@@ -37,8 +37,7 @@ struct MainSurveyScreen : View {
                     .clipShape(RoundedRectangle(cornerRadius: 15)).padding(.vertical,1)
 
 
-            AgeView(age: "")
-
+            DropDownView()
             Spacer()
 
             Button(action: {
