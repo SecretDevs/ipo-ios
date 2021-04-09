@@ -7,15 +7,16 @@ import SwiftUI
 
 struct RadioButtonsExp : View {
 
-    @State var selected : String = "Менее $10 000"
+    @StateObject var surveyRouter : SurveyRouter
+    var fontName : String = "EuclidSquare-Medium"
     var data : [String] = ["Нет","Меньше 1 года","1-3 года","Более 3 лет"]
 
 
     var body: some View {
 
         VStack {
-            Text("Какой у вас объем капитала ?").font(.system(size: 16))
-                    .fontWeight(.regular).foregroundColor(Color.black)
+            Text("Какой у вас объем капитала ?").font(.custom(fontName,size: 16))
+                    .foregroundColor(Color.black)
                     .padding(.bottom,20)
                     .multilineTextAlignment(.center)
 
@@ -25,22 +26,22 @@ struct RadioButtonsExp : View {
 
                     Button(action: {
 
-                        self.selected = i
+                        surveyRouter.exp = i
 
                     }) {
 
                         HStack {
 
                             ZStack {
-                                Circle().fill(self.selected == i ? Color("ThemeColor") : Color("Grey-2")).frame(width: 20, height: 20)
+                                Circle().fill(surveyRouter.exp == i ? Color("ThemeColor") : Color("Grey-2")).frame(width: 20, height: 20)
 
-                                if self.selected == i {
+                                if surveyRouter.exp == i {
 
                                     Circle().stroke(Color("Grey-2"), lineWidth: 5).frame(width: 19, height: 19)
                                 }
                             }.padding(.horizontal, 5)
 
-                            if self.selected == i {
+                            if surveyRouter.exp == i {
                                 Text(i).font(.system(size: 12)).foregroundColor(Color("ThemeColor"))
                             }
 

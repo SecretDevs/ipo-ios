@@ -11,11 +11,10 @@ import SwiftUI
 
 
 struct MainSurveyView: View {
-    var data1 =  ["Менее $10 000","$10 000 - $50 000","$50 000 - $250 000","Более $250 000"]
 
+    var fontName : String = "EuclidSquare-Medium"
     @StateObject var surveyRouter : SurveyRouter
-    @State private var selectedStrength = "Mild"
-    let strengths = ["Mild", "Medium", "Mature"]
+    @StateObject var mainScreenRouter : MainScreenRouter
 
     var body: some View {
         VStack(alignment: .center) {
@@ -27,6 +26,9 @@ struct MainSurveyView: View {
                     if ( surveyRouter.index > 1) {
                         surveyRouter.index -= 1
                     }
+                    else {
+                        mainScreenRouter.index -= 1
+                    }
 
                 }){
                     Image("Arrow").resizable().frame(width: 7.5, height: 15)
@@ -34,7 +36,8 @@ struct MainSurveyView: View {
 
                 Spacer()
 
-                Text("Опрос").padding(.trailing,33)
+                Text("Опрос").font(.custom(fontName,size: 19))
+                        .padding(.trailing,33)
 
                 Spacer()
             }.padding(.horizontal)
@@ -50,16 +53,75 @@ struct MainSurveyView: View {
 
             Spacer()
 
-            Button(action: {
 
-                if (surveyRouter.index < 7) {
-                    surveyRouter.index += 1
+
+            if (surveyRouter.index == 1) {
+                if (!surveyRouter.isLess18()) {
+
+                    Button(action: {
+
+                        if (surveyRouter.index < 7) {
+                            surveyRouter.index += 1
+                        }
+
+                    }) {
+                        Text("Далее").foregroundColor(Color.white).font(.system(size: 12))
+                    }.frame(width: 200, height: 45).background(Color("ThemeColor"))
+                            .clipShape(RoundedRectangle(cornerRadius: 15)).padding(.vertical, 5)
+
+
+                } else {
+                    Button(action: {
+
+
+                    }) {
+                        Text("Далее").foregroundColor(Color("DarkGrey")).font(.system(size: 12))
+                    }.frame(width: 200, height: 45).background(Color("Grey-2"))
+                            .clipShape(RoundedRectangle(cornerRadius: 15)).padding(.vertical, 5)
                 }
+            }
 
-            }){
-                Text("Далее").foregroundColor(Color.white).font(.system(size: 12))
-            }.frame(width: 200, height: 45).background(Color("ThemeColor"))
-                    .clipShape(RoundedRectangle(cornerRadius: 15)).padding(.vertical,5)
+            if (surveyRouter.index == 5) {
+                if (surveyRouter.hasChosen()) {
+
+                    Button(action: {
+
+                        if (surveyRouter.index < 7) {
+                            surveyRouter.index += 1
+                        }
+
+                    }) {
+                        Text("Далее").foregroundColor(Color.white).font(.system(size: 12))
+                    }.frame(width: 200, height: 45).background(Color("ThemeColor"))
+                            .clipShape(RoundedRectangle(cornerRadius: 15)).padding(.vertical, 5)
+
+
+                } else {
+                    Button(action: {
+
+
+                    }) {
+                        Text("Далее").foregroundColor(Color("DarkGrey")).font(.system(size: 12))
+                    }.frame(width: 200, height: 45).background(Color("Grey-2"))
+                            .clipShape(RoundedRectangle(cornerRadius: 15)).padding(.vertical, 5)
+                }
+            }
+
+            if ((surveyRouter.index != 5) && (surveyRouter.index != 1)) {
+
+                    Button(action: {
+
+                        if (surveyRouter.index < 7) {
+                            surveyRouter.index += 1
+                        }
+
+                    }) {
+                        Text("Далее").foregroundColor(Color.white).font(.system(size: 12))
+                    }.frame(width: 200, height: 45).background(Color("ThemeColor"))
+                            .clipShape(RoundedRectangle(cornerRadius: 15)).padding(.vertical, 5)
+
+            }
+
 
 
             Button(action: {
@@ -80,34 +142,34 @@ struct MainSurveyView: View {
             switch(surveyRouter.index){
 
             case 1:
-                AgeView()
+                AgeView(surveyRouter: surveyRouter)
 
 
             case 2:
-                RadioButtonsCapital()
+                RadioButtonsCapital(surveyRouter: surveyRouter)
 
 
             case 3:
-                RadioButtonsExp()
+                RadioButtonsExp(surveyRouter: surveyRouter)
 
 
             case 4:
-                CheckButtons()
+                CheckButtons(surveyRouter: surveyRouter)
 
 
             case 5:
-                DropDownView()
+                DropDownPicker(surveyRouter: surveyRouter)
 
 
             case 6:
-                RadioButtonsPercents()
+                RadioButtonsPercents(surveyRouter: surveyRouter)
 
 
             case 7:
-                RadioButtonsRisk()
+                RadioButtonsRisk(surveyRouter: surveyRouter)
 
             default:
-                AgeView()
+                AgeView(surveyRouter: surveyRouter)
             }
 
 

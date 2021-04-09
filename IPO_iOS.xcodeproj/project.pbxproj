@@ -48,7 +48,6 @@
 		87651A05A92CFA8E2E254DC0 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8765179B5A19056AAF216231 /* Transaction.swift */; };
 		87651A1BBD1648F7C4FC69B3 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876514D3E6784895973FEE33 /* Star.swift */; };
 		87651B3C42965ED927BC532C /* MagnifierRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651479728381B4DC0B7652 /* MagnifierRect.swift */; };
-		87651B6120F916075989E484 /* RegistrationCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876516F9019FA7EFB291E605 /* RegistrationCode.swift */; };
 		87651BCE71B8BA799A9F64C4 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651014FBF97139B3C70A7C /* LabelView.swift */; };
 		87651C9AA4FDB36117463F5F /* Risk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651EACEFAF4CB93560A9D0 /* Risk.swift */; };
 		87651C9BEF43007C1C9D2CA5 /* PieChartRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876516899E4CD257ACFF4DAA /* PieChartRow.swift */; };
@@ -73,12 +72,15 @@
 		CC0254D6C99EF5E961097354 /* FavoriteTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02534C83469739C0B7CBA1 /* FavoriteTransactions.swift */; };
 		CC0255703BA7FACFB21F6E4C /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025536D9D47A9ABA98F5E9 /* CheckButton.swift */; };
 		CC0257CC167CE5832A2165C8 /* SurveyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02566479C3545B3DFDE7D8 /* SurveyRouter.swift */; };
+		CC02588F0A594EE7A9253E18 /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0256C859BCBBBF0B15A67E /* MainScreenRouter.swift */; };
 		CC02590C1F0CCBF388478233 /* ViewRouterTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025C0A8B01E554D8F25B1C /* ViewRouterTransactions.swift */; };
 		CC025968427F5EA7FFD7C560 /* Registration.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02595C9B8A8C2D01EBA5D4 /* Registration.swift */; };
 		CC0259C00E0D250453F40417 /* DropDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0258B35BDED5C1A3BD64E6 /* DropDownPicker.swift */; };
 		CC0259FADE5E4257B9359F36 /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0250C2F28530C5AC3B6B6C /* PhoneNumber.swift */; };
 		CC025AC2215ED1E37E3E5641 /* MainSurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025717471AB83E197A9354 /* MainSurveyView.swift */; };
+		CC025AC4DC9A1AEE50C8F447 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025A52DAAAA33702A1CF53 /* MainScreenView.swift */; };
 		CC025AE13F75374DEAF33856 /* RadioButtonPercents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0252DA0DCF22734C387434 /* RadioButtonPercents.swift */; };
+		CC025C69DFF40FB22DDDA7C2 /* RegistrationCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025029E7C25482354B41A3 /* RegistrationCode.swift */; };
 		CC025DD32C5B6C2D9138D1F2 /* IPOTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025F42D3521844AF62C122 /* IPOTransactions.swift */; };
 		CC025F006448FE5B78CD668B /* RadioButtonExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0256E153B0BFF32146646A /* RadioButtonExp.swift */; };
 		CC025F74B9F3917391C47BD5 /* Age.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025E66C7D74D0ED4BCD77F /* Age.swift */; };
@@ -137,7 +139,6 @@
 		876515718018BFBDA40BC77C /* PieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		876515FD50F32E5AC8930BCA /* TransactionStatusTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionStatusTag.swift; sourceTree = "<group>"; };
 		876516899E4CD257ACFF4DAA /* PieChartRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartRow.swift; sourceTree = "<group>"; };
-		876516F9019FA7EFB291E605 /* RegistrationCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationCode.swift; sourceTree = "<group>"; };
 		876517130AC0D9E2F857F833 /* LineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 		876517649CEB2ABE8B68C496 /* BarChartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartCell.swift; sourceTree = "<group>"; };
 		8765179B5A19056AAF216231 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
@@ -166,6 +167,7 @@
 		C364C835260FFDDF0064A697 /* EuclidSquare-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Regular.ttf"; sourceTree = "<group>"; };
 		C364C836260FFDDF0064A697 /* EuclidSquare-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		C364C837260FFDDF0064A697 /* EuclidSquare-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-BoldItalic.ttf"; sourceTree = "<group>"; };
+		CC025029E7C25482354B41A3 /* RegistrationCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationCode.swift; sourceTree = "<group>"; };
 		CC0250C2F28530C5AC3B6B6C /* PhoneNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
 		CC0252DA0DCF22734C387434 /* RadioButtonPercents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButtonPercents.swift; sourceTree = "<group>"; };
 		CC02534C83469739C0B7CBA1 /* FavoriteTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTransactions.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 		CC025536D9D47A9ABA98F5E9 /* CheckButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckButton.swift; sourceTree = "<group>"; };
 		CC02554868D44D50E1D574DE /* ViewRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRouter.swift; sourceTree = "<group>"; };
 		CC02566479C3545B3DFDE7D8 /* SurveyRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyRouter.swift; sourceTree = "<group>"; };
+		CC0256C859BCBBBF0B15A67E /* MainScreenRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenRouter.swift; sourceTree = "<group>"; };
 		CC0256E153B0BFF32146646A /* RadioButtonExp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButtonExp.swift; sourceTree = "<group>"; };
 		CC025717471AB83E197A9354 /* MainSurveyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainSurveyView.swift; sourceTree = "<group>"; };
 		CC0258B35BDED5C1A3BD64E6 /* DropDownPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownPicker.swift; sourceTree = "<group>"; };
@@ -181,6 +184,7 @@
 		CC02595C9B8A8C2D01EBA5D4 /* Registration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Registration.swift; sourceTree = "<group>"; };
 		CC0259686E2A09D9A8C8E1BC /* SPACTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SPACTransactions.swift; sourceTree = "<group>"; };
 		CC025974311CF94E513212D1 /* DiscountsTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountsTransactions.swift; sourceTree = "<group>"; };
+		CC025A52DAAAA33702A1CF53 /* MainScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		CC025C0A8B01E554D8F25B1C /* ViewRouterTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRouterTransactions.swift; sourceTree = "<group>"; };
 		CC025E66C7D74D0ED4BCD77F /* Age.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Age.swift; sourceTree = "<group>"; };
 		CC025F42D3521844AF62C122 /* IPOTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPOTransactions.swift; sourceTree = "<group>"; };
@@ -388,14 +392,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		87651A8E5882B518B560CAC1 /* Registration */ = {
-			isa = PBXGroup;
-			children = (
-				876516F9019FA7EFB291E605 /* RegistrationCode.swift */,
-			);
-			path = Registration;
-			sourceTree = "<group>";
-		};
 		87651AB46A34615BFC75A6F1 /* PieChart */ = {
 			isa = PBXGroup;
 			children = (
@@ -531,6 +527,7 @@
 			children = (
 				CC02595C9B8A8C2D01EBA5D4 /* Registration.swift */,
 				CC02564E75CBFE75C729FDDC /* PhoneNumber */,
+				CC025029E7C25482354B41A3 /* RegistrationCode.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -548,7 +545,8 @@
 			children = (
 				CC02552DDC9E6566773E072D /* Registration */,
 				CC02508F7B2524BE4FA4A4F9 /* Survey */,
-				87651A8E5882B518B560CAC1 /* Registration */,
+				CC025A52DAAAA33702A1CF53 /* MainScreenView.swift */,
+				CC025A36D36E5BE1404E5BB2 /* ViewRouter */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -586,6 +584,14 @@
 				CC0256983B140C55C132C77F /* MainScreen */,
 			);
 			path = Survey;
+			sourceTree = "<group>";
+		};
+		CC025A36D36E5BE1404E5BB2 /* ViewRouter */ = {
+			isa = PBXGroup;
+			children = (
+				CC0256C859BCBBBF0B15A67E /* MainScreenRouter.swift */,
+			);
+			path = ViewRouter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -797,8 +803,10 @@
 				CC0254A90CAF0B26B862AF2E /* RadioButtonRisk.swift in Sources */,
 				CC025AC2215ED1E37E3E5641 /* MainSurveyView.swift in Sources */,
 				CC0257CC167CE5832A2165C8 /* SurveyRouter.swift in Sources */,
-				87651B6120F916075989E484 /* RegistrationCode.swift in Sources */,
 				CC0259C00E0D250453F40417 /* DropDownPicker.swift in Sources */,
+				CC025C69DFF40FB22DDDA7C2 /* RegistrationCode.swift in Sources */,
+				CC025AC4DC9A1AEE50C8F447 /* MainScreenView.swift in Sources */,
+				CC02588F0A594EE7A9253E18 /* MainScreenRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

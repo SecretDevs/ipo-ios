@@ -7,11 +7,12 @@ import Foundation
 import SwiftUI
 
 struct DropDownPicker: View {
+
+    @StateObject var surveyRouter : SurveyRouter
     var fontName : String = "EuclidSquare-Medium"
-    @State private var selection = "Выберите вариант..."
     @State private var isExpanded = false
     @State private var selectedIndex = -1
-    private var variants = ["Сбережение", "Основной доход", "Дополнительный доход"]
+    var variants = ["Сбережение", "Основной доход", "Дополнительный доход"]
     var body: some View {
         ZStack(alignment: .top) {
             VStack {
@@ -28,13 +29,13 @@ struct DropDownPicker: View {
                         .padding(.top, 37)
                         .padding(.horizontal, 25)
                 VStack{
-                    DisclosureGroup("\(selection)", isExpanded: $isExpanded) {
+                    DisclosureGroup("\(surveyRouter.purpose)", isExpanded: $isExpanded) {
                         VStack(spacing: 15){
                             ForEach(0...2, id: \.self){ index in
                                 HStack {
                                     Button(action: {
                                         isExpanded = false
-                                        selection = variants[index]
+                                        surveyRouter.purpose = variants[index]
                                         selectedIndex = index
                                     }) {
                                         Text(variants[index]).foregroundColor(selectedIndex == index ? Color("Blue") : Color("Black"))

@@ -6,7 +6,8 @@ import SwiftUI
 
 struct RadioButtonsRisk : View {
 
-    @State var selected : String = "Меньше 15%"
+    @StateObject var surveyRouter : SurveyRouter
+    var fontName : String = "EuclidSquare-Medium"
     var data_first_line = ["Меньше 15%","До 25%"]
     var data_second_line = ["До 50%","До 100%"]
 
@@ -14,8 +15,8 @@ struct RadioButtonsRisk : View {
     var body: some View {
 
         VStack {
-            Text("Укажите уровень риска с которым вы готовы работать").font(.system(size: 16))
-                    .fontWeight(.regular).foregroundColor(Color.black)
+            Text("Укажите уровень риска с которым вы готовы работать").font(.custom(fontName,size: 16))
+                    .foregroundColor(Color.black)
                     .padding(.bottom,20)
                     .multilineTextAlignment(.center)
 
@@ -36,22 +37,22 @@ struct RadioButtonsRisk : View {
 
                 Button(action: {
 
-                    self.selected = i
+                    surveyRouter.risk = i
 
                 }) {
 
                     HStack {
 
                         ZStack {
-                            Circle().fill(self.selected == i ? Color("ThemeColor") : Color("Grey-2")).frame(width: 20, height: 20)
+                            Circle().fill(surveyRouter.risk == i ? Color("ThemeColor") : Color("Grey-2")).frame(width: 20, height: 20)
 
-                            if self.selected == i {
+                            if surveyRouter.risk == i {
 
                                 Circle().stroke(Color("Grey-2"), lineWidth: 5).frame(width: 19, height: 19)
                             }
                         }.padding(.horizontal, 5)
 
-                        if self.selected == i {
+                        if surveyRouter.risk == i {
                             Text(i).font(.system(size: 12)).foregroundColor(Color("ThemeColor"))
                         }
 

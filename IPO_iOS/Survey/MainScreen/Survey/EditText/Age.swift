@@ -7,16 +7,15 @@ import SwiftUI
 
 struct AgeView : View {
 
-
-    @State var age : String = ""
-    @State var less18 : Bool = false
+    @StateObject var surveyRouter : SurveyRouter
+    var fontName : String = "EuclidSquare-Medium"
 
 
     var body: some View {
 
         VStack {
-            Text("Сколько вам лет ?").font(.system(size: 16))
-                    .fontWeight(.regular).foregroundColor(Color.black).padding(.top, 35)
+            Text("Сколько вам лет ?").font(.custom(fontName,size: 16))
+                    .foregroundColor(Color.black).padding(.top, 35)
                     .multilineTextAlignment(.center)
 
             VStack(alignment: .center, spacing: 1) {
@@ -24,11 +23,11 @@ struct AgeView : View {
                 VStack(alignment: .center) {
 
 
-                    if (!isLess18(age: age)) {
+                    if (!isLess18(age: surveyRouter.age)) {
 
                         VStack(alignment: .leading) {
-                            TextField("", text: $age)
-                                    .textFieldStyle(MyTextFieldStyle(less18: isLess18(age: age)))
+                            TextField("", text: $surveyRouter.age)
+                                    .textFieldStyle(MyTextFieldStyle(less18: isLess18(age: surveyRouter.age)))
                                     .multilineTextAlignment(.center)
                         }.padding(.vertical, 10)
 
@@ -40,8 +39,8 @@ struct AgeView : View {
                     else {
 
                         VStack(alignment: .leading) {
-                            TextField("", text: $age)
-                                    .textFieldStyle(MyTextFieldStyle(less18: isLess18(age: age)))
+                            TextField("", text: $surveyRouter.age)
+                                    .textFieldStyle(MyTextFieldStyle(less18: isLess18(age: surveyRouter.age)))
                                     .multilineTextAlignment(.center)
                             .foregroundColor(Color.red)
                         }.padding(.vertical, 10)
@@ -58,6 +57,32 @@ struct AgeView : View {
         }.frame(width: 335, height: 210).background(Color.white)
                 .clipShape(RoundedRectangle(cornerRadius: 15))
                 .padding(.vertical, 5)
+    }
+
+
+    func isLess18(age : String) -> Bool {
+
+        if (age.isInt){
+
+            if (Int(age) ?? 17 >= 18 ){
+
+               // surveyRouter.less18 = false
+
+                return false
+            }
+            else {
+
+               // surveyRouter.less18 = true
+
+                return true
+            }
+        }
+        else {
+
+            //surveyRouter.less18 = true
+
+            return true
+        }
     }
 }
 
@@ -80,18 +105,4 @@ extension String {
     }
 }
 
-func isLess18(age : String) -> Bool {
 
-    if (age.isInt){
-
-        if (Int(age) ?? 17 >= 18 ){
-            return false
-        }
-        else {
-            return true
-        }
-    }
-    else {
-        return true
-    }
-}

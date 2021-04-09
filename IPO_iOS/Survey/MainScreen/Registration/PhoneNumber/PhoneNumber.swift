@@ -8,6 +8,7 @@ import SwiftUI
 struct PhoneNumberView : View {
 
 
+    var fontName : String = "EuclidSquare-Medium"
     @State var number: String = ""
     @State var isCorrect: Bool = false
     @State var selected: Bool = false
@@ -16,7 +17,7 @@ struct PhoneNumberView : View {
     var body: some View {
 
         VStack {
-            Text("Введите ваш номер телефона").font(.system(size: 16))
+            Text("Введите ваш номер телефона").font(.custom(fontName,size: 16))
                     .fontWeight(.regular).foregroundColor(Color.black).padding(.top, 35)
                     .multilineTextAlignment(.center)
 

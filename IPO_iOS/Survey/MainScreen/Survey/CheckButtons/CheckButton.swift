@@ -7,16 +7,8 @@ import SwiftUI
 
 struct CheckButtons : View {
 
-    @State var selected : [String:Bool] = [
-        "Облигации":false,
-        "Акции":false,
-        "Фьючерсы":false,
-        "Опционы":false,
-        "IPO":false,
-        "Pre-IPO":false,
-        "SPAC":false,
-        "Ресурсы":false,
-    ]
+    @StateObject var surveyRouter : SurveyRouter
+    var fontName : String = "EuclidSquare-Medium"
 
     var data_first_line = ["Облигации","Акции","Фьючерсы","Опционы"]
     var data_second_line = ["IPO","Pre-IPO","SPAC","Ресурсы"]
@@ -25,8 +17,8 @@ struct CheckButtons : View {
     var body: some View {
 
         VStack {
-            Text("Какие интсрументы вам интересны ?").font(.system(size: 16))
-                    .fontWeight(.regular).foregroundColor(Color.black)
+            Text("Какие интсрументы вам интересны ?").font(.custom(fontName,size: 16))
+                    .foregroundColor(Color.black)
                     .padding(.bottom,20)
                     .multilineTextAlignment(.center)
 
@@ -49,17 +41,17 @@ struct CheckButtons : View {
 
 
                         Button(action: {
-                            if (!(self.selected[i] ?? false)) {
-                                self.selected[i] = true
+                            if (!(surveyRouter.instruments[i] ?? false)) {
+                                surveyRouter.instruments[i] = true
                             } else {
-                                self.selected[i] = false
+                                surveyRouter.instruments[i] = false
                             }
                         }) {
 
                             HStack {
 
 
-                                if (self.selected[i] ?? false) {
+                                if (surveyRouter.instruments[i] ?? false) {
                                     Image("Check").resizable().aspectRatio(contentMode: .fit).frame(width: 24, height: 24)
                                     Text(i).font(.system(size: 14)).foregroundColor(Color("ThemeColor"))
                                 } else {
