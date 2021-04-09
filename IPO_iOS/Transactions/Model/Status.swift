@@ -4,8 +4,8 @@
 
 import Foundation
 
-enum Status {
-    case OPEN
-    case CLOSED
-    case AVERAGED
+enum Status : String, Codable{
+    case OPEN = "opened"
+    case CLOSED = "closed"
+    case AVERAGED = "averaged"
 }

@@ -2,10 +2,14 @@
   "object": {
     "pins": [
       {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
         "package": "CodeVerifier",
         "repositoryURL": "https://github.com/posix88/CodeVerifier",
         "state": {
           "branch": null,
+          "revision": "4d19ad82f80cc71ff829b941ded114c56f4f604c",
+          "version": "5.4.2"
           "revision": "d5192bf0025ddfb0c8725638c21e0f0695902609",
           "version": "0.1.0"
         }

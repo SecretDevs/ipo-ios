@@ -24,6 +24,7 @@
 		65044E0C17F8E3D7C1DB9C23 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6504468210FFB191C061B872 /* Preview Assets.xcassets */; };
 		87651165E89B320A22177777 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876514168AA2544CF3F9D170 /* TransactionsView.swift */; };
 		876511A44CA43B39EC228B9F /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651A3112935CFB960D9B5E /* StatisticsView.swift */; };
+		876512150C03EBB18D345208 /* TransactionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651D5E374D5A1573132BD6 /* TransactionsResponse.swift */; };
 		87651254AB3D6CDA360561D2 /* GraphToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651A7482EC304E6808BD8D /* GraphToggleButton.swift */; };
 		8765127576D9152DF631681C /* Legend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876510BD04E5C6747D86B59C /* Legend.swift */; };
 		87651311136CD2C5435BC82C /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651C3300BDDC81679BDF13 /* LineView.swift */; };
@@ -47,10 +48,12 @@
 		876519C01966F06256988122 /* TransactionStatusTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876515FD50F32E5AC8930BCA /* TransactionStatusTag.swift */; };
 		87651A05A92CFA8E2E254DC0 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8765179B5A19056AAF216231 /* Transaction.swift */; };
 		87651A1BBD1648F7C4FC69B3 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876514D3E6784895973FEE33 /* Star.swift */; };
+		87651A385A996DD654505800 /* TransactionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651E0C106B65A56387723C /* TransactionsService.swift */; };
 		87651B3C42965ED927BC532C /* MagnifierRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651479728381B4DC0B7652 /* MagnifierRect.swift */; };
 		87651BCE71B8BA799A9F64C4 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651014FBF97139B3C70A7C /* LabelView.swift */; };
 		87651C9AA4FDB36117463F5F /* Risk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651EACEFAF4CB93560A9D0 /* Risk.swift */; };
 		87651C9BEF43007C1C9D2CA5 /* PieChartRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876516899E4CD257ACFF4DAA /* PieChartRow.swift */; };
+		87651DF096A8B173EEFF8D9C /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8765194D9B7212CE48D1F626 /* TransactionsViewModel.swift */; };
 		87651F042F85256769D28262 /* TriangleDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651DD77113B63E76F6DE0C /* TriangleDown.swift */; };
 		87651FBD3B2DE9CB260F0EA6 /* TriangleUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651EA3EC4B9AD30AB88652 /* TriangleUp.swift */; };
 		C364C838260FFDDF0064A697 /* EuclidSquare-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364C82E260FFDDF0064A697 /* EuclidSquare-Medium.ttf */; };
@@ -145,6 +148,7 @@
 		876517130AC0D9E2F857F833 /* LineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 		876517649CEB2ABE8B68C496 /* BarChartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartCell.swift; sourceTree = "<group>"; };
 		8765179B5A19056AAF216231 /* Transaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		8765194D9B7212CE48D1F626 /* TransactionsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsViewModel.swift; sourceTree = "<group>"; };
 		87651A3112935CFB960D9B5E /* StatisticsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		87651A7482EC304E6808BD8D /* GraphToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphToggleButton.swift; sourceTree = "<group>"; };
 		87651A8624FD5FAD96551C4A /* IndicatorPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorPoint.swift; sourceTree = "<group>"; };
@@ -153,10 +157,12 @@
 		87651C3300BDDC81679BDF13 /* LineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		87651D20CFD0E93ED6E31349 /* TransactionCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCardView.swift; sourceTree = "<group>"; };
 		87651D48E73BD0A5D3B54F43 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphView.swift; path = IPO_iOS/SwiftUICharts/LineChart/GraphView.swift; sourceTree = SOURCE_ROOT; };
+		87651D5E374D5A1573132BD6 /* TransactionsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsResponse.swift; sourceTree = "<group>"; };
 		87651DAABB8E240157B4BE22 /* BarChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		87651DD77113B63E76F6DE0C /* TriangleDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleDown.swift; sourceTree = "<group>"; };
 		87651DEFDEEA36EFED8F21E7 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		87651E03D5C5F5070D4DCD32 /* BarChartRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartRow.swift; sourceTree = "<group>"; };
+		87651E0C106B65A56387723C /* TransactionsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsService.swift; sourceTree = "<group>"; };
 		87651EA3EC4B9AD30AB88652 /* TriangleUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleUp.swift; sourceTree = "<group>"; };
 		87651EACEFAF4CB93560A9D0 /* Risk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Risk.swift; sourceTree = "<group>"; };
 		87651EE0457F09DF83E1BDF4 /* CompletedTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedTransaction.swift; sourceTree = "<group>"; };
@@ -264,6 +270,8 @@
 				CC0258A0D5F11EAB2A882D94 /* ViewRouter */,
 				87651954D74DEBF7EF146DA3 /* Model */,
 				87651C95F27DF44D16143D88 /* View */,
+				87651E1221CD45349FAEA8B7 /* ViewModel */,
+				87651833A887BD13CD561C2F /* API */,
 			);
 			path = Transactions;
 			sourceTree = "<group>";
@@ -388,12 +396,21 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		87651833A887BD13CD561C2F /* API */ = {
+			isa = PBXGroup;
+			children = (
+				87651E0C106B65A56387723C /* TransactionsService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		87651954D74DEBF7EF146DA3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				8765179B5A19056AAF216231 /* Transaction.swift */,
 				8765115CCD368FC0C33BF85F /* Status.swift */,
 				87651EACEFAF4CB93560A9D0 /* Risk.swift */,
+				87651D5E374D5A1573132BD6 /* TransactionsResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -438,6 +455,14 @@
 				87651B45FE31424A42A1A2CE /* View */,
 			);
 			path = Statistics;
+			sourceTree = "<group>";
+		};
+		87651E1221CD45349FAEA8B7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8765194D9B7212CE48D1F626 /* TransactionsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		87651E2253D8F18A68DE9CEE /* LineChart */ = {
@@ -628,7 +653,7 @@
 			);
 			name = IPO_iOS;
 			packageProductDependencies = (
-				C3B039C8261E2D8100A9D8AE,
+				C3B039A726193D3B00A9D8AE,
 			);
 			productName = IPO_iOS;
 			productReference = 6504421D66C6FE08C915C38C /* IPO_iOS.app */;
@@ -692,7 +717,7 @@
 			);
 			mainGroup = 65044346AE75F9F9BD86A7CF;
 			packageReferences = (
-				C3B039C7261E2D8100A9D8AE,
+				C3B039A626193D3B00A9D8AE,
 			);
 			productRefGroup = 65044D55ACE57EB961DAE660 /* Products */;
 			projectDirPath = "";
@@ -829,6 +854,9 @@
 				CC0256DF09CFED3EF5B960FF /* RegistrationCode.swift in Sources */,
 				CC02507B6D8374D0D1D3D49D /* CodeView.swift in Sources */,
 				CC0253713EFD9AC1B5377181 /* CodeRouter.swift in Sources */,
+				87651DF096A8B173EEFF8D9C /* TransactionsViewModel.swift in Sources */,
+				87651A385A996DD654505800 /* TransactionsService.swift in Sources */,
+				876512150C03EBB18D345208 /* TransactionsResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1133,6 +1161,25 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C3B039C7261E2D8100A9D8AE;
 			productName = CodeVerifier;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C3B039A626193D3B00A9D8AE = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C3B039A726193D3B00A9D8AE = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3B039A626193D3B00A9D8AE;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 

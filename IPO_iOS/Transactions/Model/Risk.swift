@@ -4,8 +4,8 @@
 
 import Foundation
 
-enum Risk {
-    case HIGH
-    case MIDDLE
-    case LOW
+enum Risk : String, Codable{
+    case HIGH = "Высокий"
+    case MIDDLE = "Средний"
+    case LOW = "Низкий"
 }
