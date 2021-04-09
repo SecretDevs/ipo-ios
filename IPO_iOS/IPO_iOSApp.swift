@@ -13,11 +13,17 @@ struct IPO_iOSApp: App {
     let persistenceController = PersistenceController.shared
     @StateObject var viewRouter: ViewRouter = ViewRouter()
     @StateObject var viewRouterForTransactions: ViewRouterTransactions = ViewRouterTransactions()
+    @StateObject var mainScreenRouter : MainScreenRouter = MainScreenRouter()
 
     var body: some Scene {
         WindowGroup {
 
-            MainScreenView(mainScreenRouter: mainScreenRouter)
+            let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
+            if launchedBefore  {
+                MainView(viewRouter: viewRouter,viewRouterForTransactions: viewRouterForTransactions)
+            } else {
+                MainScreenView(mainScreenRouter: mainScreenRouter)
+            }
            // MainView(viewRouter: viewRouter, viewRouterForTransactions: viewRouterForTransactions)
              //   .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }

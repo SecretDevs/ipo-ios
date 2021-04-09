@@ -19,41 +19,49 @@ struct MainSurveyView: View {
     var body: some View {
         VStack(alignment: .center) {
 
-            HStack {
+            VStack {
+                HStack {
 
-                Button(action: {
+                    Button(action: {
 
-                    if ( surveyRouter.index > 1) {
-                        surveyRouter.index -= 1
-                    }
-                    else {
-                        mainScreenRouter.index -= 1
-                    }
+                        if (surveyRouter.index > 1) {
+                            surveyRouter.index -= 1
+                        } else {
+                            mainScreenRouter.index -= 1
+                        }
 
-                }){
-                    Image("Arrow").resizable().frame(width: 7.5, height: 15)
-                }.padding(.leading,21)
+                    }) {
+                        Image("Arrow").resizable().frame(width: 7.5, height: 15)
+                    }.padding(.leading, 21)
+
+                    Spacer()
+
+                    Text("Опрос").font(.custom(fontName, size: 19))
+                            .padding(.trailing, 33)
+
+                    Spacer()
+                }.padding(.horizontal)
+                        .padding(.top, 60)
 
                 Spacer()
 
-                Text("Опрос").font(.custom(fontName,size: 19))
-                        .padding(.trailing,33)
+                if (surveyRouter.index != 5) {
+                    Text(String(surveyRouter.index) + "/7").font(.system(size: 12))
+                            .frame(width: 50, height: 25).background(Color("Grey-2"))
+                            .clipShape(RoundedRectangle(cornerRadius: 15)).padding(.vertical, 1)
+                }
+                else {
+
+                    Text(String(surveyRouter.index) + "/7").font(.system(size: 12))
+                            .frame(width: 50, height: 25).background(Color("Grey-2"))
+                            .clipShape(RoundedRectangle(cornerRadius: 15)).padding(.top,65)
+                }
+
+                parseView()
 
                 Spacer()
-            }.padding(.horizontal)
-            .padding(.top,60)
 
-            Spacer()
-
-            Text(String(surveyRouter.index)+"/7").font(.system(size: 12))
-                    .frame(width: 50,height: 25).background(Color("Grey-2"))
-                    .clipShape(RoundedRectangle(cornerRadius: 15)).padding(.vertical,1)
-
-            parseView()
-
-            Spacer()
-
-
+            }.frame(height: 640)
 
             if (surveyRouter.index == 1) {
                 if (!surveyRouter.isLess18()) {
@@ -114,6 +122,9 @@ struct MainSurveyView: View {
                         if (surveyRouter.index < 7) {
                             surveyRouter.index += 1
                         }
+                        else{
+                            mainScreenRouter.index += 1
+                        }
 
                     }) {
                         Text("Далее").foregroundColor(Color.white).font(.system(size: 12))
@@ -125,7 +136,7 @@ struct MainSurveyView: View {
 
 
             Button(action: {
-
+                mainScreenRouter.index = 4
             }){
                 Text("Пройти тест позже").foregroundColor(Color("ThemeColor")).font(.system(size: 12))
             }.frame(width: 200, height: 45).background(Color("Grey-2"))
@@ -158,7 +169,7 @@ struct MainSurveyView: View {
 
 
             case 5:
-                DropDownPicker(surveyRouter: surveyRouter)
+                DropDownPicker(surveyRouter: surveyRouter).padding(.top,65)
 
 
             case 6:

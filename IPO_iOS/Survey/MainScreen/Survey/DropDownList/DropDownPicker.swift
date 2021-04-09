@@ -57,9 +57,10 @@ struct DropDownPicker: View {
                                             .stroke(Color("Grey-2"), lineWidth: 2))
                 }.padding(.top, 41)
                 Spacer()
-            }.frame(width: 335, height: 341)
+            }.frame(width: 335, height: 321)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
         }
                 .padding(.vertical, 5)
+
     }
 }

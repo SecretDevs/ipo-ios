@@ -63,16 +63,18 @@
 		C364C83F260FFDDF0064A697 /* EuclidSquare-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364C835260FFDDF0064A697 /* EuclidSquare-Regular.ttf */; };
 		C364C840260FFDDF0064A697 /* EuclidSquare-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364C836260FFDDF0064A697 /* EuclidSquare-SemiBoldItalic.ttf */; };
 		C364C841260FFDDF0064A697 /* EuclidSquare-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364C837260FFDDF0064A697 /* EuclidSquare-BoldItalic.ttf */; };
-		C3B039C9261E2D8100A9D8AE /* CodeVerifier in Frameworks */ = {isa = PBXBuildFile; productRef = C3B039C8261E2D8100A9D8AE /* CodeVerifier */; };
-		CC02511C789FB784413DD140 /* RadioButtonExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0253D7431E10B69903678F /* RadioButtonExp.swift */; };
+		CC02507B6D8374D0D1D3D49D /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025077B8A8B1FC24E2C9EB /* CodeView.swift */; };
+		CC0250CD92D02F8F240C44F2 /* RegistrationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025106184A958CAF6CEE61 /* RegistrationRouter.swift */; };
 		CC02519F4CC7CB3170E8B976 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02554868D44D50E1D574DE /* ViewRouter.swift */; };
 		CC02526544BE54644E494022 /* RadioButtonCapital.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025914E7D57D5D64A1C0D5 /* RadioButtonCapital.swift */; };
 		CC0253432E6795CC73871833 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025F91D3B6110956F3CE10 /* ToggleButton.swift */; };
+		CC0253713EFD9AC1B5377181 /* CodeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02508A56E340B246447C53 /* CodeRouter.swift */; };
 		CC02544EA725F02C6775C6F0 /* SPACTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0259686E2A09D9A8C8E1BC /* SPACTransactions.swift */; };
 		CC0254609BC007296299CB27 /* DiscountsTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025974311CF94E513212D1 /* DiscountsTransactions.swift */; };
 		CC0254A90CAF0B26B862AF2E /* RadioButtonRisk.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0253D864C8537137412AE5 /* RadioButtonRisk.swift */; };
 		CC0254D6C99EF5E961097354 /* FavoriteTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02534C83469739C0B7CBA1 /* FavoriteTransactions.swift */; };
 		CC0255703BA7FACFB21F6E4C /* CheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025536D9D47A9ABA98F5E9 /* CheckButton.swift */; };
+		CC0256DF09CFED3EF5B960FF /* RegistrationCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025D37B2602B5826D1E7D5 /* RegistrationCode.swift */; };
 		CC0257CC167CE5832A2165C8 /* SurveyRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02566479C3545B3DFDE7D8 /* SurveyRouter.swift */; };
 		CC02588F0A594EE7A9253E18 /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0256C859BCBBBF0B15A67E /* MainScreenRouter.swift */; };
 		CC02590C1F0CCBF388478233 /* ViewRouterTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025C0A8B01E554D8F25B1C /* ViewRouterTransactions.swift */; };
@@ -82,7 +84,6 @@
 		CC025AC2215ED1E37E3E5641 /* MainSurveyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025717471AB83E197A9354 /* MainSurveyView.swift */; };
 		CC025AC4DC9A1AEE50C8F447 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025A52DAAAA33702A1CF53 /* MainScreenView.swift */; };
 		CC025AE13F75374DEAF33856 /* RadioButtonPercents.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0252DA0DCF22734C387434 /* RadioButtonPercents.swift */; };
-		CC025C69DFF40FB22DDDA7C2 /* RegistrationCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025029E7C25482354B41A3 /* RegistrationCode.swift */; };
 		CC025DD32C5B6C2D9138D1F2 /* IPOTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025F42D3521844AF62C122 /* IPOTransactions.swift */; };
 		CC025F006448FE5B78CD668B /* RadioButtonExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0256E153B0BFF32146646A /* RadioButtonExp.swift */; };
 		CC025F74B9F3917391C47BD5 /* Age.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025E66C7D74D0ED4BCD77F /* Age.swift */; };
@@ -169,8 +170,10 @@
 		C364C835260FFDDF0064A697 /* EuclidSquare-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-Regular.ttf"; sourceTree = "<group>"; };
 		C364C836260FFDDF0064A697 /* EuclidSquare-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		C364C837260FFDDF0064A697 /* EuclidSquare-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "EuclidSquare-BoldItalic.ttf"; sourceTree = "<group>"; };
-		CC025029E7C25482354B41A3 /* RegistrationCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationCode.swift; sourceTree = "<group>"; };
+		CC025077B8A8B1FC24E2C9EB /* CodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
+		CC02508A56E340B246447C53 /* CodeRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeRouter.swift; sourceTree = "<group>"; };
 		CC0250C2F28530C5AC3B6B6C /* PhoneNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
+		CC025106184A958CAF6CEE61 /* RegistrationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationRouter.swift; sourceTree = "<group>"; };
 		CC0252DA0DCF22734C387434 /* RadioButtonPercents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButtonPercents.swift; sourceTree = "<group>"; };
 		CC02534C83469739C0B7CBA1 /* FavoriteTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTransactions.swift; sourceTree = "<group>"; };
 		CC0253D864C8537137412AE5 /* RadioButtonRisk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButtonRisk.swift; sourceTree = "<group>"; };
@@ -188,6 +191,7 @@
 		CC025974311CF94E513212D1 /* DiscountsTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscountsTransactions.swift; sourceTree = "<group>"; };
 		CC025A52DAAAA33702A1CF53 /* MainScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		CC025C0A8B01E554D8F25B1C /* ViewRouterTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRouterTransactions.swift; sourceTree = "<group>"; };
+		CC025D37B2602B5826D1E7D5 /* RegistrationCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationCode.swift; sourceTree = "<group>"; };
 		CC025E66C7D74D0ED4BCD77F /* Age.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Age.swift; sourceTree = "<group>"; };
 		CC025F42D3521844AF62C122 /* IPOTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPOTransactions.swift; sourceTree = "<group>"; };
 		CC025F91D3B6110956F3CE10 /* ToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
@@ -212,7 +216,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3B039C9261E2D8100A9D8AE /* CodeVerifier in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,7 +533,7 @@
 			children = (
 				CC02595C9B8A8C2D01EBA5D4 /* Registration.swift */,
 				CC02564E75CBFE75C729FDDC /* PhoneNumber */,
-				CC025029E7C25482354B41A3 /* RegistrationCode.swift */,
+				CC025106184A958CAF6CEE61 /* RegistrationRouter.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -550,6 +553,7 @@
 				CC02508F7B2524BE4FA4A4F9 /* Survey */,
 				CC025A52DAAAA33702A1CF53 /* MainScreenView.swift */,
 				CC025A36D36E5BE1404E5BB2 /* ViewRouter */,
+				CC025BF09E92599FD4CEDBB0 /* Code */,
 			);
 			path = MainScreen;
 			sourceTree = "<group>";
@@ -597,6 +601,16 @@
 			path = ViewRouter;
 			sourceTree = "<group>";
 		};
+		CC025BF09E92599FD4CEDBB0 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+				CC025D37B2602B5826D1E7D5 /* RegistrationCode.swift */,
+				CC025077B8A8B1FC24E2C9EB /* CodeView.swift */,
+				CC02508A56E340B246447C53 /* CodeRouter.swift */,
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -614,7 +628,7 @@
 			);
 			name = IPO_iOS;
 			packageProductDependencies = (
-				C3B039C8261E2D8100A9D8AE /* CodeVerifier */,
+				C3B039C8261E2D8100A9D8AE,
 			);
 			productName = IPO_iOS;
 			productReference = 6504421D66C6FE08C915C38C /* IPO_iOS.app */;
@@ -678,7 +692,7 @@
 			);
 			mainGroup = 65044346AE75F9F9BD86A7CF;
 			packageReferences = (
-				C3B039C7261E2D8100A9D8AE /* XCRemoteSwiftPackageReference "CodeVerifier" */,
+				C3B039C7261E2D8100A9D8AE,
 			);
 			productRefGroup = 65044D55ACE57EB961DAE660 /* Products */;
 			projectDirPath = "";
@@ -809,9 +823,12 @@
 				CC025AC2215ED1E37E3E5641 /* MainSurveyView.swift in Sources */,
 				CC0257CC167CE5832A2165C8 /* SurveyRouter.swift in Sources */,
 				CC0259C00E0D250453F40417 /* DropDownPicker.swift in Sources */,
-				CC025C69DFF40FB22DDDA7C2 /* RegistrationCode.swift in Sources */,
 				CC025AC4DC9A1AEE50C8F447 /* MainScreenView.swift in Sources */,
 				CC02588F0A594EE7A9253E18 /* MainScreenRouter.swift in Sources */,
+				CC0250CD92D02F8F240C44F2 /* RegistrationRouter.swift in Sources */,
+				CC0256DF09CFED3EF5B960FF /* RegistrationCode.swift in Sources */,
+				CC02507B6D8374D0D1D3D49D /* CodeView.swift in Sources */,
+				CC0253713EFD9AC1B5377181 /* CodeRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1101,7 +1118,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C3B039C7261E2D8100A9D8AE /* XCRemoteSwiftPackageReference "CodeVerifier" */ = {
+		C3B039C7261E2D8100A9D8AE = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/posix88/CodeVerifier";
 			requirement = {
@@ -1112,9 +1129,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C3B039C8261E2D8100A9D8AE /* CodeVerifier */ = {
+		C3B039C8261E2D8100A9D8AE = {
 			isa = XCSwiftPackageProductDependency;
-			package = C3B039C7261E2D8100A9D8AE /* XCRemoteSwiftPackageReference "CodeVerifier" */;
+			package = C3B039C7261E2D8100A9D8AE;
 			productName = CodeVerifier;
 		};
 /* End XCSwiftPackageProductDependency section */

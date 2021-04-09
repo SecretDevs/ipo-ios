@@ -8,6 +8,10 @@ import SwiftUI
 struct MainScreenView: View{
 
     @StateObject var surveyRouter: SurveyRouter = SurveyRouter()
+    @StateObject var codeRouter: CodeRouter = CodeRouter()
+    @StateObject var viewRouter: ViewRouter = ViewRouter()
+    @StateObject var viewRouterForTrascatons: ViewRouterTransactions = ViewRouterTransactions()
+    @StateObject var registrationRouter: RegistrationRouter = RegistrationRouter()
 
 
     @StateObject var mainScreenRouter : MainScreenRouter
@@ -16,13 +20,20 @@ struct MainScreenView: View{
             switch (mainScreenRouter.index) {
 
             case 1:
-                Registration(mainScreenRouter: mainScreenRouter)
+                Registration(registrationRouter: registrationRouter, mainScreenRouter: mainScreenRouter)
 
             case 2:
+                CodeView(codeRouter: codeRouter,mainScreenRouter: mainScreenRouter)
+
+            case 3:
                 MainSurveyView(surveyRouter: surveyRouter, mainScreenRouter: mainScreenRouter)
 
+            case 4:
+                MainView(viewRouter: viewRouter, viewRouterForTransactions: viewRouterForTrascatons)
+
+
             default:
-                Registration(mainScreenRouter: mainScreenRouter)
+                Registration(registrationRouter: registrationRouter,mainScreenRouter: mainScreenRouter)
             }
         }
     }

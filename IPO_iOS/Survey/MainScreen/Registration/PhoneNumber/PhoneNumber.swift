@@ -8,10 +8,9 @@ import SwiftUI
 struct PhoneNumberView : View {
 
 
+    @StateObject var registrationRouter : RegistrationRouter
     var fontName : String = "EuclidSquare-Medium"
-    @State var number: String = ""
     @State var isCorrect: Bool = false
-    @State var selected: Bool = false
 
 
     var body: some View {
@@ -28,7 +27,7 @@ struct PhoneNumberView : View {
 
 
                         VStack(alignment: .leading) {
-                            TextField("", text: $number)
+                            TextField("", text: $registrationRouter.number)
                                     .textFieldStyle(MyTextFieldStyleForNumber())
                                     .multilineTextAlignment(.center)
                         }.padding(.vertical, 10)
@@ -39,14 +38,14 @@ struct PhoneNumberView : View {
                     HStack {
                             Button(action: {
 
-                                if (!(self.selected)) {
-                                    self.selected = true
+                                if (!(registrationRouter.checked)) {
+                                    registrationRouter.checked = true
                                 } else {
-                                    self.selected = false
+                                    registrationRouter.checked = false
                                 }
 
                             }) {
-                                if (selected){
+                                if (registrationRouter.checked){
                                     Image("Check").resizable().aspectRatio(contentMode: .fit).frame(width: 24, height: 24)
                                     Text("Я ознакомлен с условиями и принимаю их").font(.system(size: 12))
                                             .foregroundColor(Color("ThemeColor"))

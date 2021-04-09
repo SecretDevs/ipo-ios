@@ -7,6 +7,7 @@ import SwiftUI
 
 struct PasscodeField: View {
 
+    @StateObject var codeRouter : CodeRouter
     var maxDigits: Int = 4
     var label = "Введите 4-х значный код"
     var rightPin: String = "1234"
@@ -74,8 +75,10 @@ struct PasscodeField: View {
             isDisabled = true
 
             if (pin == rightPin){
+                codeRouter.isRight = true
                 state = PinState.CORRECT
             } else {
+                codeRouter.isRight = false
                 state = PinState.INCORRECT
             }
         }
