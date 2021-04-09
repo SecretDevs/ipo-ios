@@ -169,7 +169,7 @@ struct MainSurveyView: View {
 
 
             case 5:
-                DropDownPicker(surveyRouter: surveyRouter).padding(.top,65)
+                DropDownPicker(surveyRouter: surveyRouter).padding(.top,5)
 
 
             case 6:

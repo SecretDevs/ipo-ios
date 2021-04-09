@@ -9,10 +9,12 @@ import SwiftUI
 struct DropDownPicker: View {
 
     @StateObject var surveyRouter : SurveyRouter
-    var fontName : String = "EuclidSquare-Medium"
     @State private var isExpanded = false
     @State private var selectedIndex = -1
+
+    var fontName : String = "EuclidSquare-Medium"
     var variants = ["Сбережение", "Основной доход", "Дополнительный доход"]
+
     var body: some View {
         ZStack(alignment: .top) {
             VStack {
@@ -60,7 +62,7 @@ struct DropDownPicker: View {
             }.frame(width: 335, height: 321)
                     .clipShape(RoundedRectangle(cornerRadius: 15))
         }
-                .padding(.vertical, 5)
+                //.padding(.vertical, 5)
 
     }
 }
