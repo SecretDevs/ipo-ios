@@ -11,6 +11,7 @@ struct DropDownPicker: View {
     @State private var isExpanded = false
     @State private var selectedIndex = -1
     private var variants = ["Сбережение", "Основной доход", "Дополнительный доход"]
+
     var body: some View {
         ZStack(alignment: .top) {
             VStack {

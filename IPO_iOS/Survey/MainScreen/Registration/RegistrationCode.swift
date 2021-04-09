@@ -5,41 +5,53 @@
 import Foundation
 import SwiftUI
 
-public struct RegistrationCode: View {
+struct PasscodeField: View {
 
-    var maxDigits: Int = 6
-    var label = "Enter One Time Password"
+    var maxDigits: Int = 4
+    var label = "Введите 4-х значный код"
+    var rightPin: String = "1234"
+    var telephone = "+7 999 123-45-56"
+
     @State var pin: String = ""
-    @State var showPin = true
-    var handler: (String, (Bool) -> Void) -> Void
+    @State var isDisabled = false
+    @State var state : PinState = PinState.NOT_COMPLETED
+
     public var body: some View {
-        VStack {
-            Text(label).font(.title)
+        VStack(spacing: 27) {
+            Text(label)
+                    .font(.custom("EuclidSquare-Regular", fixedSize: 16))
+                    .foregroundColor(Color("Black"))
             ZStack {
                 pinDots
                 backgroundField
             }
+            Text("Код был отправлен на номер \(telephone)")
+                    .font(.custom("EuclidSquare-Regular", fixedSize: 12))
+                    .foregroundColor(Color("DarkGrey"))
         }
+                .frame(width: 335, height: 210)
+                .background(Color.white)
+                .clipShape(RoundedRectangle(cornerRadius: 15))
+                .padding(.vertical, 5)
+
     }
+
     private var pinDots: some View {
         HStack {
             Spacer()
             ForEach(0..<maxDigits) { index in
-                Image(systemName: self.getImageName(at: index))
-                        .font(.system(size: 60, weight: .thin, design: .default))
+                Text(self.getSymbol(at: index))
+                        .font(.custom("EuclidSquare-Regular", fixedSize: 16))
+                        .foregroundColor(Color(state == .NOT_COMPLETED ? "Blue" : (state == .CORRECT ? "Green" : "Red")))
+                        .padding(.vertical, 12)
+                        .padding(.horizontal, 18)
+                        .frame(width: 45, height: 45)
+                        .overlay(
+                                RoundedRectangle(cornerRadius: 10)
+                                        .stroke(Color(state == .NOT_COMPLETED ? (index == self.pin.count ? "Blue" : "Grey-2") : (state == .CORRECT ? "Green" : "Red")), lineWidth: 1))
                 Spacer()
             }
         }
-    }
-
-    private func getImageName(at index: Int) -> String {
-        if index >= self.pin.count {
-            return "square"
-        }
-        if self.showPin {
-            return self.pin.digits[index].numberString + ".square"
-        }
-        return "square"
     }
 
     private var backgroundField: some View {
@@ -52,42 +64,52 @@ public struct RegistrationCode: View {
                 .accentColor(.clear)
                 .foregroundColor(.clear)
                 .keyboardType(.numberPad)
-    }
+                .disabled(isDisabled)
 
-
-    private var showPinButton: some View {
-        Button(action: {
-            self.showPin.toggle()
-        }, label: {
-            self.showPin ?
-                    Image(systemName: "eye.slash.fill").foregroundColor(.primary) :
-                    Image(systemName: "eye.fill").foregroundColor(.primary)
-        })
     }
 
     private func submitPin() {
+
         if pin.count == maxDigits {
-            handler(pin) { isSuccess in
-                if isSuccess {
-                    print("pin matched, go to next page, no action to perfrom here")
-                } else {
-                    pin = ""
-                    print("this has to called after showing toast why is the failure")
-                }
+            isDisabled = true
+
+            if (pin == rightPin){
+                state = PinState.CORRECT
+            } else {
+                state = PinState.INCORRECT
             }
         }
+
+        // this code is never reached under  normal circumstances. If the user pastes a text with count higher than the
+        // max digits, we remove the additional characters and make a recursive call.
+        if pin.count > maxDigits {
+            pin = String(pin.prefix(maxDigits))
+            submitPin()
+        }
+    }
+
+    private func getSymbol(at index: Int) -> String {
+        if index < self.pin.count {
+            return self.pin.digits[index].numberString
+        }
+        return " "
     }
 }
+
 extension String {
+
     var digits: [Int] {
         var result = [Int]()
+
         for char in self {
             if let number = Int(String(char)) {
                 result.append(number)
             }
         }
+
         return result
     }
+
 }
 
 extension Int {
@@ -98,4 +120,10 @@ extension Int {
 
         return String(self)
     }
+}
+
+enum PinState {
+    case NOT_COMPLETED
+    case CORRECT
+    case INCORRECT
 }
