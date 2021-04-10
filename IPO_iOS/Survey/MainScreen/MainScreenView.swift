@@ -26,7 +26,7 @@ struct MainScreenView: View{
                 CodeView(registrationRouter: registrationRouter,codeRouter: codeRouter,mainScreenRouter: mainScreenRouter)
 
             case 3:
-                MainSurveyView(surveyRouter: surveyRouter, mainScreenRouter: mainScreenRouter)
+                MainSurveyView(surveyRouter: surveyRouter, registrationRouter: registrationRouter, mainScreenRouter: mainScreenRouter)
 
             case 4:
                 MainView(viewRouter: viewRouter, viewRouterForTransactions: viewRouterForTrascatons)

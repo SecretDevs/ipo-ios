@@ -67,6 +67,7 @@
 		CC0250CD92D02F8F240C44F2 /* RegistrationRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025106184A958CAF6CEE61 /* RegistrationRouter.swift */; };
 		CC02519F4CC7CB3170E8B976 /* ViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02554868D44D50E1D574DE /* ViewRouter.swift */; };
 		CC02526544BE54644E494022 /* RadioButtonCapital.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025914E7D57D5D64A1C0D5 /* RadioButtonCapital.swift */; };
+		CC02529AE772064DD3A61E6C /* localStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02533141B13DEF87CB1D42 /* localStorage.swift */; };
 		CC0253432E6795CC73871833 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025F91D3B6110956F3CE10 /* ToggleButton.swift */; };
 		CC0253713EFD9AC1B5377181 /* CodeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02508A56E340B246447C53 /* CodeRouter.swift */; };
 		CC02544EA725F02C6775C6F0 /* SPACTransactions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0259686E2A09D9A8C8E1BC /* SPACTransactions.swift */; };
@@ -175,6 +176,7 @@
 		CC0250C2F28530C5AC3B6B6C /* PhoneNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneNumber.swift; sourceTree = "<group>"; };
 		CC025106184A958CAF6CEE61 /* RegistrationRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationRouter.swift; sourceTree = "<group>"; };
 		CC0252DA0DCF22734C387434 /* RadioButtonPercents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButtonPercents.swift; sourceTree = "<group>"; };
+		CC02533141B13DEF87CB1D42 /* localStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = localStorage.swift; sourceTree = "<group>"; };
 		CC02534C83469739C0B7CBA1 /* FavoriteTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteTransactions.swift; sourceTree = "<group>"; };
 		CC0253D864C8537137412AE5 /* RadioButtonRisk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButtonRisk.swift; sourceTree = "<group>"; };
 		CC02550E74A1AD7135D9D6A8 /* DropDownView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				87651CB560A816D9680BD417 /* Statistics */,
 				87651495C6DFE0CCAF1EF98D /* SwiftUICharts */,
 				CC025A0451690C55A2096072 /* Survey */,
+				CC02533141B13DEF87CB1D42 /* localStorage.swift */,
 			);
 			path = IPO_iOS;
 			sourceTree = "<group>";
@@ -831,6 +834,7 @@
 				CC0256DF09CFED3EF5B960FF /* RegistrationCode.swift in Sources */,
 				CC02507B6D8374D0D1D3D49D /* CodeView.swift in Sources */,
 				CC0253713EFD9AC1B5377181 /* CodeRouter.swift in Sources */,
+				CC02529AE772064DD3A61E6C /* localStorage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
