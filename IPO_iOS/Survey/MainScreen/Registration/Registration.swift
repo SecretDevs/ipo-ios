@@ -54,8 +54,7 @@ struct Registration: View {
 
                 Button(action: {
                     mainScreenRouter.index += 1
-                    print(parameters)
-                    mainScreenRouter.phone = String(registrationRouter.number.phoneNumber)
+                    mainScreenRouter.phone = registrationRouter.number.phoneNumber
                     registrationViewModel.requestCode(parameters: parameters)
                 }) {
 

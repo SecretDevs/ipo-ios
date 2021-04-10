@@ -4,7 +4,7 @@
 
 import Foundation
 import SwiftUI
-
+import Alamofire
 
 class RegistrationRouter : ObservableObject {
 

@@ -7,11 +7,6 @@ import Foundation
 extension String {
 
     var phoneNumber: String {
-        print(self
-                .replacingOccurrences(of: "+", with: "")
-                .replacingOccurrences(of: " ", with: "")
-                .replacingOccurrences(of: "-", with: "")
-        )
         return self
                 .replacingOccurrences(of: "+", with: "")
                 .replacingOccurrences(of: " ", with: "")
