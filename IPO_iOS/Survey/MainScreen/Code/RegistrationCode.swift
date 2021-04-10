@@ -8,10 +8,10 @@ import SwiftUI
 struct PasscodeField: View {
 
     @StateObject var codeRouter : CodeRouter
+    @StateObject var registrationRouter : RegistrationRouter
     var maxDigits: Int = 4
     var label = "Введите 4-х значный код"
     var rightPin: String = "1234"
-    var telephone = "+7 999 123-45-56"
 
     @State var pin: String = ""
     @State var isDisabled = false
@@ -26,7 +26,7 @@ struct PasscodeField: View {
                 pinDots
                 backgroundField
             }
-            Text("Код был отправлен на номер \(telephone)")
+            Text("Код был отправлен на номер \(registrationRouter.number)")
                     .font(.custom("EuclidSquare-Regular", fixedSize: 12))
                     .foregroundColor(Color("DarkGrey"))
         }

@@ -4,6 +4,8 @@
 
 import Foundation
 import SwiftUI
+import iPhoneNumberField
+
 
 struct PhoneNumberView : View {
 
@@ -11,6 +13,7 @@ struct PhoneNumberView : View {
     @StateObject var registrationRouter : RegistrationRouter
     var fontName : String = "EuclidSquare-Medium"
     @State var isCorrect: Bool = false
+    @State var isEditing: Bool = false
 
 
     var body: some View {
@@ -27,9 +30,30 @@ struct PhoneNumberView : View {
 
 
                         VStack(alignment: .leading) {
-                            TextField("", text: $registrationRouter.number)
-                                    .textFieldStyle(MyTextFieldStyleForNumber())
-                                    .multilineTextAlignment(.center)
+                            ZStack {
+                                if (!isEditing) {
+                                    Text("+7 999 123-45-67").foregroundColor(Color("DarkGrey"))
+                                }
+                                else {
+                                    Text("")
+                                }
+
+                                iPhoneNumberField("+7 999 123-45-67", text: $registrationRouter.number, isEditing: $isEditing)
+                                        .onReturn(perform: { _ in
+                                            isCorrect = registrationRouter.isCorrect()
+                                        })
+                                        .foregroundColor((isEditing ? registrationRouter.isCorrect() ? Color("ThemeColor") : Color.red : Color.black))
+                                        .multilineTextAlignment(.center)
+                                        .prefixHidden(false)
+                                        .padding(10)
+                                        .background(
+                                                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                                        .stroke((isEditing ? registrationRouter.isCorrect() ? Color("ThemeColor") : Color.red : Color("Grey-2")), lineWidth: 1)
+                                        ).padding()
+
+
+                            }
+
                         }.padding(.vertical, 10)
 
 
@@ -67,16 +91,5 @@ struct PhoneNumberView : View {
                 .clipShape(RoundedRectangle(cornerRadius: 15))
                 .padding(.vertical, 5)
     }
-}
 
-
-struct MyTextFieldStyleForNumber: TextFieldStyle {
-    func _body(configuration: TextField<Self._Label>) -> some View {
-        configuration
-                .padding(10)
-                .background(
-                        RoundedRectangle(cornerRadius: 10, style: .continuous)
-                                .stroke(Color("Grey-2"), lineWidth: 1)
-                ).padding()
-    }
 }

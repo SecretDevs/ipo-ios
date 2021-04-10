@@ -18,8 +18,8 @@ struct IPO_iOSApp: App {
     var body: some Scene {
         WindowGroup {
 
-            let launchedBefore = UserDefaults.standard.bool(forKey: "launchedBefore")
-            if launchedBefore  {
+            let localStorage : LocalStorage = LocalStorage()
+            if (localStorage.getFromLocalStorage() == "visited")  {
                 MainView(viewRouter: viewRouter,viewRouterForTransactions: viewRouterForTransactions)
             } else {
                 MainScreenView(mainScreenRouter: mainScreenRouter)

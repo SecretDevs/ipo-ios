@@ -4,21 +4,14 @@
 
 import Foundation
 import SwiftUI
-
-
-
-//
-// Created by JelliedFish on 04.04.2021.
-//
-
-
-import Foundation
-import SwiftUI
 import Alamofire
+
+
 
 struct CodeView: View {
 
     @ObservedObject var codeViewModel = CodeViewModel()
+    @StateObject var registrationRouter : RegistrationRouter
     @StateObject var codeRouter : CodeRouter
     @StateObject var mainScreenRouter : MainScreenRouter
 
@@ -54,7 +47,7 @@ struct CodeView: View {
 
             Spacer()
 
-            PasscodeField(codeRouter: codeRouter).padding(.top,60)
+            PasscodeField(codeRouter: codeRouter, registrationRouter: registrationRouter).padding(.top,60)
 
             Spacer()
 
@@ -94,6 +87,7 @@ struct CodeView: View {
                 Button(action: {
 
                     mainScreenRouter.index += 1
+
                 }) {
                     Text("Далее").foregroundColor(Color("DarkGrey")).font(.system(size: 12))
                 }.frame(width: 200, height: 45).background(Color("Grey-2"))

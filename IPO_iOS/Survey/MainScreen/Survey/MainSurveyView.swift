@@ -14,7 +14,9 @@ struct MainSurveyView: View {
 
     var fontName : String = "EuclidSquare-Medium"
     @StateObject var surveyRouter : SurveyRouter
+    @StateObject var registrationRouter : RegistrationRouter
     @StateObject var mainScreenRouter : MainScreenRouter
+    var localStorage : LocalStorage = LocalStorage()
 
     var body: some View {
         VStack(alignment: .center) {
@@ -123,6 +125,7 @@ struct MainSurveyView: View {
                             surveyRouter.index += 1
                         }
                         else{
+                            localStorage.setToLocalStorage()
                             mainScreenRouter.index += 1
                         }
 
@@ -136,6 +139,7 @@ struct MainSurveyView: View {
 
 
             Button(action: {
+                localStorage.setToLocalStorage()
                 mainScreenRouter.index = 4
             }){
                 Text("Пройти тест позже").foregroundColor(Color("ThemeColor")).font(.system(size: 12))
