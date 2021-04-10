@@ -629,6 +629,7 @@
 			name = IPO_iOS;
 			packageProductDependencies = (
 				C3B039C8261E2D8100A9D8AE,
+				16642F0B26210A1800665ADC,
 			);
 			productName = IPO_iOS;
 			productReference = 6504421D66C6FE08C915C38C /* IPO_iOS.app */;
@@ -693,6 +694,7 @@
 			mainGroup = 65044346AE75F9F9BD86A7CF;
 			packageReferences = (
 				C3B039C7261E2D8100A9D8AE,
+				16642F0A26210A1800665ADC,
 			);
 			productRefGroup = 65044D55ACE57EB961DAE660 /* Products */;
 			projectDirPath = "";
@@ -1118,6 +1120,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		16642F0A26210A1800665ADC = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MojtabaHs/iPhoneNumberField.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.1;
+			};
+		};
 		C3B039C7261E2D8100A9D8AE = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/posix88/CodeVerifier";
@@ -1129,6 +1139,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		16642F0B26210A1800665ADC = {
+			isa = XCSwiftPackageProductDependency;
+			package = 16642F0A26210A1800665ADC;
+			productName = iPhoneNumberField;
+		};
 		C3B039C8261E2D8100A9D8AE = {
 			isa = XCSwiftPackageProductDependency;
 			package = C3B039C7261E2D8100A9D8AE;

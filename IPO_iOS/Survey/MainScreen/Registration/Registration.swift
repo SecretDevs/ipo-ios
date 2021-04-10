@@ -2,13 +2,6 @@
 // Created by JelliedFish on 08.04.2021.
 //
 
-//
-// Created by JelliedFish on 04.04.2021.
-//
-
-//
-// Created by JelliedFish on 03.04.2021.
-//
 
 import Foundation
 import SwiftUI
@@ -53,7 +46,7 @@ struct Registration : View {
 
             Spacer()
 
-            if (registrationRouter.checked) {
+            if ((registrationRouter.checked) && (registrationRouter.isCorrect())) {
 
                 Button(action: {
 

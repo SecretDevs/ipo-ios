@@ -6,18 +6,9 @@ import Foundation
 import SwiftUI
 
 
-
-//
-// Created by JelliedFish on 04.04.2021.
-//
-
-
-import Foundation
-import SwiftUI
-
-
 struct CodeView: View {
 
+    @StateObject var registrationRouter : RegistrationRouter
     @StateObject var codeRouter : CodeRouter
     var fontName : String = "EuclidSquare-Medium"
     @StateObject var mainScreenRouter : MainScreenRouter
@@ -46,7 +37,7 @@ struct CodeView: View {
 
             Spacer()
 
-            PasscodeField(codeRouter: codeRouter).padding(.top,60)
+            PasscodeField(codeRouter: codeRouter, registrationRouter: registrationRouter).padding(.top,60)
 
             Spacer()
 

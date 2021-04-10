@@ -23,7 +23,7 @@ struct MainScreenView: View{
                 Registration(registrationRouter: registrationRouter, mainScreenRouter: mainScreenRouter)
 
             case 2:
-                CodeView(codeRouter: codeRouter,mainScreenRouter: mainScreenRouter)
+                CodeView(registrationRouter: registrationRouter,codeRouter: codeRouter,mainScreenRouter: mainScreenRouter)
 
             case 3:
                 MainSurveyView(surveyRouter: surveyRouter, mainScreenRouter: mainScreenRouter)
