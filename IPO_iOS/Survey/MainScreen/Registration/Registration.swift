@@ -18,7 +18,7 @@ struct Registration: View {
     var fontName: String = "EuclidSquare-Medium"
     var parameters : Parameters {
         [
-            "phone_number": Int(registrationRouter.number) ?? 0
+            "phone_number": registrationRouter.number.phoneNumber
         ]
     }
 
@@ -54,7 +54,8 @@ struct Registration: View {
 
                 Button(action: {
                     mainScreenRouter.index += 1
-                    mainScreenRouter.phone = registrationRouter.number
+                    print(parameters)
+                    mainScreenRouter.phone = String(registrationRouter.number.phoneNumber)
                     registrationViewModel.requestCode(parameters: parameters)
                 }) {
 

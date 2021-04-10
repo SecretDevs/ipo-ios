@@ -60,6 +60,7 @@
 		87651C9AA4FDB36117463F5F /* Risk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651EACEFAF4CB93560A9D0 /* Risk.swift */; };
 		87651C9BEF43007C1C9D2CA5 /* PieChartRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876516899E4CD257ACFF4DAA /* PieChartRow.swift */; };
 		87651DF096A8B173EEFF8D9C /* TransactionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8765194D9B7212CE48D1F626 /* TransactionsViewModel.swift */; };
+		87651E16929B5BF46825B664 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651642A697A745628FC641 /* Utils.swift */; };
 		87651F042F85256769D28262 /* TriangleDown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651DD77113B63E76F6DE0C /* TriangleDown.swift */; };
 		87651FBD3B2DE9CB260F0EA6 /* TriangleUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651EA3EC4B9AD30AB88652 /* TriangleUp.swift */; };
 		C364C838260FFDDF0064A697 /* EuclidSquare-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C364C82E260FFDDF0064A697 /* EuclidSquare-Medium.ttf */; };
@@ -153,6 +154,7 @@
 		876514F8883B1E77224C9B8A /* TableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		876515718018BFBDA40BC77C /* PieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		876515FD50F32E5AC8930BCA /* TransactionStatusTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionStatusTag.swift; sourceTree = "<group>"; };
+		87651642A697A745628FC641 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		876516899E4CD257ACFF4DAA /* PieChartRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartRow.swift; sourceTree = "<group>"; };
 		876517130AC0D9E2F857F833 /* LineChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
 		876517649CEB2ABE8B68C496 /* BarChartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartCell.swift; sourceTree = "<group>"; };
@@ -322,6 +324,7 @@
 				CC025A0451690C55A2096072 /* Survey */,
 				CC02533141B13DEF87CB1D42 /* localStorage.swift */,
 				8765146E13542D73B68FEDC7 /* API */,
+				8765114A29F66E999D086992 /* Utils */,
 			);
 			path = IPO_iOS;
 			sourceTree = "<group>";
@@ -380,6 +383,14 @@
 				876514D3E6784895973FEE33 /* Star.swift */,
 			);
 			path = Shapes;
+			sourceTree = "<group>";
+		};
+		8765114A29F66E999D086992 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				87651642A697A745628FC641 /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		876512D481706F5BFCC9514E /* API */ = {
@@ -723,7 +734,8 @@
 			name = IPO_iOS;
 			packageProductDependencies = (
 				C3B4F1B52620B8BE006A184F,
-				C3B4F1BF2620C07C006A184F,
+				C3AB59B826221EF500035AE3,
+				C3AB59BE26221F5E00035AE3,
 			);
 			productName = IPO_iOS;
 			productReference = 6504421D66C6FE08C915C38C /* IPO_iOS.app */;
@@ -787,8 +799,8 @@
 			);
 			mainGroup = 65044346AE75F9F9BD86A7CF;
 			packageReferences = (
-				C3B4F1B42620B8BE006A184F,
-				C3B4F1BE2620C07C006A184F,
+				C3AB59B726221EF500035AE3,
+				C3AB59BD26221F5E00035AE3,
 			);
 			productRefGroup = 65044D55ACE57EB961DAE660 /* Products */;
 			projectDirPath = "";
@@ -935,6 +947,7 @@
 				8765178A1046F0023974B12C /* TokenAnswer.swift in Sources */,
 				876517BFF0078E0FF545361F /* CodeViewModel.swift in Sources */,
 				CC02529AE772064DD3A61E6C /* localStorage.swift in Sources */,
+				87651E16929B5BF46825B664 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1224,15 +1237,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		16642F0A26210A1800665ADC = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/MojtabaHs/iPhoneNumberField.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.6.1;
-			};
-		};
-		C3B039C7261E2D8100A9D8AE = {
+		C3AB59B726221EF500035AE3 = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -1240,31 +1245,30 @@
 				minimumVersion = 5.4.2;
 			};
 		};
-		C3B4F1BE2620C07C006A184F = {
+		C3AB59BD26221F5E00035AE3 = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			repositoryURL = "https://github.com/MojtabaHs/iPhoneNumberField.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.1;
+				minimumVersion = 0.6.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		16642F0B26210A1800665ADC = {
+		C3AB59B826221EF500035AE3 = {
 			isa = XCSwiftPackageProductDependency;
-			package = 16642F0A26210A1800665ADC;
+			package = C3AB59B726221EF500035AE3;
+			productName = Alamofire;
+		};
+		C3AB59BE26221F5E00035AE3 = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3AB59BD26221F5E00035AE3;
 			productName = iPhoneNumberField;
 		};
 		C3B4F1B52620B8BE006A184F = {
 			isa = XCSwiftPackageProductDependency;
-			package = C3B4F1B42620B8BE006A184F;
 			productName = Alamofire;
-		};
-		C3B4F1BF2620C07C006A184F = {
-			isa = XCSwiftPackageProductDependency;
-			package = C3B4F1BE2620C07C006A184F;
-			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
 

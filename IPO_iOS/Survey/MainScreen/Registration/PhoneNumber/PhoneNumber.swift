@@ -11,10 +11,10 @@ struct PhoneNumberView : View {
 
 
     @StateObject var registrationRouter : RegistrationRouter
-    var fontName : String = "EuclidSquare-Medium"
     @State var isCorrect: Bool = false
     @State var isEditing: Bool = false
 
+    var fontName : String = "EuclidSquare-Medium"
 
     var body: some View {
 
