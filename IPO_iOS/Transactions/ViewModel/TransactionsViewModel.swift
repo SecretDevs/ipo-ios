@@ -8,14 +8,13 @@ import Combine
 class TransactionsViewModel : ObservableObject {
     @Published var transactions : [Transaction] = []
     var cancellation: AnyCancellable?
-    let service = TransactionsService()
 
     init() {
         fetchTransactions()
     }
 
     func fetchTransactions() {
-        cancellation = service.fetch()
+        cancellation = TransactionsAPI.fetch(nil)
                 .mapError({ (error) -> Error in
                     print(error)
                     return error

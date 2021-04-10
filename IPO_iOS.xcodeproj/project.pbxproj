@@ -23,10 +23,12 @@
 		65044CC20D1CA38658EA8B5F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044027DF9C58A6EFC1ADB1 /* Persistence.swift */; };
 		65044E0C17F8E3D7C1DB9C23 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6504468210FFB191C061B872 /* Preview Assets.xcassets */; };
 		87651165E89B320A22177777 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876514168AA2544CF3F9D170 /* TransactionsView.swift */; };
+		8765117DEA8265E61B63C048 /* AccountAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651E118F34403E29991EB1 /* AccountAPI.swift */; };
 		876511A44CA43B39EC228B9F /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651A3112935CFB960D9B5E /* StatisticsView.swift */; };
 		876512150C03EBB18D345208 /* TransactionsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651D5E374D5A1573132BD6 /* TransactionsResponse.swift */; };
 		87651254AB3D6CDA360561D2 /* GraphToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651A7482EC304E6808BD8D /* GraphToggleButton.swift */; };
 		8765127576D9152DF631681C /* Legend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876510BD04E5C6747D86B59C /* Legend.swift */; };
+		8765130F9055DD6EB615D5D2 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651D308FC5212B1DAD9081 /* Answer.swift */; };
 		87651311136CD2C5435BC82C /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651C3300BDDC81679BDF13 /* LineView.swift */; };
 		876513B423E84BB481760218 /* BarChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876517649CEB2ABE8B68C496 /* BarChartCell.swift */; };
 		876514032971672F5F67F20A /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651D48E73BD0A5D3B54F43 /* GraphView.swift */; };
@@ -40,15 +42,19 @@
 		876516FC1BAD482992D76A92 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651DAABB8E240157B4BE22 /* BarChartView.swift */; };
 		87651723D45A6541C8AC52AB /* Path+QuadCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651BE300E6BF1F6283B8A0 /* Path+QuadCurve.swift */; };
 		87651728C41D4E075BA933C7 /* CompletedTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651EE0457F09DF83E1BDF4 /* CompletedTransaction.swift */; };
+		8765178A1046F0023974B12C /* TokenAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651CD67773FE3897C3D297 /* TokenAnswer.swift */; };
 		876517BEEB5180365C1F9E10 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876514F6C3B2564DF795630C /* Helpers.swift */; };
+		876517BFF0078E0FF545361F /* CodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651209C91A8B49616CAAC0 /* CodeViewModel.swift */; };
 		876517C80FCBD8FB22C261E1 /* BarChartRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651E03D5C5F5070D4DCD32 /* BarChartRow.swift */; };
 		876517EB93BA12D055173C8A /* PieChartHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876512E41F327527571532BA /* PieChartHelpers.swift */; };
 		8765180D53997DF797E8CA1D /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876514F8883B1E77224C9B8A /* TableView.swift */; };
 		876518F4668BAE25194A2DEE /* TransactionRiskTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651BAF3C3F97A9B3DC30D1 /* TransactionRiskTag.swift */; };
+		87651914219812143047AE15 /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651CF564709CC96979CA8D /* RegistrationViewModel.swift */; };
 		876519C01966F06256988122 /* TransactionStatusTag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876515FD50F32E5AC8930BCA /* TransactionStatusTag.swift */; };
 		87651A05A92CFA8E2E254DC0 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8765179B5A19056AAF216231 /* Transaction.swift */; };
 		87651A1BBD1648F7C4FC69B3 /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876514D3E6784895973FEE33 /* Star.swift */; };
-		87651A385A996DD654505800 /* TransactionsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651E0C106B65A56387723C /* TransactionsService.swift */; };
+		87651A385A996DD654505800 /* TransactionsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651E0C106B65A56387723C /* TransactionsAPI.swift */; };
+		87651A7E6D9705DD27FB4DF2 /* RequestAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8765143E9794DAEC3B8E5CD5 /* RequestAPI.swift */; };
 		87651B3C42965ED927BC532C /* MagnifierRect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651479728381B4DC0B7652 /* MagnifierRect.swift */; };
 		87651BCE71B8BA799A9F64C4 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651014FBF97139B3C70A7C /* LabelView.swift */; };
 		87651C9AA4FDB36117463F5F /* Risk.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651EACEFAF4CB93560A9D0 /* Risk.swift */; };
@@ -136,8 +142,10 @@
 		87651049727DF2259044E2F5 /* PieChartCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartCell.swift; sourceTree = "<group>"; };
 		876510BD04E5C6747D86B59C /* Legend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Legend.swift; sourceTree = "<group>"; };
 		8765115CCD368FC0C33BF85F /* Status.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Status.swift; sourceTree = "<group>"; };
+		87651209C91A8B49616CAAC0 /* CodeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeViewModel.swift; sourceTree = "<group>"; };
 		876512E41F327527571532BA /* PieChartHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartHelpers.swift; sourceTree = "<group>"; };
 		876514168AA2544CF3F9D170 /* TransactionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
+		8765143E9794DAEC3B8E5CD5 /* RequestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestAPI.swift; sourceTree = "<group>"; };
 		87651479728381B4DC0B7652 /* MagnifierRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifierRect.swift; sourceTree = "<group>"; };
 		876514D3E6784895973FEE33 /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		876514F6C3B2564DF795630C /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
@@ -155,14 +163,18 @@
 		87651BAF3C3F97A9B3DC30D1 /* TransactionRiskTag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionRiskTag.swift; sourceTree = "<group>"; };
 		87651BE300E6BF1F6283B8A0 /* Path+QuadCurve.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Path+QuadCurve.swift"; sourceTree = "<group>"; };
 		87651C3300BDDC81679BDF13 /* LineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		87651CD67773FE3897C3D297 /* TokenAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenAnswer.swift; sourceTree = "<group>"; };
+		87651CF564709CC96979CA8D /* RegistrationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		87651D20CFD0E93ED6E31349 /* TransactionCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionCardView.swift; sourceTree = "<group>"; };
+		87651D308FC5212B1DAD9081 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		87651D48E73BD0A5D3B54F43 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphView.swift; path = IPO_iOS/SwiftUICharts/LineChart/GraphView.swift; sourceTree = SOURCE_ROOT; };
 		87651D5E374D5A1573132BD6 /* TransactionsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsResponse.swift; sourceTree = "<group>"; };
 		87651DAABB8E240157B4BE22 /* BarChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		87651DD77113B63E76F6DE0C /* TriangleDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleDown.swift; sourceTree = "<group>"; };
 		87651DEFDEEA36EFED8F21E7 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		87651E03D5C5F5070D4DCD32 /* BarChartRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartRow.swift; sourceTree = "<group>"; };
-		87651E0C106B65A56387723C /* TransactionsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsService.swift; sourceTree = "<group>"; };
+		87651E0C106B65A56387723C /* TransactionsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsAPI.swift; sourceTree = "<group>"; };
+		87651E118F34403E29991EB1 /* AccountAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountAPI.swift; sourceTree = "<group>"; };
 		87651EA3EC4B9AD30AB88652 /* TriangleUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleUp.swift; sourceTree = "<group>"; };
 		87651EACEFAF4CB93560A9D0 /* Risk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Risk.swift; sourceTree = "<group>"; };
 		87651EE0457F09DF83E1BDF4 /* CompletedTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompletedTransaction.swift; sourceTree = "<group>"; };
@@ -306,6 +318,7 @@
 				87651CB560A816D9680BD417 /* Statistics */,
 				87651495C6DFE0CCAF1EF98D /* SwiftUICharts */,
 				CC025A0451690C55A2096072 /* Survey */,
+				8765146E13542D73B68FEDC7 /* API */,
 			);
 			path = IPO_iOS;
 			sourceTree = "<group>";
@@ -366,6 +379,14 @@
 			path = Shapes;
 			sourceTree = "<group>";
 		};
+		876512D481706F5BFCC9514E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				87651E118F34403E29991EB1 /* AccountAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		87651452A3FDCB9D7CF7E32C /* BarChart */ = {
 			isa = PBXGroup;
 			children = (
@@ -375,6 +396,14 @@
 				87651DAABB8E240157B4BE22 /* BarChartView.swift */,
 			);
 			path = BarChart;
+			sourceTree = "<group>";
+		};
+		8765146E13542D73B68FEDC7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8765143E9794DAEC3B8E5CD5 /* RequestAPI.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		87651495C6DFE0CCAF1EF98D /* SwiftUICharts */ = {
@@ -396,10 +425,34 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		87651555AF1FE99D996853F1 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				87651209C91A8B49616CAAC0 /* CodeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		876516037B0E66BF5C07C3AD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				87651CF564709CC96979CA8D /* RegistrationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		876517F94B8D4B5D88B60FD8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				87651D308FC5212B1DAD9081 /* Answer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		87651833A887BD13CD561C2F /* API */ = {
 			isa = PBXGroup;
 			children = (
-				87651E0C106B65A56387723C /* TransactionsService.swift */,
+				87651E0C106B65A56387723C /* TransactionsAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -435,6 +488,14 @@
 				876514F8883B1E77224C9B8A /* TableView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		87651BA22B0E0FF8E8F2B3B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				87651CD67773FE3897C3D297 /* TokenAnswer.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		87651C95F27DF44D16143D88 /* View */ = {
@@ -559,6 +620,8 @@
 				CC02595C9B8A8C2D01EBA5D4 /* Registration.swift */,
 				CC02564E75CBFE75C729FDDC /* PhoneNumber */,
 				CC025106184A958CAF6CEE61 /* RegistrationRouter.swift */,
+				876516037B0E66BF5C07C3AD /* ViewModel */,
+				876517F94B8D4B5D88B60FD8 /* Model */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -614,6 +677,7 @@
 			isa = PBXGroup;
 			children = (
 				CC0256983B140C55C132C77F /* MainScreen */,
+				876512D481706F5BFCC9514E /* API */,
 			);
 			path = Survey;
 			sourceTree = "<group>";
@@ -632,6 +696,8 @@
 				CC025D37B2602B5826D1E7D5 /* RegistrationCode.swift */,
 				CC025077B8A8B1FC24E2C9EB /* CodeView.swift */,
 				CC02508A56E340B246447C53 /* CodeRouter.swift */,
+				87651BA22B0E0FF8E8F2B3B6 /* Model */,
+				87651555AF1FE99D996853F1 /* ViewModel */,
 			);
 			path = Code;
 			sourceTree = "<group>";
@@ -653,7 +719,8 @@
 			);
 			name = IPO_iOS;
 			packageProductDependencies = (
-				C3B039A726193D3B00A9D8AE,
+				C3B4F1B52620B8BE006A184F,
+				C3B4F1BF2620C07C006A184F,
 			);
 			productName = IPO_iOS;
 			productReference = 6504421D66C6FE08C915C38C /* IPO_iOS.app */;
@@ -717,7 +784,8 @@
 			);
 			mainGroup = 65044346AE75F9F9BD86A7CF;
 			packageReferences = (
-				C3B039A626193D3B00A9D8AE,
+				C3B4F1B42620B8BE006A184F,
+				C3B4F1BE2620C07C006A184F,
 			);
 			productRefGroup = 65044D55ACE57EB961DAE660 /* Products */;
 			projectDirPath = "";
@@ -855,8 +923,14 @@
 				CC02507B6D8374D0D1D3D49D /* CodeView.swift in Sources */,
 				CC0253713EFD9AC1B5377181 /* CodeRouter.swift in Sources */,
 				87651DF096A8B173EEFF8D9C /* TransactionsViewModel.swift in Sources */,
-				87651A385A996DD654505800 /* TransactionsService.swift in Sources */,
+				87651A385A996DD654505800 /* TransactionsAPI.swift in Sources */,
 				876512150C03EBB18D345208 /* TransactionsResponse.swift in Sources */,
+				87651A7E6D9705DD27FB4DF2 /* RequestAPI.swift in Sources */,
+				8765117DEA8265E61B63C048 /* AccountAPI.swift in Sources */,
+				8765130F9055DD6EB615D5D2 /* Answer.swift in Sources */,
+				87651914219812143047AE15 /* RegistrationViewModel.swift in Sources */,
+				8765178A1046F0023974B12C /* TokenAnswer.swift in Sources */,
+				876517BFF0078E0FF545361F /* CodeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1146,26 +1220,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C3B039C7261E2D8100A9D8AE = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/posix88/CodeVerifier";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.1.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		C3B039C8261E2D8100A9D8AE = {
-			isa = XCSwiftPackageProductDependency;
-			package = C3B039C7261E2D8100A9D8AE;
-			productName = CodeVerifier;
-		};
-/* End XCSwiftPackageProductDependency section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		C3B039A626193D3B00A9D8AE = {
+		C3B4F1B42620B8BE006A184F = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -1173,13 +1228,26 @@
 				minimumVersion = 5.4.2;
 			};
 		};
+		C3B4F1BE2620C07C006A184F = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C3B039A726193D3B00A9D8AE = {
+		C3B4F1B52620B8BE006A184F = {
 			isa = XCSwiftPackageProductDependency;
-			package = C3B039A626193D3B00A9D8AE;
+			package = C3B4F1B42620B8BE006A184F;
 			productName = Alamofire;
+		};
+		C3B4F1BF2620C07C006A184F = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3B4F1BE2620C07C006A184F;
+			productName = SwiftyJSON;
 		};
 /* End XCSwiftPackageProductDependency section */
 

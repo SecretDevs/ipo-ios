@@ -73,7 +73,7 @@ struct PasscodeField: View {
 
         if pin.count == maxDigits {
             isDisabled = true
-
+            codeRouter.code = pin
             if (pin == rightPin){
                 codeRouter.isRight = true
                 state = PinState.CORRECT

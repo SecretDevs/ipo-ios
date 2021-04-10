@@ -14,13 +14,21 @@ import SwiftUI
 
 import Foundation
 import SwiftUI
-
+import Alamofire
 
 struct CodeView: View {
 
+    @ObservedObject var codeViewModel = CodeViewModel()
     @StateObject var codeRouter : CodeRouter
-    var fontName : String = "EuclidSquare-Medium"
     @StateObject var mainScreenRouter : MainScreenRouter
+
+    var fontName : String = "EuclidSquare-Medium"
+    var parameters : Parameters {
+        [
+            "phone_number": Int(mainScreenRouter.phone),
+            "sms_code" : Int(codeRouter.code)
+        ]
+    }
 
     var body: some View {
         VStack(alignment: .center) {
@@ -65,7 +73,7 @@ struct CodeView: View {
                     Button(action: {
 
                         mainScreenRouter.index += 1
-
+                        codeViewModel.checkCode(parameters: parameters)
                     }) {
                         Text("Далее").foregroundColor(Color.white).font(.system(size: 12))
                     }.frame(width: 200, height: 45).background(Color("ThemeColor"))
@@ -86,7 +94,6 @@ struct CodeView: View {
                 Button(action: {
 
                     mainScreenRouter.index += 1
-
                 }) {
                     Text("Далее").foregroundColor(Color("DarkGrey")).font(.system(size: 12))
                 }.frame(width: 200, height: 45).background(Color("Grey-2"))

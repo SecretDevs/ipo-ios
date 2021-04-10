@@ -8,5 +8,5 @@ import SwiftUI
 
 class CodeRouter: ObservableObject {
     @Published var isRight : Bool = false
-
+    @Published var code : String = ""
 }

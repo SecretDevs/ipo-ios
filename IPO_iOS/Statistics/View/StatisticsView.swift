@@ -4,7 +4,6 @@
 
 import Foundation
 import SwiftUI
-import SwiftUICharts
 
 struct StatisticsView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
