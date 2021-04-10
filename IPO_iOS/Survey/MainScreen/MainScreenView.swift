@@ -33,7 +33,7 @@ struct MainScreenView: View{
 
 
             default:
-                Registration(registrationRouter: registrationRouter,mainScreenRouter: mainScreenRouter)
+                Registration(registrationRouter: registrationRouter, mainScreenRouter: mainScreenRouter)
             }
         }
     }

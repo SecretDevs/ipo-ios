@@ -25,14 +25,13 @@ struct Registration: View {
     var fontName: String = "EuclidSquare-Medium"
     var parameters : Parameters {
         [
-            "phone_number": Int(registrationRouter.number)
+            "phone_number": Int(registrationRouter.number) ?? 0
         ]
     }
 
     var body: some View {
 
         VStack(alignment: .center, content: {
-
 
             HStack {
 
@@ -42,12 +41,10 @@ struct Registration: View {
                     Image("Arrow").resizable().frame(width: 7.5, height: 15)
                 }.padding(.leading, 21)
 
-
                 Spacer()
 
                 Text("Регистрация").font(.custom(fontName, size: 19))
                         .padding(.trailing, 35)
-
 
                 Spacer()
             }
