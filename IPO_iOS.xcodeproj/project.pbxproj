@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16908447262392520048659B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C3B4F1B52620B8BE006A184F /* Alamofire */; };
+		16908448262392520048659B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C3AB59B826221EF500035AE3 /* Alamofire */; };
+		16908449262392520048659B /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = C3AB59BE26221F5E00035AE3 /* iPhoneNumberField */; };
+		1690844C262393C40048659B /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 1690844B262393C40048659B /* FirebaseMessaging */; };
 		16AD1E56260E4CC5004CF50F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16AD1E55260E4CC5004CF50F /* Colors.xcassets */; };
 		315F601E01821BAACDFCDFBE /* LessonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6864AEFBA2797A9F9BA8 /* LessonsView.swift */; };
 		315F61EA6D26F2BDA5EFFC2A /* IPOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F65F6CE3F7F19B5DB342C /* IPOView.swift */; };
@@ -238,6 +242,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1690844C262393C40048659B /* FirebaseMessaging in Frameworks */,
+				16908447262392520048659B /* Alamofire in Frameworks */,
+				16908448262392520048659B /* Alamofire in Frameworks */,
+				16908449262392520048659B /* iPhoneNumberField in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,9 +741,10 @@
 			);
 			name = IPO_iOS;
 			packageProductDependencies = (
-				C3B4F1B52620B8BE006A184F,
-				C3AB59B826221EF500035AE3,
-				C3AB59BE26221F5E00035AE3,
+				C3B4F1B52620B8BE006A184F /* Alamofire */,
+				C3AB59B826221EF500035AE3 /* Alamofire */,
+				C3AB59BE26221F5E00035AE3 /* iPhoneNumberField */,
+				1690844B262393C40048659B /* FirebaseMessaging */,
 			);
 			productName = IPO_iOS;
 			productReference = 6504421D66C6FE08C915C38C /* IPO_iOS.app */;
@@ -799,8 +808,9 @@
 			);
 			mainGroup = 65044346AE75F9F9BD86A7CF;
 			packageReferences = (
-				C3AB59B726221EF500035AE3,
-				C3AB59BD26221F5E00035AE3,
+				C3AB59B726221EF500035AE3 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				C3AB59BD26221F5E00035AE3 /* XCRemoteSwiftPackageReference "iPhoneNumberField" */,
+				1690844A262393C40048659B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 65044D55ACE57EB961DAE660 /* Products */;
 			projectDirPath = "";
@@ -1237,7 +1247,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C3AB59B726221EF500035AE3 = {
+		1690844A262393C40048659B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.0;
+			};
+		};
+		C3AB59B726221EF500035AE3 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -1245,7 +1263,7 @@
 				minimumVersion = 5.4.2;
 			};
 		};
-		C3AB59BD26221F5E00035AE3 = {
+		C3AB59BD26221F5E00035AE3 /* XCRemoteSwiftPackageReference "iPhoneNumberField" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MojtabaHs/iPhoneNumberField.git";
 			requirement = {
@@ -1256,17 +1274,22 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C3AB59B826221EF500035AE3 = {
+		1690844B262393C40048659B /* FirebaseMessaging */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C3AB59B726221EF500035AE3;
+			package = 1690844A262393C40048659B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		C3AB59B826221EF500035AE3 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3AB59B726221EF500035AE3 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		C3AB59BE26221F5E00035AE3 = {
+		C3AB59BE26221F5E00035AE3 /* iPhoneNumberField */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C3AB59BD26221F5E00035AE3;
+			package = C3AB59BD26221F5E00035AE3 /* XCRemoteSwiftPackageReference "iPhoneNumberField" */;
 			productName = iPhoneNumberField;
 		};
-		C3B4F1B52620B8BE006A184F = {
+		C3B4F1B52620B8BE006A184F /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Alamofire;
 		};
