@@ -2,19 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>EuclidSquare-Bold.ttf</string>
-		<string>EuclidSquare-BoldItalic.ttf</string>
-		<string>EuclidSquare-Italic.ttf</string>
-		<string>EuclidSquare-Light.ttf</string>
-		<string>EuclidSquare-LightItalic.ttf</string>
-		<string>EuclidSquare-Medium.ttf</string>
-		<string>EuclidSquare-MediumItalic.ttf</string>
-		<string>EuclidSquare-Regular.ttf</string>
-		<string>EuclidSquare-SemiBold.ttf</string>
-		<string>EuclidSquare-SemiBoldItalic.ttf</string>
-	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -29,10 +16,34 @@
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.886010069576-u0cvehaof0oqb7lup9gvp2v1r0spah14</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>EuclidSquare-Bold.ttf</string>
+		<string>EuclidSquare-BoldItalic.ttf</string>
+		<string>EuclidSquare-Italic.ttf</string>
+		<string>EuclidSquare-Light.ttf</string>
+		<string>EuclidSquare-LightItalic.ttf</string>
+		<string>EuclidSquare-Medium.ttf</string>
+		<string>EuclidSquare-MediumItalic.ttf</string>
+		<string>EuclidSquare-Regular.ttf</string>
+		<string>EuclidSquare-SemiBold.ttf</string>
+		<string>EuclidSquare-SemiBoldItalic.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -40,6 +51,12 @@
 	</dict>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>processing</string>
+		<string>remote-notification</string>
+	</array>
 	<key>UILaunchScreen</key>
 	<dict/>
 	<key>UIRequiredDeviceCapabilities</key>

@@ -13,7 +13,7 @@ import Firebase
 struct IPO_iOSApp: App {
     let persistenceController = PersistenceController.shared
     
-   // @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     @StateObject var viewRouter: ViewRouter = ViewRouter()
     @StateObject var viewRouterForTransactions: ViewRouterTransactions = ViewRouterTransactions()
@@ -137,5 +137,3 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
     completionHandler()
   }
 }
-
-

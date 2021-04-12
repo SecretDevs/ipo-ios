@@ -103,6 +103,7 @@
 		CC025F006448FE5B78CD668B /* RadioButtonExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0256E153B0BFF32146646A /* RadioButtonExp.swift */; };
 		CC025F74B9F3917391C47BD5 /* Age.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC025E66C7D74D0ED4BCD77F /* Age.swift */; };
 		CC025FCA831B21B6A5A0E81F /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02550E74A1AD7135D9D6A8 /* DropDownView.swift */; };
+		F27BE18C2623A24C004976C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F27BE18B2623A24C004976C0 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -221,6 +222,8 @@
 		CC025E66C7D74D0ED4BCD77F /* Age.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Age.swift; sourceTree = "<group>"; };
 		CC025F42D3521844AF62C122 /* IPOTransactions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPOTransactions.swift; sourceTree = "<group>"; };
 		CC025F91D3B6110956F3CE10 /* ToggleButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
+		F27BE18426239D3C004976C0 /* IPO_iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IPO_iOS.entitlements; sourceTree = "<group>"; };
+		F27BE18B2623A24C004976C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +314,8 @@
 		65044009EA209EC9E10460F0 /* IPO_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				F27BE18B2623A24C004976C0 /* GoogleService-Info.plist */,
+				F27BE18426239D3C004976C0 /* IPO_iOS.entitlements */,
 				C364C82D260FFD7C0064A697 /* Fonts */,
 				650440CBB75B70564B0B1D5C /* Info.plist */,
 				65044B1FB6B8A115ED1BA0AD /* Assets.xcassets */,
@@ -792,11 +797,6 @@
 		650444FCCCC1054F1EEF0741 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				TargetAttributes = {
-					6504427C3713CFB690B34748 = {
-						DevelopmentTeam = HQ4NY73BWJ;
-					};
-				};
 			};
 			buildConfigurationList = 650448525914DD9F0C99D868 /* Build configuration list for PBXProject "IPO_iOS" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -855,6 +855,7 @@
 				C364C83F260FFDDF0064A697 /* EuclidSquare-Regular.ttf in Resources */,
 				C364C841260FFDDF0064A697 /* EuclidSquare-BoldItalic.ttf in Resources */,
 				C364C83D260FFDDF0064A697 /* EuclidSquare-Italic.ttf in Resources */,
+				F27BE18C2623A24C004976C0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -982,8 +983,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IPO_iOS/IPO_iOS.entitlements;
 				DEVELOPMENT_ASSET_PATHS = "\"IPO_iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = HQ4NY73BWJ;
+				DEVELOPMENT_TEAM = QWPDSL467T;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = IPO_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -991,7 +993,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ONTO.IPO-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kondrashovinvest.ipo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1117,8 +1119,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IPO_iOS/IPO_iOS.entitlements;
 				DEVELOPMENT_ASSET_PATHS = "\"IPO_iOS/Preview Content\"";
-				DEVELOPMENT_TEAM = HQ4NY73BWJ;
+				DEVELOPMENT_TEAM = QWPDSL467T;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = IPO_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1126,7 +1129,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ONTO.IPO-iOS";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kondrashovinvest.ipo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
