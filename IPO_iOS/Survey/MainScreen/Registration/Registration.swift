@@ -60,10 +60,10 @@ struct Registration: View {
                 }) {
 
                     Text("Отправить код").foregroundColor(correctNumber ? Color.white : Color("DarkGrey"))
-                            .font(.system(size: 12))
+                            .font(.system(size: 12)).frame(width: 200, height: 45).background(correctNumber ? Color("ThemeColor") : Color("Grey-2"))
+                        .clipShape(RoundedRectangle(cornerRadius: 15))
 
-                }.frame(width: 200, height: 45).background(correctNumber ? Color("ThemeColor") : Color("Grey-2"))
-                        .clipShape(RoundedRectangle(cornerRadius: 15)).padding(.vertical, 5)
+                }.padding(.vertical, 5)
 
             } else {
 
@@ -74,14 +74,25 @@ struct Registration: View {
 
                     Text("Отправить код").foregroundColor(Color("DarkGrey"))
                             .font(.system(size: 12))
+                        .frame(width: 200, height: 45).background(Color("Grey-2"))
+                                .clipShape(RoundedRectangle(cornerRadius: 15))
 
-                }.frame(width: 200, height: 45).background(Color("Grey-2"))
-                        .clipShape(RoundedRectangle(cornerRadius: 15)).padding(.vertical, 5)
+                }.padding(.vertical, 5)
 
             }
 
             Spacer()
 
-        }).background(Color("Background")).edgesIgnoringSafeArea(.vertical)
+        })
+        .background(Color("Background")).edgesIgnoringSafeArea(.vertical)
+        .onTapGesture {
+            UIApplication.shared.endEditing()
+        }
+    }
+}
+
+extension UIApplication {
+    func endEditing() {
+        sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }

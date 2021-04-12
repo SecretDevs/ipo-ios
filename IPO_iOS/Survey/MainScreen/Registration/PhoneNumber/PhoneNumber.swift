@@ -13,9 +13,11 @@ struct PhoneNumberView : View {
     @StateObject var registrationRouter : RegistrationRouter
     @State var isCorrect: Bool = false
     @State var isEditing: Bool = false
+    @State var isEditingFirst: Bool = false
+
 
     var fontName : String = "EuclidSquare-Medium"
-
+    @State var colorClear : Bool = false
     var body: some View {
 
         VStack {
@@ -31,21 +33,47 @@ struct PhoneNumberView : View {
 
                         VStack(alignment: .leading) {
                             ZStack {
-                                if (!isEditing) {
+                                
+                                if (!isEditing) && (registrationRouter.number == "+") {
                                     Text("+7 999 123-45-67").foregroundColor(Color("DarkGrey"))
                                 }
                                 else {
                                     Text("")
                                 }
 
+                                
                                 iPhoneNumberField("+7 999 123-45-67", text: $registrationRouter.number, isEditing: $isEditing)
-                                        .onReturn(perform: { _ in
+                                    .onEditingBegan(){ _ in
+                                        isEditingFirst = true
+                                        print(registrationRouter.number)
+
+                                    }
+                                    .onEdit(perform: { _ in
+                                        print(registrationRouter.number)
+                                    })
+                                            .onEditingEnded(){ _ in
+                                                if(registrationRouter.number.count <= 2) ||
+                                                    (registrationRouter.number == "+"){
+                                                    
+                                                    print(registrationRouter.number.count)
+                                                    
+                                                    registrationRouter.number = "+"
+                                                    
+                                                    isEditingFirst = false
+                                                }
+                                                
+                                                
                                             isCorrect = registrationRouter.isCorrect()
-                                        })
-                                        .foregroundColor((isEditing ? registrationRouter.isCorrect() ? Color("ThemeColor") : Color.red : Color.black))
+                                        }
+                                            
+                                
+                                        .foregroundColor((!isEditingFirst ?
+                                                            Color.clear
+                                                            : isEditing ? registrationRouter.isCorrect() ? Color("ThemeColor") : Color.red : Color.black))
                                         .multilineTextAlignment(.center)
                                         .prefixHidden(false)
                                         .padding(10)
+                                    .accentColor((isEditing ? registrationRouter.isCorrect() ? Color("ThemeColor") : Color.red : Color.black))
                                         .background(
                                                 RoundedRectangle(cornerRadius: 10, style: .continuous)
                                                         .stroke((isEditing ? registrationRouter.isCorrect() ? Color("ThemeColor") : Color.red : Color("Grey-2")), lineWidth: 1)
@@ -55,6 +83,7 @@ struct PhoneNumberView : View {
                             }
 
                         }.padding(.vertical, 10)
+                    
 
 
 
@@ -87,9 +116,12 @@ struct PhoneNumberView : View {
             }
 
 
-        }.frame(width: 335, height: 210).background(Color.white)
+        }.onTapGesture {
+            UIApplication.shared.endEditing()
+        }
+        .frame(width: 335, height: 210).background(Color.white)
                 .clipShape(RoundedRectangle(cornerRadius: 15))
                 .padding(.vertical, 5)
     }
-
 }
+
