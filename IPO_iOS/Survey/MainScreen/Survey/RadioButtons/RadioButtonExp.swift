@@ -15,7 +15,7 @@ struct RadioButtonsExp : View {
     var body: some View {
 
         VStack {
-            Text("Какой у вас объем капитала ?").font(.custom(fontName,size: 16))
+            Text("Какой у вас опыт в инвестициях ?").font(.custom(fontName,size: 16))
                     .foregroundColor(Color.black)
                     .padding(.bottom,20)
                     .multilineTextAlignment(.center)

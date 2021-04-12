@@ -4,7 +4,6 @@
 
 import Alamofire
 import Foundation
-import SwiftyJSON
 
 struct RequestAPI {
     static func call(_ path: String, method: HTTPMethod, parameters: Parameters?) -> DataRequest {

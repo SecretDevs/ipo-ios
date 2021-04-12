@@ -9,7 +9,7 @@ import Alamofire
 class RegistrationRouter : ObservableObject {
 
     @Published var index : Int = 1
-    @Published var number : String = ""
+    @Published var number : String = "+"
     @Published var checked : Bool = false
 
 
