@@ -4,9 +4,15 @@
 
 import Foundation
 import SwiftUI
+import Alamofire
 
 struct TransactionCardView : View {
-    @State var transaction : Transaction
+    @ObservedObject var transactionsViewModel: TransactionsViewModel
+    @Binding var transaction : Transaction
+    var parameters : Parameters{[
+        "id" : transaction.id
+    ]
+    }
     var body: some View {
         VStack(alignment: .leading, spacing: 10){
             HStack{
@@ -24,13 +30,15 @@ struct TransactionCardView : View {
                         Image("favorite").resizable().renderingMode(.template)
                                 .frame(width: 16, height: 16).foregroundColor(Color("Orange"))
                                 .onTapGesture(perform: {
-                                    transaction.isFavorite//.toggle()
+                                    transactionsViewModel.deleteTransactionFromFavorites(parameters: parameters)
+                                    transaction.isFavorite.toggle()
                                 })
                     }else{
                         Image("favorite-border").resizable().renderingMode(.template)
                                 .frame(width: 16, height: 16).foregroundColor(Color("DarkGrey"))
                                 .onTapGesture(perform: {
-                                    transaction.isFavorite//.toggle()
+                                    transactionsViewModel.addTransactionToFavorites(parameters: parameters)
+                                    transaction.isFavorite.toggle()
                                 })
                     }
                 }

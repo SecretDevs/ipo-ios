@@ -8,15 +8,29 @@
 
 import Foundation
 import SwiftUI
+import Alamofire
 
 
 struct MainSurveyView: View {
 
-    var fontName : String = "EuclidSquare-Medium"
+    @ObservedObject var surveyViewModel = SurveyViewModel()
     @StateObject var surveyRouter : SurveyRouter
     @StateObject var registrationRouter : RegistrationRouter
     @StateObject var mainScreenRouter : MainScreenRouter
+
+    var fontName : String = "EuclidSquare-Medium"
     var localStorage : LocalStorage = LocalStorage()
+    var parameters : Parameters {
+        [
+            "age" : surveyRouter.age,
+            "capital" : surveyRouter.capital,
+            "experience" : surveyRouter.exp,
+            "tools" : surveyRouter.getInstrumentsStrings(),
+            "goal" : surveyRouter.purpose,
+            "interest" : surveyRouter.percents,
+            "risk" : surveyRouter.risk
+        ]
+    }
 
     var body: some View {
         VStack(alignment: .center) {
@@ -126,6 +140,7 @@ struct MainSurveyView: View {
                         }
                         else{
                             localStorage.setToLocalStorage()
+                            surveyViewModel.checkCode(parameters: parameters)
                             mainScreenRouter.index += 1
                         }
 

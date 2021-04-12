@@ -13,7 +13,7 @@ struct Transaction : Codable, Identifiable{
     let createdAt: String
     let risk : Risk
     let status : Status
-    let isFavorite : Bool
+    var isFavorite : Bool
 
     enum CodingKeys: String, CodingKey {
         case id = "_id"

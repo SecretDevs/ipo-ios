@@ -56,4 +56,14 @@ class SurveyRouter : ObservableObject {
             return true
         }
     }
+
+    func getInstrumentsStrings() -> [String] {
+        var answer : [String] = []
+        for instrument in instruments{
+            if(instrument.value){
+                answer.append(instrument.key)
+            }
+        }
+        return answer
+    }
 }
