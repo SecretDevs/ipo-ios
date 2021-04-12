@@ -25,10 +25,11 @@ struct TransactionsView: View {
                     Button(action: {
                         //TODO
                     }, label: {
-                        Image("search").resizable().renderingMode(.original)
+                        Text("").frame(width: 21, height: 21)
+                            .padding()
+                        /*Image("search").resizable().renderingMode(.original)
                                 .frame(width: 21, height: 21)
-                                .padding()
-                    })
+                            .padding()*/                    })
                 }
 
                 ToggleButtonsView(viewRouter: viewRouter).padding(.horizontal)

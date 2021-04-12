@@ -25,8 +25,11 @@ struct StatisticsView: View {
                 Button(action: {
                     //TODO
                 }) {
-                    Image("search").resizable().renderingMode(.template)
-                            .frame(width: 21, height: 21).foregroundColor(Color("DarkGrey"))
+                   
+                    Text("").frame(width: 21, height: 21)
+                   // Image("search").resizable().renderingMode(.template)
+                     //       .frame(width: 21, height: //21).foregroundColor(Color("DarkGrey"))
+                    
                 }
             }
                     .padding([.top, .leading, .trailing])

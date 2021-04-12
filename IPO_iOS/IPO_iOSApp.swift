@@ -47,6 +47,15 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         //Setting Up Cloud Messaging
         
         Messaging.messaging().delegate = self
+        Messaging.messaging().subscribe(toTopic: "IPO") { error in
+          print("Subscribed")
+        }
+        Messaging.messaging().subscribe(toTopic: "SPAC") { error in
+          print("Subscribed")
+        }
+        Messaging.messaging().subscribe(toTopic: "STOCK") { error in
+          print("Subscribed")
+        }
  
         
         //Setting Up Notifications

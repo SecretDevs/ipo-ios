@@ -75,9 +75,9 @@ struct MainSurveyView: View {
                         }
 
                     }) {
-                        Text("Далее").foregroundColor(Color.white).font(.system(size: 12))
-                    }.frame(width: 200, height: 45).background(Color("ThemeColor"))
-                            .clipShape(RoundedRectangle(cornerRadius: 15)).padding(.vertical, 5)
+                        Text("Далее").foregroundColor(Color.white).font(.system(size: 12)).frame(width: 200, height: 45).background(Color("ThemeColor"))
+                            .clipShape(RoundedRectangle(cornerRadius: 15))
+                    }.padding(.vertical, 5)
 
 
                 } else {
@@ -85,9 +85,9 @@ struct MainSurveyView: View {
 
 
                     }) {
-                        Text("Далее").foregroundColor(Color("DarkGrey")).font(.system(size: 12))
-                    }.frame(width: 200, height: 45).background(Color("Grey-2"))
-                            .clipShape(RoundedRectangle(cornerRadius: 15)).padding(.vertical, 5)
+                        Text("Далее").foregroundColor(Color("DarkGrey")).font(.system(size: 12)).frame(width: 200, height: 45).background(Color("Grey-2"))
+                            .clipShape(RoundedRectangle(cornerRadius: 15))
+                    }.padding(.vertical, 5)
                 }
             }
 
@@ -101,9 +101,9 @@ struct MainSurveyView: View {
                         }
 
                     }) {
-                        Text("Далее").foregroundColor(Color.white).font(.system(size: 12))
-                    }.frame(width: 200, height: 45).background(Color("ThemeColor"))
-                            .clipShape(RoundedRectangle(cornerRadius: 15)).padding(.vertical, 5)
+                        Text("Далее").foregroundColor(Color.white).font(.system(size: 12)).frame(width: 200, height: 45).background(Color("ThemeColor"))
+                            .clipShape(RoundedRectangle(cornerRadius: 15))
+                    }.padding(.vertical, 5)
 
 
                 } else {
@@ -111,9 +111,9 @@ struct MainSurveyView: View {
 
 
                     }) {
-                        Text("Далее").foregroundColor(Color("DarkGrey")).font(.system(size: 12))
-                    }.frame(width: 200, height: 45).background(Color("Grey-2"))
-                            .clipShape(RoundedRectangle(cornerRadius: 15)).padding(.vertical, 5)
+                        Text("Далее").foregroundColor(Color("DarkGrey")).font(.system(size: 12)).frame(width: 200, height: 45).background(Color("Grey-2"))
+                            .clipShape(RoundedRectangle(cornerRadius: 15))
+                    }.padding(.vertical, 5)
                 }
             }
 
@@ -130,9 +130,9 @@ struct MainSurveyView: View {
                         }
 
                     }) {
-                        Text("Далее").foregroundColor(Color.white).font(.system(size: 12))
-                    }.frame(width: 200, height: 45).background(Color("ThemeColor"))
-                            .clipShape(RoundedRectangle(cornerRadius: 15)).padding(.vertical, 5)
+                        Text("Далее").foregroundColor(Color.white).font(.system(size: 12)).frame(width: 200, height: 45).background(Color("ThemeColor"))
+                            .clipShape(RoundedRectangle(cornerRadius: 15))
+                    }.padding(.vertical, 5)
 
             }
 
@@ -142,9 +142,9 @@ struct MainSurveyView: View {
                 localStorage.setToLocalStorage()
                 mainScreenRouter.index = 4
             }){
-                Text("Пройти тест позже").foregroundColor(Color("ThemeColor")).font(.system(size: 12))
-            }.frame(width: 200, height: 45).background(Color("Grey-2"))
-                    .clipShape(RoundedRectangle(cornerRadius: 15)).padding(.vertical,5)
+                Text("Пройти тест позже").foregroundColor(Color("ThemeColor")).font(.system(size: 12)).frame(width: 200, height: 45).background(Color("Grey-2"))
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+            }.padding(.vertical,5)
 
             Spacer()
 
