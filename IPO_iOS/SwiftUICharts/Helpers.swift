@@ -225,46 +225,52 @@ public class ChartStyle {
 public class ChartData: ObservableObject/*, Identifiable*/ {
     @Published var points: [(String, Double)]
     @Published var index : Int
+    @Published var profit : Int
     var valuesGiven: Bool = false
     //var ID = UUID()
 
-    public init<N: BinaryFloatingPoint>(points: [N], index: Int) {
+    public init<N: BinaryFloatingPoint>(points: [N], index: Int, profit: Int) {
         self.points = points.map {
             ("", Double($0))
         }
         self.index = index
+        self.profit = profit
     }
 
-    public init<N: BinaryInteger>(values: [(String, N)], index: Int) {
+    public init<N: BinaryInteger>(values: [(String, N)], index: Int, profit: Int) {
         self.points = values.map {
             ($0.0, Double($0.1))
         }
         self.valuesGiven = true
         self.index = index
+        self.profit = profit
     }
 
-    public init<N: BinaryFloatingPoint>(values: [(String, N)], index: Int) {
+    public init<N: BinaryFloatingPoint>(values: [(String, N)], index: Int, profit: Int) {
         self.points = values.map {
             ($0.0, Double($0.1))
         }
         self.valuesGiven = true
         self.index = index
+        self.profit = profit
     }
 
-    public init<N: BinaryInteger>(numberValues: [(N, N)], index: Int) {
+    public init<N: BinaryInteger>(numberValues: [(N, N)], index: Int, profit: Int) {
         self.points = numberValues.map {
             (String($0.0), Double($0.1))
         }
         self.valuesGiven = true
         self.index = index
+        self.profit = profit
     }
 
-    public init<N: BinaryFloatingPoint & LosslessStringConvertible>(numberValues: [(N, N)], index: Int) {
+    public init<N: BinaryFloatingPoint & LosslessStringConvertible>(numberValues: [(N, N)], index: Int, profit: Int) {
         self.points = numberValues.map {
             (String($0.0), Double($0.1))
         }
         self.valuesGiven = true
         self.index = index
+        self.profit = profit
     }
 
     public func onlyPoints() -> [Double] {
@@ -277,6 +283,10 @@ public class ChartData: ObservableObject/*, Identifiable*/ {
         self.points = points.map {
             ("", Double($0))
         }
+    }
+
+    public func setProfit(profit: Int){
+        self.profit = profit
     }
 }
 
