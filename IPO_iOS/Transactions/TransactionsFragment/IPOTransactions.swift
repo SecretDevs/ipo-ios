@@ -6,7 +6,7 @@ import Foundation
 import SwiftUI
 
 struct IPOTransactionsView: View {
-    @ObservedObject var transactionsViewModel = TransactionsViewModel()
+    @ObservedObject var transactionsViewModel = TransactionsViewModel(type: "IPO")
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: false){

@@ -16,23 +16,23 @@ struct TransactionCardView : View {
                         .foregroundColor(Color("DarkGrey"))
                 Spacer()
                 HStack{
-                    Text(transaction.createdAt)
+                    Text(transaction.createdAt.dateForTransaction)
                             .font(.custom("EuclidSquare-Medium",size: 10))
                             .fontWeight(.medium)
                             .foregroundColor(Color("DarkGrey"))
-                    /*if(transaction.isFavorite){
+                    if(transaction.isFavorite){
                         Image("favorite").resizable().renderingMode(.template)
                                 .frame(width: 16, height: 16).foregroundColor(Color("Orange"))
                                 .onTapGesture(perform: {
-                                    transaction.isFavorite.toggle()
+                                    transaction.isFavorite//.toggle()
                                 })
                     }else{
                         Image("favorite-border").resizable().renderingMode(.template)
                                 .frame(width: 16, height: 16).foregroundColor(Color("DarkGrey"))
                                 .onTapGesture(perform: {
-                                    transaction.isFavorite.toggle()
+                                    transaction.isFavorite//.toggle()
                                 })
-                    }*/
+                    }
                 }
             }
             HStack{

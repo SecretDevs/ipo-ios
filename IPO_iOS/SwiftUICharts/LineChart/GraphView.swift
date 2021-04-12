@@ -7,6 +7,8 @@ import SwiftUI
 
 public struct GraphView: View {
     @ObservedObject var data: ChartData
+    @ObservedObject var statisticsViewModel : StatisticsViewModel
+    @Binding var completedTransactions : [CompletedTransaction]
     public var title: String?
     public var legend: String?
     public var style: ChartStyle
@@ -23,14 +25,18 @@ public struct GraphView: View {
     @State private var currentDataNumber: Double = 0
     @State private var hideHorizontalLines: Bool = false
 
-    public init(data: [Double],
+    init(data: [Double],
+         profit: Int,
+         statisticsViewModel: ObservedObject<StatisticsViewModel>,
+                completedTransactions: Binding<[CompletedTransaction]>,
                 title: String? = nil,
                 legend: String? = nil,
                 style: ChartStyle = Styles.lineChartStyleOne,
                 valueSpecifier: String? = "%.1f",
                 legendSpecifier: String? = "%.2f") {
-
-        self.data = ChartData(points: data, index: 0)
+        self.data = ChartData(points: data, index: 0, profit: profit)
+        self._statisticsViewModel = statisticsViewModel
+        self._completedTransactions = completedTransactions
         self.title = title
         self.legend = legend
         self.style = style
@@ -52,7 +58,7 @@ public struct GraphView: View {
                             }
                             Spacer()
                             if (self.legend != nil) {
-                                Text(self.legend!)
+                                Text("\(self.data.profit)%")
                                         .font(.custom(self.style.fontName, fixedSize: 18))
                                         .foregroundColor(Color("Green"))
                                         .foregroundColor(self.colorScheme == .dark ? self.darkModeStyle.legendTextColor : self.style.legendTextColor)
@@ -197,12 +203,12 @@ public struct GraphView: View {
                                             self.hideHorizontalLines = false
                                         })
                                 )
-                        GraphToggleButton(graphData: data)
+                        GraphToggleButton(graphData: data, statisticsViewModel: statisticsViewModel)
                     }
                             .background(self.colorScheme == .dark ? self.darkModeStyle.backgroundColor : self.style.backgroundColor)
                             .cornerRadius(15)
                             .shadow(color: self.style.dropShadowColor, radius: true ? 8 : 0)
-                    TableView()
+                    TableView(completedTransactions: $completedTransactions)
                         .padding(.top, 20)
                         .padding([.leading, .trailing], 30)
 

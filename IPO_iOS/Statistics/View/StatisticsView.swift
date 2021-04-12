@@ -7,6 +7,7 @@ import SwiftUI
 
 struct StatisticsView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @ObservedObject var statisticsViewModel = StatisticsViewModel()
 
     var body: some View {
         VStack {
@@ -30,7 +31,7 @@ struct StatisticsView: View {
                 }
             }
                     .padding([.top, .leading, .trailing])
-            GraphView(data: [12, 5, 6, 9, 1, 20], title: "Рост портфеля", legend: "+74%",
+            GraphView(data: statisticsViewModel.getDayAccounts(), profit: statisticsViewModel.getDayProfit(), statisticsViewModel: _statisticsViewModel, completedTransactions: $statisticsViewModel.completedTransactions, title: "Рост портфеля", legend: "+74%",
                     style: ChartStyle(
                             backgroundColor: .white,
                             accentColor: Color("Blue"),
@@ -40,7 +41,7 @@ struct StatisticsView: View {
                             textColor: Color("DarkGrey"),
                             legendTextColor: Color("DarkGrey"),
                             fontName: "EuclidSquare-Regular",
-                            dropShadowColor: Color("DarkGrey")))
+                            dropShadowColor: Color("DarkGrey")), legendSpecifier: "%.0f")
         }
                 .background(Color("Background").edgesIgnoringSafeArea(.top))
                 .navigationBarHidden(true)

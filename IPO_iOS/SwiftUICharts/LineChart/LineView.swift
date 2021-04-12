@@ -33,7 +33,7 @@ public struct LineView: View {
                 valueSpecifier: String? = "%.1f",
                 legendSpecifier: String? = "%.2f") {
         
-        self.data = ChartData(points: data, index: 0)
+        self.data = ChartData(points: data, index: 0, profit: 0)
         self.title = title
         self.legend = legend
         self.style = style

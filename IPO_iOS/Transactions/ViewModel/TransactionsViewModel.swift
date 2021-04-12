@@ -5,21 +5,24 @@
 import Foundation
 import Combine
 
-class TransactionsViewModel : ObservableObject {
+class TransactionsViewModel: ObservableObject {
     @Published var transactions : [Transaction] = []
     var cancellation: AnyCancellable?
+    var type: String = "IPO"
 
-    init() {
+    init(type: String) {
+        self.type = type
         fetchTransactions()
     }
 
     func fetchTransactions() {
-        cancellation = TransactionsAPI.fetch(nil)
+        cancellation = TransactionsAPI.fetchTransactions(nil, type: self.type)
                 .mapError({ (error) -> Error in
                     print(error)
                     return error
                 })
                 .sink(receiveCompletion: { _ in }, receiveValue: { response in
+                    print(response.transactions)
                     self.transactions = response.transactions
                 })
     }

@@ -8,7 +8,8 @@ import SwiftUI
 
 struct GraphToggleButton: View {
 
-    @ObservedObject var graphData: ChartData;
+    @ObservedObject var graphData: ChartData
+    @ObservedObject var statisticsViewModel : StatisticsViewModel
 
     var body: some View {
         ZStack {
@@ -17,7 +18,8 @@ struct GraphToggleButton: View {
                 HStack {
 
                     Button(action: {
-                        graphData.setPoints(points: [12, 5, 6, 9, 1, 20]);
+                        graphData.setPoints(points: statisticsViewModel.getDayAccounts());
+                        graphData.setProfit(profit: statisticsViewModel.getDayProfit())
                         graphData.index = 0;
                     }) {
                         VStack{
@@ -33,8 +35,9 @@ struct GraphToggleButton: View {
                     Spacer()
 
                     Button(action: {
-                        graphData.setPoints(points: [1, 50, 3, 2, 4, 20, 50]);
-                        graphData.index = 1;
+                        graphData.setPoints(points: statisticsViewModel.getWeekAccounts())
+                        graphData.setProfit(profit: statisticsViewModel.getWeekProfit())
+                        graphData.index = 1
                     }) {
 
                         VStack{
@@ -50,8 +53,9 @@ struct GraphToggleButton: View {
                     Spacer()
 
                     Button(action: {
-                        graphData.setPoints(points: [12, 5, 6, 9, 1, 20, 40, 60, 3]);
-                        graphData.index = 2;
+                        graphData.setPoints(points: statisticsViewModel.getMonthAccounts())
+                        graphData.setProfit(profit: statisticsViewModel.getMonthProfit())
+                        graphData.index = 2
                     }) {
 
                         VStack{
@@ -67,8 +71,9 @@ struct GraphToggleButton: View {
                     Spacer()
 
                     Button(action: {
-                        graphData.setPoints(points: [12, 5, 6, 9, 1, 20, 80, 90, 100, 35]);
-                        graphData.index = 3;
+                        graphData.setPoints(points: statisticsViewModel.getYearAccounts())
+                        graphData.setProfit(profit: statisticsViewModel.getYearProfit())
+                        graphData.index = 3
                     }) {
 
                         VStack{
@@ -84,8 +89,9 @@ struct GraphToggleButton: View {
                     Spacer()
 
                     Button(action: {
-                        graphData.setPoints(points: [12, 5, 6, 9, 1, 20, 200, 300, 500, 1000]);
-                        graphData.index = 4;
+                        graphData.setPoints(points: statisticsViewModel.getAccounts())
+                        graphData.setProfit(profit: statisticsViewModel.getProfit())
+                        graphData.index = 4
                     }) {
 
                         VStack{

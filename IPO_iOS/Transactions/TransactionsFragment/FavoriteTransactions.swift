@@ -6,7 +6,7 @@ import Foundation
 import SwiftUI
 
 struct FavoriteTransactionsView: View {
-    @ObservedObject var transactionsViewModel = TransactionsViewModel()
+    @ObservedObject var transactionsViewModel = TransactionsViewModel(type: "favourites")
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: false){

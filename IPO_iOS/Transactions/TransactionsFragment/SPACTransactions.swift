@@ -6,7 +6,7 @@ import Foundation
 import SwiftUI
 
 struct SPACTransactionsView: View {
-    @ObservedObject var transactionsViewModel = TransactionsViewModel()
+    @ObservedObject var transactionsViewModel = TransactionsViewModel(type: "SPAC")
 
     var body: some View {
         ScrollView(.vertical, showsIndicators: false){
