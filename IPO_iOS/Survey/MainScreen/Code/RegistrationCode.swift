@@ -4,18 +4,25 @@
 
 import Foundation
 import SwiftUI
+import Alamofire
 
 struct PasscodeField: View {
 
+    @StateObject var codeViewModel : CodeViewModel
     @StateObject var codeRouter : CodeRouter
     @StateObject var registrationRouter : RegistrationRouter
+    @StateObject var mainScreenRouter : MainScreenRouter
     @State var pin: String = ""
     @State var isDisabled = false
-    @State var state : PinState = PinState.NOT_COMPLETED
 
     var maxDigits: Int = 4
     var label = "Введите 4-х значный код"
-    var rightPin: String = "1234"
+    var parameters : Parameters {
+        [
+            "phone_number": Int(mainScreenRouter.phone),
+            "sms_code" : Int(codeRouter.code)
+        ]
+    }
 
     public var body: some View {
         VStack(spacing: 27) {
@@ -43,13 +50,13 @@ struct PasscodeField: View {
             ForEach(0..<maxDigits) { index in
                 Text(self.getSymbol(at: index))
                         .font(.custom("EuclidSquare-Regular", fixedSize: 16))
-                        .foregroundColor(Color(state == .NOT_COMPLETED ? "Blue" : (state == .CORRECT ? "Green" : "Red")))
+                        .foregroundColor(Color(codeViewModel.state == .NOT_COMPLETED ? "Blue" : (codeViewModel.state == .CORRECT ? "Green" : "Red")))
                         .padding(.vertical, 12)
                         .padding(.horizontal, 18)
                         .frame(width: 45, height: 45)
                         .overlay(
                                 RoundedRectangle(cornerRadius: 10)
-                                        .stroke(Color(state == .NOT_COMPLETED ? (index == self.pin.count ? "Blue" : "Grey-2") : (state == .CORRECT ? "Green" : "Red")), lineWidth: 1))
+                                        .stroke(Color(codeViewModel.state == .NOT_COMPLETED ? (index == self.pin.count ? "Blue" : "Grey-2") : (codeViewModel.state == .CORRECT ? "Green" : "Red")), lineWidth: 1))
                 Spacer()
             }
         }
@@ -65,22 +72,16 @@ struct PasscodeField: View {
                 .accentColor(.clear)
                 .foregroundColor(.clear)
                 .keyboardType(.numberPad)
-                .disabled(isDisabled)
+                .disabled(codeViewModel.state == .CORRECT)
 
     }
 
     private func submitPin() {
 
         if pin.count == maxDigits {
-            isDisabled = true
+            //isDisabled = true
             codeRouter.code = pin
-            if (pin == rightPin){
-                codeRouter.isRight = true
-                state = PinState.CORRECT
-            } else {
-                codeRouter.isRight = false
-                state = PinState.INCORRECT
-            }
+            codeViewModel.checkCode(parameters: parameters)
         }
 
         // this code is never reached under  normal circumstances. If the user pastes a text with count higher than the
