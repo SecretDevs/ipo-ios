@@ -24,6 +24,9 @@ struct MainScreenView: View{
 
             case 2:
                 CodeView(registrationRouter: registrationRouter,codeRouter: codeRouter,mainScreenRouter: mainScreenRouter)
+                        .onTapGesture {
+                            UIApplication.shared.endEditing()
+                        }
 
             case 3:
                 MainSurveyView(surveyRouter: surveyRouter, registrationRouter: registrationRouter, mainScreenRouter: mainScreenRouter)

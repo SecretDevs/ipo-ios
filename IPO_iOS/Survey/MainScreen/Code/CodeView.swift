@@ -10,7 +10,8 @@ import Alamofire
 
 struct CodeView: View {
 
-    @ObservedObject var codeViewModel = CodeViewModel()
+    @StateObject var codeViewModel = CodeViewModel()
+    @ObservedObject var registrationViewModel = RegistrationViewModel()
     @StateObject var registrationRouter : RegistrationRouter
     @StateObject var codeRouter : CodeRouter
     @StateObject var mainScreenRouter : MainScreenRouter
@@ -19,7 +20,6 @@ struct CodeView: View {
     var parameters : Parameters {
         [
             "phone_number": Int(mainScreenRouter.phone),
-            "sms_code" : Int(codeRouter.code)
         ]
     }
 
@@ -47,14 +47,14 @@ struct CodeView: View {
 
             Spacer()
 
-            PasscodeField(codeRouter: codeRouter, registrationRouter: registrationRouter).padding(.top,60)
+            PasscodeField(codeViewModel: codeViewModel, codeRouter: codeRouter, registrationRouter: registrationRouter, mainScreenRouter: mainScreenRouter).padding(.top,60)
 
             Spacer()
 
 
 
 
-                if (codeRouter.isRight) {
+                if (codeViewModel.state == .CORRECT) {
                     Button(action: {
 
                     }) {
@@ -66,7 +66,6 @@ struct CodeView: View {
                     Button(action: {
 
                         mainScreenRouter.index += 1
-                        codeViewModel.checkCode(parameters: parameters)
 
                     }) {
                         Text("Далее").foregroundColor(Color.white).font(.system(size: 12)).frame(width: 200, height: 45).background(Color("ThemeColor"))
@@ -78,7 +77,7 @@ struct CodeView: View {
             else {
 
                 Button(action: {
-
+                    registrationViewModel.requestCode(parameters: parameters)
                 }) {
                     Text("Отправить код еще раз").foregroundColor(Color("ThemeColor")).font(.system(size: 12)).frame(width: 200, height: 45).background(Color("Grey-2"))
                         .clipShape(RoundedRectangle(cornerRadius: 15))
@@ -98,6 +97,11 @@ struct CodeView: View {
 
             Spacer()
 
-        }.background(Color("Background")).edgesIgnoringSafeArea(.vertical)
+        }
+                .onTapGesture {
+                    UIApplication.shared.endEditing()
+                }
+                .background(Color("Background"))
+                .edgesIgnoringSafeArea(.vertical)
     }
 }
