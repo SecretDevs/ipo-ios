@@ -67,6 +67,7 @@ struct CodeView: View {
 
                         mainScreenRouter.index += 1
                         codeViewModel.checkCode(parameters: parameters)
+
                     }) {
                         Text("Далее").foregroundColor(Color.white).font(.system(size: 12)).frame(width: 200, height: 45).background(Color("ThemeColor"))
                             .clipShape(RoundedRectangle(cornerRadius: 15))

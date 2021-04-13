@@ -9,13 +9,13 @@ struct PasscodeField: View {
 
     @StateObject var codeRouter : CodeRouter
     @StateObject var registrationRouter : RegistrationRouter
-    var maxDigits: Int = 4
-    var label = "Введите 4-х значный код"
-    var rightPin: String = "1234"
-
     @State var pin: String = ""
     @State var isDisabled = false
     @State var state : PinState = PinState.NOT_COMPLETED
+
+    var maxDigits: Int = 4
+    var label = "Введите 4-х значный код"
+    var rightPin: String = "1234"
 
     public var body: some View {
         VStack(spacing: 27) {
