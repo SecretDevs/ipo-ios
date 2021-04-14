@@ -52,12 +52,17 @@ class TransactionsViewModel: ObservableObject {
                     return error
                 })
                 .sink(receiveCompletion: { _ in }, receiveValue: { response in
-                    print(UserDefaults.standard.string(forKey: "access_token"))
                     print(response)
+                    var index = 0
                     for var transaction in self.transactions{
                         if(transaction.id == parameters?["id"] as! String){
                             transaction.isFavorite = false
+                            if(self.type == "favourites"){
+                                self.transactions.remove(at: index)
+                                index -= 1
+                            }
                         }
+                        index += 1
                     }
                 })
     }

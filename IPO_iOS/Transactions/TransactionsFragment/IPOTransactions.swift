@@ -12,8 +12,8 @@ struct IPOTransactionsView: View {
         ScrollView(.vertical, showsIndicators: false){
             VStack(spacing: 15){
                 if(transactionsViewModel.transactions.count != 0){
-                    ForEach(0...transactionsViewModel.transactions.count - 1, id: \.self){
-                        TransactionCardView(transactionsViewModel: transactionsViewModel, transaction: self.$transactionsViewModel.transactions[$0])
+                    ForEach(transactionsViewModel.transactions){ transaction in
+                        TransactionCardView(transactionsViewModel: transactionsViewModel, transaction: transaction)
                     }
                 }
             }
