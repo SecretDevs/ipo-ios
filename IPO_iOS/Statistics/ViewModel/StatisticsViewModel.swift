@@ -7,6 +7,8 @@ import Combine
 
 class StatisticsViewModel: ObservableObject {
     @Published var completedTransactions : [CompletedTransaction] = []
+    @Published var state : ViewState = .idle
+
     var cancellation: AnyCancellable?
 
     /*init() {
@@ -14,22 +16,16 @@ class StatisticsViewModel: ObservableObject {
     }*/
 
     func fetchCompletedTransactions() {
+        self.state = .loading
         cancellation = StatisticsAPI.fetchStatistics()
                 .mapError({ (error) -> Error in
                     print(error)
+                    self.state = .error
                     return error
                 })
                 .sink(receiveCompletion: { _ in }, receiveValue: { response in
                     print(response.completedTransactions)
-                    /*let isoDateFormatter = ISO8601DateFormatter()
-                    isoDateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
-                    isoDateFormatter.formatOptions = [
-                        .withFullDate,
-                        .withFullTime,
-                        .withDashSeparatorInDate,
-                        .withFractionalSeconds
-                    ]
-                    print(Date().timeIntervalSince1970 - isoDateFormatter.date(from: response.completedTransactions.last!.date)!.timeIntervalSince1970)*/
+                    self.state = .loaded
                     self.completedTransactions = response.completedTransactions
                 })
     }

@@ -46,8 +46,8 @@
 		876516FC1BAD482992D76A92 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651DAABB8E240157B4BE22 /* BarChartView.swift */; };
 		87651723D45A6541C8AC52AB /* Path+QuadCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651BE300E6BF1F6283B8A0 /* Path+QuadCurve.swift */; };
 		87651728C41D4E075BA933C7 /* CompletedTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651EE0457F09DF83E1BDF4 /* CompletedTransaction.swift */; };
+		8765176A7BA32A077242CAEE /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876514668C71FC000798B7A9 /* State.swift */; };
 		8765178A1046F0023974B12C /* TokenAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651CD67773FE3897C3D297 /* TokenAnswer.swift */; };
-		8765178A82396864E6F974DA /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651D84055416BDF4BC6657 /* State.swift */; };
 		876517BEEB5180365C1F9E10 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876514F6C3B2564DF795630C /* Helpers.swift */; };
 		876517BFF0078E0FF545361F /* CodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651209C91A8B49616CAAC0 /* CodeViewModel.swift */; };
 		876517C80FCBD8FB22C261E1 /* BarChartRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651E03D5C5F5070D4DCD32 /* BarChartRow.swift */; };
@@ -157,6 +157,7 @@
 		876512E41F327527571532BA /* PieChartHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartHelpers.swift; sourceTree = "<group>"; };
 		876514168AA2544CF3F9D170 /* TransactionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsView.swift; sourceTree = "<group>"; };
 		8765143E9794DAEC3B8E5CD5 /* RequestAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestAPI.swift; sourceTree = "<group>"; };
+		876514668C71FC000798B7A9 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		87651479728381B4DC0B7652 /* MagnifierRect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MagnifierRect.swift; sourceTree = "<group>"; };
 		876514D3E6784895973FEE33 /* Star.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
 		876514F6C3B2564DF795630C /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
@@ -187,7 +188,6 @@
 		87651D308FC5212B1DAD9081 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		87651D48E73BD0A5D3B54F43 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphView.swift; path = IPO_iOS/SwiftUICharts/LineChart/GraphView.swift; sourceTree = SOURCE_ROOT; };
 		87651D5E374D5A1573132BD6 /* TransactionsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsResponse.swift; sourceTree = "<group>"; };
-		87651D84055416BDF4BC6657 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		87651DAABB8E240157B4BE22 /* BarChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		87651DD77113B63E76F6DE0C /* TriangleDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleDown.swift; sourceTree = "<group>"; };
 		87651DDAA00A1539E19E9A0E /* View+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
@@ -346,7 +346,7 @@
 				CC02533141B13DEF87CB1D42 /* localStorage.swift */,
 				8765146E13542D73B68FEDC7 /* API */,
 				8765114A29F66E999D086992 /* Utils */,
-				8765180288F39A83710B98E3 /* Extensions */,
+				8765180288F39A83710B98E3 /* ExtensionsAndEnums */,
 			);
 			path = IPO_iOS;
 			sourceTree = "<group>";
@@ -503,12 +503,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		8765180288F39A83710B98E3 /* Extensions */ = {
+		8765180288F39A83710B98E3 /* ExtensionsAndEnums */ = {
 			isa = PBXGroup;
 			children = (
 				87651DDAA00A1539E19E9A0E /* View+Ext.swift */,
+				876514668C71FC000798B7A9 /* State.swift */,
 			);
-			path = Extensions;
+			path = ExtensionsAndEnums;
 			sourceTree = "<group>";
 		};
 		87651833A887BD13CD561C2F /* API */ = {
@@ -594,7 +595,6 @@
 			isa = PBXGroup;
 			children = (
 				8765194D9B7212CE48D1F626 /* TransactionsViewModel.swift */,
-				87651D84055416BDF4BC6657 /* State.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1021,8 +1021,8 @@
 				87651DFEA6ED24EAEBC7BF3B /* SurveyAPI.swift in Sources */,
 				87651EC9BD609061B8220841 /* SaveSurveyResultsAnswer.swift in Sources */,
 				8765168DEE54758CEFFCAB1B /* SurveyViewModel.swift in Sources */,
-				8765178A82396864E6F974DA /* State.swift in Sources */,
 				8765110EAFAA6738663173DA /* View+Ext.swift in Sources */,
+				8765176A7BA32A077242CAEE /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
