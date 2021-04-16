@@ -8,22 +8,27 @@ import Alamofire
 
 class TransactionsViewModel: ObservableObject {
     @Published var transactions : [Transaction] = []
-    var cancellation: AnyCancellable?
-    var type: String = "IPO"
+    @Published var state : ViewState = .idle
+
+    private var cancellation: AnyCancellable?
+    private var type: String = "IPO"
 
     init(type: String) {
         self.type = type
-        fetchTransactions()
+        //self.fetchTransactions()
     }
 
     func fetchTransactions() {
+        self.state = .loading
         cancellation = TransactionsAPI.fetchTransactions(nil, type: self.type)
                 .mapError({ (error) -> Error in
                     print(error)
+                    self.state = .error
                     return error
                 })
                 .sink(receiveCompletion: { _ in }, receiveValue: { response in
                     print(response.transactions)
+                    self.state = .loaded
                     self.transactions = response.transactions
                 })
     }

@@ -6,18 +6,46 @@ import Foundation
 import SwiftUI
 
 struct IPOTransactionsView: View {
-    @ObservedObject var transactionsViewModel = TransactionsViewModel(type: "IPO")
+    @StateObject var transactionsViewModel : TransactionsViewModel = TransactionsViewModel(type: "IPO")
 
     var body: some View {
-        ScrollView(.vertical, showsIndicators: false){
-            VStack(spacing: 15){
-                if(transactionsViewModel.transactions.count != 0){
-                    ForEach(transactionsViewModel.transactions){ transaction in
+        GeometryReader { geometry in
+            ScrollView(.vertical, showsIndicators: false) {
+                getContent(width: geometry.size.width, height: geometry.size.height)
+            }
+        }.onAppear{
+            transactionsViewModel.fetchTransactions()
+        }
+    }
+
+    private func getContent(width: CGFloat, height: CGFloat) -> some View {
+        switch transactionsViewModel.state {
+        case .idle:
+            return Color.clear.eraseToAnyView()
+        case .loading:
+            return VStack{
+                ProgressView().scaleEffect(2.0)
+            }.frame(width: width, height: height, alignment: .center).eraseToAnyView()
+        case .loaded:
+            if (transactionsViewModel.transactions.count != 0) {
+                return VStack(spacing: 15) {
+                    ForEach(transactionsViewModel.transactions) { transaction in
                         TransactionCardView(transactionsViewModel: transactionsViewModel, transaction: transaction)
                     }
                 }
+                        .padding(20)
+                        .eraseToAnyView()
+            }else{
+                return VStack{
+                    Text("Пока нет сделок")
+                            .font(.custom("EuclidSquare-Medium", size: 16))
+                }.frame(width: width, height: height, alignment: .center).eraseToAnyView()
             }
-                    .padding(20)
+        case .error:
+            return VStack{
+                Text("Ошибка")
+                    .font(.custom("EuclidSquare-Medium", size: 16))
+            }.frame(width: width, height: height, alignment: .center).eraseToAnyView()
         }
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 struct GraphToggleButton: View {
 
     @ObservedObject var graphData: ChartData
-    @ObservedObject var statisticsViewModel : StatisticsViewModel
+    @StateObject var statisticsViewModel : StatisticsViewModel
 
     var body: some View {
         ZStack {

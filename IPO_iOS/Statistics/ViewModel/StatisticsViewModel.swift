@@ -9,9 +9,9 @@ class StatisticsViewModel: ObservableObject {
     @Published var completedTransactions : [CompletedTransaction] = []
     var cancellation: AnyCancellable?
 
-    init() {
+    /*init() {
         fetchCompletedTransactions()
-    }
+    }*/
 
     func fetchCompletedTransactions() {
         cancellation = StatisticsAPI.fetchStatistics()

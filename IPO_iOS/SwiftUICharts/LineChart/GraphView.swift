@@ -7,7 +7,7 @@ import SwiftUI
 
 public struct GraphView: View {
     @ObservedObject var data: ChartData
-    @ObservedObject var statisticsViewModel : StatisticsViewModel
+    @StateObject var statisticsViewModel : StatisticsViewModel
     @Binding var completedTransactions : [CompletedTransaction]
     public var title: String?
     public var legend: String?
@@ -27,7 +27,7 @@ public struct GraphView: View {
 
     init(data: [Double],
          profit: Int,
-         statisticsViewModel: ObservedObject<StatisticsViewModel>,
+         statisticsViewModel: StateObject<StatisticsViewModel>,
                 completedTransactions: Binding<[CompletedTransaction]>,
                 title: String? = nil,
                 legend: String? = nil,

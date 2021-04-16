@@ -7,7 +7,7 @@ import SwiftUI
 
 struct StatisticsView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @ObservedObject var statisticsViewModel = StatisticsViewModel()
+    @StateObject var statisticsViewModel = StatisticsViewModel()
 
     var body: some View {
         VStack {
@@ -46,6 +46,9 @@ struct StatisticsView: View {
                             fontName: "EuclidSquare-Regular",
                             dropShadowColor: Color("DarkGrey")), legendSpecifier: "%.0f")
         }
+                .onAppear{
+                    statisticsViewModel.fetchCompletedTransactions()
+                }
                 .background(Color("Background").edgesIgnoringSafeArea(.top))
                 .navigationBarHidden(true)
     }

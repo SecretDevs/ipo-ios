@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		16908447262392520048659B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C3B4F1B52620B8BE006A184F /* Alamofire */; };
-		16908448262392520048659B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C3AB59B826221EF500035AE3 /* Alamofire */; };
-		16908449262392520048659B /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = C3AB59BE26221F5E00035AE3 /* iPhoneNumberField */; };
-		1690844C262393C40048659B /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 1690844B262393C40048659B /* FirebaseMessaging */; };
 		16AD1E56260E4CC5004CF50F /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16AD1E55260E4CC5004CF50F /* Colors.xcassets */; };
 		315F601E01821BAACDFCDFBE /* LessonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F6864AEFBA2797A9F9BA8 /* LessonsView.swift */; };
 		315F61EA6D26F2BDA5EFFC2A /* IPOView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315F65F6CE3F7F19B5DB342C /* IPOView.swift */; };
@@ -26,6 +22,7 @@
 		65044A93CD8FDDA7E954F58D /* IPO_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 650446A069EEB0AEB04A305A /* IPO_iOS.xcdatamodeld */; };
 		65044CC20D1CA38658EA8B5F /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65044027DF9C58A6EFC1ADB1 /* Persistence.swift */; };
 		65044E0C17F8E3D7C1DB9C23 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6504468210FFB191C061B872 /* Preview Assets.xcassets */; };
+		8765110EAFAA6738663173DA /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651DDAA00A1539E19E9A0E /* View+Ext.swift */; };
 		87651165E89B320A22177777 /* TransactionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876514168AA2544CF3F9D170 /* TransactionsView.swift */; };
 		8765117DEA8265E61B63C048 /* AccountAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651E118F34403E29991EB1 /* AccountAPI.swift */; };
 		876511A44CA43B39EC228B9F /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651A3112935CFB960D9B5E /* StatisticsView.swift */; };
@@ -50,6 +47,7 @@
 		87651723D45A6541C8AC52AB /* Path+QuadCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651BE300E6BF1F6283B8A0 /* Path+QuadCurve.swift */; };
 		87651728C41D4E075BA933C7 /* CompletedTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651EE0457F09DF83E1BDF4 /* CompletedTransaction.swift */; };
 		8765178A1046F0023974B12C /* TokenAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651CD67773FE3897C3D297 /* TokenAnswer.swift */; };
+		8765178A82396864E6F974DA /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651D84055416BDF4BC6657 /* State.swift */; };
 		876517BEEB5180365C1F9E10 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876514F6C3B2564DF795630C /* Helpers.swift */; };
 		876517BFF0078E0FF545361F /* CodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651209C91A8B49616CAAC0 /* CodeViewModel.swift */; };
 		876517C80FCBD8FB22C261E1 /* BarChartRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87651E03D5C5F5070D4DCD32 /* BarChartRow.swift */; };
@@ -189,8 +187,10 @@
 		87651D308FC5212B1DAD9081 /* Answer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		87651D48E73BD0A5D3B54F43 /* GraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GraphView.swift; path = IPO_iOS/SwiftUICharts/LineChart/GraphView.swift; sourceTree = SOURCE_ROOT; };
 		87651D5E374D5A1573132BD6 /* TransactionsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsResponse.swift; sourceTree = "<group>"; };
+		87651D84055416BDF4BC6657 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		87651DAABB8E240157B4BE22 /* BarChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		87651DD77113B63E76F6DE0C /* TriangleDown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleDown.swift; sourceTree = "<group>"; };
+		87651DDAA00A1539E19E9A0E /* View+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		87651DEFDEEA36EFED8F21E7 /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		87651E03D5C5F5070D4DCD32 /* BarChartRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartRow.swift; sourceTree = "<group>"; };
 		87651E0C106B65A56387723C /* TransactionsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionsAPI.swift; sourceTree = "<group>"; };
@@ -257,10 +257,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1690844C262393C40048659B /* FirebaseMessaging in Frameworks */,
-				16908447262392520048659B /* Alamofire in Frameworks */,
-				16908448262392520048659B /* Alamofire in Frameworks */,
-				16908449262392520048659B /* iPhoneNumberField in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +346,7 @@
 				CC02533141B13DEF87CB1D42 /* localStorage.swift */,
 				8765146E13542D73B68FEDC7 /* API */,
 				8765114A29F66E999D086992 /* Utils */,
+				8765180288F39A83710B98E3 /* Extensions */,
 			);
 			path = IPO_iOS;
 			sourceTree = "<group>";
@@ -506,6 +503,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		8765180288F39A83710B98E3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				87651DDAA00A1539E19E9A0E /* View+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		87651833A887BD13CD561C2F /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -589,6 +594,7 @@
 			isa = PBXGroup;
 			children = (
 				8765194D9B7212CE48D1F626 /* TransactionsViewModel.swift */,
+				87651D84055416BDF4BC6657 /* State.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -796,10 +802,10 @@
 			);
 			name = IPO_iOS;
 			packageProductDependencies = (
-				C3B4F1B52620B8BE006A184F /* Alamofire */,
-				C3AB59B826221EF500035AE3 /* Alamofire */,
-				C3AB59BE26221F5E00035AE3 /* iPhoneNumberField */,
-				1690844B262393C40048659B /* FirebaseMessaging */,
+				C3B4F1B52620B8BE006A184F,
+				C3AB59B826221EF500035AE3,
+				C3AB59BE26221F5E00035AE3,
+				1690844B262393C40048659B,
 			);
 			productName = IPO_iOS;
 			productReference = 6504421D66C6FE08C915C38C /* IPO_iOS.app */;
@@ -858,9 +864,9 @@
 			);
 			mainGroup = 65044346AE75F9F9BD86A7CF;
 			packageReferences = (
-				C3AB59B726221EF500035AE3 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				C3AB59BD26221F5E00035AE3 /* XCRemoteSwiftPackageReference "iPhoneNumberField" */,
-				1690844A262393C40048659B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				C3AB59B726221EF500035AE3,
+				C3AB59BD26221F5E00035AE3,
+				1690844A262393C40048659B,
 			);
 			productRefGroup = 65044D55ACE57EB961DAE660 /* Products */;
 			projectDirPath = "";
@@ -1015,6 +1021,8 @@
 				87651DFEA6ED24EAEBC7BF3B /* SurveyAPI.swift in Sources */,
 				87651EC9BD609061B8220841 /* SaveSurveyResultsAnswer.swift in Sources */,
 				8765168DEE54758CEFFCAB1B /* SurveyViewModel.swift in Sources */,
+				8765178A82396864E6F974DA /* State.swift in Sources */,
+				8765110EAFAA6738663173DA /* View+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1310,7 +1318,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		1690844A262393C40048659B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		1690844A262393C40048659B = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
 			requirement = {
@@ -1318,7 +1326,7 @@
 				minimumVersion = 7.10.0;
 			};
 		};
-		C3AB59B726221EF500035AE3 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		C3AB59B726221EF500035AE3 = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -1326,7 +1334,7 @@
 				minimumVersion = 5.4.2;
 			};
 		};
-		C3AB59BD26221F5E00035AE3 /* XCRemoteSwiftPackageReference "iPhoneNumberField" */ = {
+		C3AB59BD26221F5E00035AE3 = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MojtabaHs/iPhoneNumberField.git";
 			requirement = {
@@ -1337,22 +1345,22 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		1690844B262393C40048659B /* FirebaseMessaging */ = {
+		1690844B262393C40048659B = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1690844A262393C40048659B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = 1690844A262393C40048659B;
 			productName = FirebaseMessaging;
 		};
-		C3AB59B826221EF500035AE3 /* Alamofire */ = {
+		C3AB59B826221EF500035AE3 = {
 			isa = XCSwiftPackageProductDependency;
-			package = C3AB59B726221EF500035AE3 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = C3AB59B726221EF500035AE3;
 			productName = Alamofire;
 		};
-		C3AB59BE26221F5E00035AE3 /* iPhoneNumberField */ = {
+		C3AB59BE26221F5E00035AE3 = {
 			isa = XCSwiftPackageProductDependency;
-			package = C3AB59BD26221F5E00035AE3 /* XCRemoteSwiftPackageReference "iPhoneNumberField" */;
+			package = C3AB59BD26221F5E00035AE3;
 			productName = iPhoneNumberField;
 		};
-		C3B4F1B52620B8BE006A184F /* Alamofire */ = {
+		C3B4F1B52620B8BE006A184F = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Alamofire;
 		};
