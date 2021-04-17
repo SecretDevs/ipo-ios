@@ -29,18 +29,22 @@ struct TransactionCardView : View {
                             .font(.custom("EuclidSquare-Medium",size: 10))
                             .fontWeight(.medium)
                             .foregroundColor(Color("DarkGrey"))
-                    if(transaction.isFavorite){
-                        Image("favorite").resizable().renderingMode(.template)
-                                .frame(width: 16, height: 16).foregroundColor(Color("Orange"))
-                                .onTapGesture(perform: {
-                                    transactionsViewModel.deleteTransactionFromFavorites(parameters: parameters)
-                                })
+                    if(transaction.isLoading){
+                        ProgressView()
                     }else{
-                        Image("favorite-border").resizable().renderingMode(.template)
-                                .frame(width: 16, height: 16).foregroundColor(Color("DarkGrey"))
-                                .onTapGesture(perform: {
-                                    transactionsViewModel.addTransactionToFavorites(parameters: parameters)
-                                })
+                        if(transaction.isFavorite){
+                            Image("favorite").resizable().renderingMode(.template)
+                                    .frame(width: 16, height: 16).foregroundColor(Color("Orange"))
+                                    .onTapGesture(perform: {
+                                        transactionsViewModel.deleteTransactionFromFavorites(parameters: parameters)
+                                    })
+                        }else{
+                            Image("favorite-border").resizable().renderingMode(.template)
+                                    .frame(width: 16, height: 16).foregroundColor(Color("DarkGrey"))
+                                    .onTapGesture(perform: {
+                                        transactionsViewModel.addTransactionToFavorites(parameters: parameters)
+                                    })
+                        }
                     }
                 }
             }

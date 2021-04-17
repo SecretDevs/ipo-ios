@@ -34,6 +34,7 @@ class TransactionsViewModel: ObservableObject {
     }
 
     func addTransactionToFavorites(parameters: Parameters?) {
+        transactions.first(where: {$0.id == parameters?["id"] as! String})?.isLoading = true
         cancellation = TransactionsAPI.addTransactionToFavourites(parameters)
                 .mapError({ (error) -> Error in
                     print(error)
@@ -44,6 +45,7 @@ class TransactionsViewModel: ObservableObject {
                     for var transaction in self.transactions{
                         if(transaction.id == parameters?["id"] as! String){
                             transaction.isFavorite = true
+                            transaction.isLoading = false
                             print(transaction.isFavorite)
                         }
                     }
@@ -51,6 +53,7 @@ class TransactionsViewModel: ObservableObject {
     }
 
     func deleteTransactionFromFavorites(parameters: Parameters?) {
+        transactions.first(where: {$0.id == parameters?["id"] as! String})?.isLoading = true
         cancellation = TransactionsAPI.deleteTransactionFromFavourites(parameters)
                 .mapError({ (error) -> Error in
                     print(error)
@@ -62,6 +65,7 @@ class TransactionsViewModel: ObservableObject {
                     for var transaction in self.transactions{
                         if(transaction.id == parameters?["id"] as! String){
                             transaction.isFavorite = false
+                            transaction.isLoading = false
                             if(self.type == "favourites"){
                                 self.transactions.remove(at: index)
                                 index -= 1

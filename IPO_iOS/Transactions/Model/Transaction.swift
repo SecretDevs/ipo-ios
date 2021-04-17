@@ -15,6 +15,7 @@ class Transaction : Codable, Identifiable, ObservableObject{
     @Published var risk : Risk
     @Published var status : Status
     @Published var isFavorite : Bool
+    @Published var isLoading : Bool
 
     enum CodingKeys: String, CodingKey {
         case id = "_id"
@@ -40,6 +41,7 @@ class Transaction : Codable, Identifiable, ObservableObject{
         risk = try container.decode(Risk.self, forKey: .risk)
         status = try container.decode(Status.self, forKey: .status)
         isFavorite = try container.decode(Bool.self, forKey: .isFavorite)
+        isLoading = false
     }
 
     func encode(to encoder: Encoder) throws {
